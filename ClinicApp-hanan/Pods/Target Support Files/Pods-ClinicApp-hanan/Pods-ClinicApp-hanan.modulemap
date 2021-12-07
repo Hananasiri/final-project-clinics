@@ -1,0 +1,6 @@
+framework module Pods_ClinicApp_hanan {
+  umbrella header "Pods-ClinicApp-hanan-umbrella.h"
+
+  export *
+  module * { export * }
+}

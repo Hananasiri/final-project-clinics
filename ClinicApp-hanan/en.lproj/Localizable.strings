@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  ClinicApp-hanan
+
+  Created by  HANAN ASIRI on 01/05/1443 AH.
+  
+*/
+"العيادات" = "Clinics" ;
+"المواعيد" = "Appointments" ;
+"إرشادات طبية" = "Medical advice" ;
+"الملف الشخصي" = "Profile" ;
+"حفظ معلوماتك" = "Save your information" ;
+"تفضل بإدخال رقم جوالك" = "Enter your phone number" ;
+"خروج" = "Exit" ;
+"تغيير اللغة" = "Change language" ;
+"دخول" = "Login" ;
+"تسجيل الدخول" = "Register" ;
+"عيادة استشاري جراحة الأسنان" = "Dental surgery clinic" ;
+"عيادة أطباء جراحة الأسنان" = "Dental Surgeon's Clinic" ;
+"عيادة أطباء أسنان أطفال" = "Pediatric Dentists Clinic" ;
+"عيادة أطباءأسنان صحة عامة" = "Public health dental clinic" ;
+"استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس" = "Use fluoride toothpaste to provide the most effective protection against cavities" ;
+"تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم" = "Water is one of the best drinks for health, including oral health" ;
+"توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية" = "go to the dentist at least twice a year, to find health problems" ;
+"يساعد غسول الفم على تقليل نسبة الحمض الموجودة بالفم، وينظف المناطق التي يصعب تنظيفها" = "Mouthwash helps reduce acid in the mouth and cleans hard-to-clean areas" ;
+"احرص على تناول الأطعمة التي تعزز من صحة الفم والأسنان، مثل منتجات الألبان، والبيض، والبقوليات" = "Eat foods that promote oral health, such as dairy products, eggs, and legumes" ;
+"تجنب تناول المشروبات الغازية، وقلل من الشاي، والقهوة" = "Avoid soft drinks, cut back on tea and coffee" ;
+

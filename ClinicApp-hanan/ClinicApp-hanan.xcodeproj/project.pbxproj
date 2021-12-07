@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		729205C95D3AC1CBA1C996AC /* Pods_ClinicApp_hanan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */; };
+		865C3B44275019CA004917CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Date.swift */; };
+		8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8660D367275CAC6400D2CB9B /* Localizable.strings */; };
+		867326F8275F3B990070E172 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F7275F3B990070E172 /* LocationVC.swift */; };
+		8677993F274E1D1000F46DC0 /* ClinicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677993E274E1D1000F46DC0 /* ClinicData.swift */; };
+		867A1FFB275E25C50027D716 /* ClinicJoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFA275E25C50027D716 /* ClinicJoya.swift */; };
+		867A1FFD275E25F40027D716 /* ClinicAbuHathrah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */; };
+		867A1FFF275E263E0027D716 /* ClinicBro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFE275E263E0027D716 /* ClinicBro.swift */; };
+		8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7E6274B6C5400097E17 /* AppDelegate.swift */; };
+		8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7E8274B6C5400097E17 /* SceneDelegate.swift */; };
+		8687F7EE274B6C5400097E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8687F7EC274B6C5400097E17 /* Main.storyboard */; };
+		8687F7F0274B6C5600097E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8687F7EF274B6C5600097E17 /* Assets.xcassets */; };
+		8687F7F3274B6C5600097E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8687F7F1274B6C5600097E17 /* LaunchScreen.storyboard */; };
+		8687F7FB274B6D4200097E17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8687F7FA274B6D4200097E17 /* GoogleService-Info.plist */; };
+		8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FC274BA0BA00097E17 /* LoginVC.swift */; };
+		8687F7FF274BA11900097E17 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FE274BA11900097E17 /* TabVC.swift */; };
+		8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F802274BA1DF00097E17 /* ClinicVC.swift */; };
+		868B64A42750EA3700293CAF /* ClinicsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A32750EA3700293CAF /* ClinicsServices.swift */; };
+		868B64A62750EAA700293CAF /* NewServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A52750EAA700293CAF /* NewServiceVC.swift */; };
+		868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A72750F70700293CAF /* ClinicDentera.swift */; };
+		868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127A274D0FEB004494A2 /* ClinicCell.swift */; };
+		868C127D274D125A004494A2 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127C274D125A004494A2 /* Clinic.swift */; };
+		86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16674140E9B8973EC14DB475 /* Pods-ClinicApp-hanan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicApp-hanan.debug.xcconfig"; path = "Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan.debug.xcconfig"; sourceTree = "<group>"; };
+		348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicApp_hanan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		865C3B43275019CA004917CF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8660D361275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		8660D362275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8660D366275CAC6400D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8660D368275CAC6600D2CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		867326F7275F3B990070E172 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		8677993E274E1D1000F46DC0 /* ClinicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicData.swift; sourceTree = "<group>"; };
+		867A1FFA275E25C50027D716 /* ClinicJoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicJoya.swift; sourceTree = "<group>"; };
+		867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAbuHathrah.swift; sourceTree = "<group>"; };
+		867A1FFE275E263E0027D716 /* ClinicBro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicBro.swift; sourceTree = "<group>"; };
+		8687F7E3274B6C5400097E17 /* ClinicApp-hanan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClinicApp-hanan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8687F7E6274B6C5400097E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8687F7E8274B6C5400097E17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8687F7ED274B6C5400097E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8687F7EF274B6C5600097E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8687F7F2274B6C5600097E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8687F7F4274B6C5600097E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8687F7FA274B6D4200097E17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8687F7FC274BA0BA00097E17 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8687F7FE274BA11900097E17 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		8687F802274BA1DF00097E17 /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
+		868B64A32750EA3700293CAF /* ClinicsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsServices.swift; sourceTree = "<group>"; };
+		868B64A52750EAA700293CAF /* NewServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceVC.swift; sourceTree = "<group>"; };
+		868B64A72750F70700293CAF /* ClinicDentera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDentera.swift; sourceTree = "<group>"; };
+		868C127A274D0FEB004494A2 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
+		868C127C274D125A004494A2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };
+		9404CD29C2C2B28EAA988FC7 /* Pods-ClinicApp-hanan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicApp-hanan.release.xcconfig"; path = "Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8687F7E0274B6C5400097E17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729205C95D3AC1CBA1C996AC /* Pods_ClinicApp_hanan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		024C0F99A919D23E36D5E168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80195F9587A651A2D6CB59FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16674140E9B8973EC14DB475 /* Pods-ClinicApp-hanan.debug.xcconfig */,
+				9404CD29C2C2B28EAA988FC7 /* Pods-ClinicApp-hanan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		86779945274E22A900F46DC0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8687F7FC274BA0BA00097E17 /* LoginVC.swift */,
+				8687F7FE274BA11900097E17 /* TabVC.swift */,
+				868B64A52750EAA700293CAF /* NewServiceVC.swift */,
+				86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */,
+				867326F7275F3B990070E172 /* LocationVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8677994B274E23FF00F46DC0 /* Clinics */ = {
+			isa = PBXGroup;
+			children = (
+				8687F802274BA1DF00097E17 /* ClinicVC.swift */,
+				868C127A274D0FEB004494A2 /* ClinicCell.swift */,
+				8677993E274E1D1000F46DC0 /* ClinicData.swift */,
+				868B64A72750F70700293CAF /* ClinicDentera.swift */,
+				867A1FFA275E25C50027D716 /* ClinicJoya.swift */,
+				867A1FFE275E263E0027D716 /* ClinicBro.swift */,
+				867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */,
+				86779945274E22A900F46DC0 /* Controllers */,
+			);
+			path = Clinics;
+			sourceTree = "<group>";
+		};
+		8687F7DA274B6C5400097E17 = {
+			isa = PBXGroup;
+			children = (
+				8660D367275CAC6400D2CB9B /* Localizable.strings */,
+				8687F7E5274B6C5400097E17 /* ClinicApp-hanan */,
+				8687F7E4274B6C5400097E17 /* Products */,
+				80195F9587A651A2D6CB59FE /* Pods */,
+				024C0F99A919D23E36D5E168 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8687F7E4274B6C5400097E17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8687F7E3274B6C5400097E17 /* ClinicApp-hanan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8687F7E5274B6C5400097E17 /* ClinicApp-hanan */ = {
+			isa = PBXGroup;
+			children = (
+				868B64A92751348200293CAF /* Services */,
+				868B64A22750E2C200293CAF /* Models */,
+				8677994B274E23FF00F46DC0 /* Clinics */,
+				8687F7E6274B6C5400097E17 /* AppDelegate.swift */,
+				8687F7E8274B6C5400097E17 /* SceneDelegate.swift */,
+				8687F7EC274B6C5400097E17 /* Main.storyboard */,
+				8687F7EF274B6C5600097E17 /* Assets.xcassets */,
+				8687F7F1274B6C5600097E17 /* LaunchScreen.storyboard */,
+				8687F7F4274B6C5600097E17 /* Info.plist */,
+				8687F7FA274B6D4200097E17 /* GoogleService-Info.plist */,
+			);
+			path = "ClinicApp-hanan";
+			sourceTree = "<group>";
+		};
+		868B64A22750E2C200293CAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				865C3B43275019CA004917CF /* Date.swift */,
+				868C127C274D125A004494A2 /* Clinic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		868B64A92751348200293CAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				868B64A32750EA3700293CAF /* ClinicsServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8687F7E2274B6C5400097E17 /* ClinicApp-hanan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8687F7F7274B6C5600097E17 /* Build configuration list for PBXNativeTarget "ClinicApp-hanan" */;
+			buildPhases = (
+				F7D95FA2EED2CD31603C02D8 /* [CP] Check Pods Manifest.lock */,
+				8687F7DF274B6C5400097E17 /* Sources */,
+				8687F7E0274B6C5400097E17 /* Frameworks */,
+				8687F7E1274B6C5400097E17 /* Resources */,
+				419FA98B8748FCBAB20A3595 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ClinicApp-hanan";
+			productName = "ClinicApp-hanan";
+			productReference = 8687F7E3274B6C5400097E17 /* ClinicApp-hanan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8687F7DB274B6C5400097E17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					8687F7E2274B6C5400097E17 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 8687F7DE274B6C5400097E17 /* Build configuration list for PBXProject "ClinicApp-hanan" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = 8687F7DA274B6C5400097E17;
+			productRefGroup = 8687F7E4274B6C5400097E17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8687F7E2274B6C5400097E17 /* ClinicApp-hanan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8687F7E1274B6C5400097E17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */,
+				8687F7FB274B6D4200097E17 /* GoogleService-Info.plist in Resources */,
+				8687F7F3274B6C5600097E17 /* LaunchScreen.storyboard in Resources */,
+				8687F7F0274B6C5600097E17 /* Assets.xcassets in Resources */,
+				8687F7EE274B6C5400097E17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		419FA98B8748FCBAB20A3595 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D95FA2EED2CD31603C02D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClinicApp-hanan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8687F7DF274B6C5400097E17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868B64A62750EAA700293CAF /* NewServiceVC.swift in Sources */,
+				868B64A42750EA3700293CAF /* ClinicsServices.swift in Sources */,
+				868C127D274D125A004494A2 /* Clinic.swift in Sources */,
+				868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */,
+				8687F7FF274BA11900097E17 /* TabVC.swift in Sources */,
+				8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */,
+				868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */,
+				867A1FFD275E25F40027D716 /* ClinicAbuHathrah.swift in Sources */,
+				8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */,
+				865C3B44275019CA004917CF /* Date.swift in Sources */,
+				867326F8275F3B990070E172 /* LocationVC.swift in Sources */,
+				86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */,
+				8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */,
+				8677993F274E1D1000F46DC0 /* ClinicData.swift in Sources */,
+				867A1FFB275E25C50027D716 /* ClinicJoya.swift in Sources */,
+				8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */,
+				867A1FFF275E263E0027D716 /* ClinicBro.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8660D367275CAC6400D2CB9B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8660D366275CAC6400D2CB9B /* ar */,
+				8660D368275CAC6600D2CB9B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8687F7EC274B6C5400097E17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8687F7ED274B6C5400097E17 /* Base */,
+				8660D361275CABC500D2CB9B /* ar */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8687F7F1274B6C5600097E17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8687F7F2274B6C5600097E17 /* Base */,
+				8660D362275CABC500D2CB9B /* ar */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8687F7F5274B6C5600097E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8687F7F6274B6C5600097E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8687F7F8274B6C5600097E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16674140E9B8973EC14DB475 /* Pods-ClinicApp-hanan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 822RG578M9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ClinicApp-hanan/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanan.ClinicApp-hanan";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8687F7F9274B6C5600097E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9404CD29C2C2B28EAA988FC7 /* Pods-ClinicApp-hanan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 822RG578M9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ClinicApp-hanan/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanan.ClinicApp-hanan";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8687F7DE274B6C5400097E17 /* Build configuration list for PBXProject "ClinicApp-hanan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8687F7F5274B6C5600097E17 /* Debug */,
+				8687F7F6274B6C5600097E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8687F7F7274B6C5600097E17 /* Build configuration list for PBXNativeTarget "ClinicApp-hanan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8687F7F8274B6C5600097E17 /* Debug */,
+				8687F7F9274B6C5600097E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8687F7DB274B6C5400097E17 /* Project object */;
+}
