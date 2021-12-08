@@ -29,11 +29,15 @@ class TabVC: UITabBarController {
            
             createNavController(for: ClinicVC() , title: NSLocalizedString ("العيادات", comment: ""),image: UIImage(systemName: "cross.case.fill")!),
             
-            createNavController(for: ClinicData(), title: NSLocalizedString("المواعيد" , comment: ""), image: UIImage(systemName: "folder.fill.badge.person.crop")!),
-            
            createNavController(for: LocationVC() , title: NSLocalizedString("مواقع العيادات" , comment: ""), image: UIImage(systemName: "globe.asia.australia.fill")!),
             
             createNavController(for: AdvicesVC() , title: NSLocalizedString("إرشادات طبية" , comment: ""), image: UIImage(systemName: "heart.text.square")!),
+            
+            createNavController(for: NewServiceVC() , title: NSLocalizedString("مواعيدي" , comment: ""), image: UIImage(systemName: "heart.text.square")!),
+            
+            createNavController(for: ProfileVC(), title: NSLocalizedString("الملف الشخصي" , comment: ""), image: UIImage(systemName: "person.crop.rectangle")!),
+            
+            
           
          ]
          }

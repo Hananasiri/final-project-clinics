@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class LoginVC: UIViewController {
    
@@ -93,7 +94,7 @@ class LoginVC: UIViewController {
         view.addSubview(imageView)
 
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 250),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
@@ -136,8 +137,9 @@ class LoginVC: UIViewController {
                 print(error as Any)
                 return
             }
-            
-            self.present(TabVC(), animated: true, completion: nil)
+            let vc = TabVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }
         
     }
@@ -155,8 +157,16 @@ class LoginVC: UIViewController {
                 return
             }
             
-            self.present(TabVC(), animated: true, completion: nil)
+            let vc = TabVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
     }
+        guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+        Firestore.firestore().document("people/\(currentUserID)").setData([
+            "email" : self.emailTF.text as Any,
+            "id" : currentUserID,
+            "password" : self.passwordTF.text as Any,
+        ])
         
     }
 
