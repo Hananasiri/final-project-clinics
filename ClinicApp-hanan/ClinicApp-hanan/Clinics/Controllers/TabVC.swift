@@ -33,7 +33,7 @@ class TabVC: UITabBarController {
             
             createNavController(for: AdvicesVC() , title: NSLocalizedString("إرشادات طبية" , comment: ""), image: UIImage(systemName: "heart.text.square")!),
             
-            createNavController(for: NewServiceVC() , title: NSLocalizedString("مواعيدي" , comment: ""), image: UIImage(systemName: "heart.text.square")!),
+            createNavController(for: NewServiceVC() , title: NSLocalizedString("مواعيدي" , comment: ""), image: UIImage(systemName: "rectangle.badge.person.crop")!),
             
             createNavController(for: ProfileVC(), title: NSLocalizedString("الملف الشخصي" , comment: ""), image: UIImage(systemName: "person.crop.rectangle")!),
             

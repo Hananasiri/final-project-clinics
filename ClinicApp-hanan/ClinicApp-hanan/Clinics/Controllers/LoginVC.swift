@@ -162,7 +162,7 @@ class LoginVC: UIViewController {
             self.present(vc, animated: true, completion: nil)
     }
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-        Firestore.firestore().document("people/\(currentUserID)").setData([
+        Firestore.firestore().document("users/\(currentUserID)").setData([
             "email" : self.emailTF.text as Any,
             "id" : currentUserID,
             "password" : self.passwordTF.text as Any,

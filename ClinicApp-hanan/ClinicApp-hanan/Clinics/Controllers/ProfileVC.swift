@@ -8,9 +8,12 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import TransitionButton
 
 class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    
+    
     // Add stack view ..
     let stackView = UIStackView()
     
@@ -48,37 +51,25 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         return imagePicker
     }()
 
-    var RegistTF: UITextField = {
+    var NameTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.backgroundColor = .systemGray5
         tf.layer.cornerRadius = 12
         tf.textAlignment = .right
-        tf.placeholder = "تفضل بإدخال اسم العيادة"
+        tf.placeholder = "تفضل بإدخال اسمك"
         return tf
     }()
-    var passwordTF: UITextField = {
+    var addressTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.isSecureTextEntry = false
         tf.layer.cornerRadius = 12
         tf.backgroundColor = .systemGray5
         tf.textAlignment = .right
-        tf.placeholder = "تفضل بإدخال رقم جوالك"
+        tf.placeholder = "تفضل بإدخال عنوانك"
         return tf
     }()
 
-
-    let Button : UIButton = {
-        $0.backgroundColor = .systemTeal
-        $0.setTitle(NSLocalizedString("حفظ معلوماتك", comment: ""), for: .normal)
-        $0.tintColor = .blue
-        $0.layer.cornerRadius = 20
-        $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .light)
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.addTarget(self, action: #selector(saveButtone), for: .touchUpInside)
-        return $0
-    }(UIButton())
     
     let Button1 : UIButton = {
         $0.backgroundColor = .white
@@ -90,11 +81,11 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         return $0
     }(UIButton())
     
-    lazy var addserviceButton: UIButton = {
-        let b = UIButton()
+    lazy var addserviceButton: TransitionButton = {
+        let b = TransitionButton()
         b.addTarget(self, action: #selector(addService), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle(" مواعيدي", for: .normal)
+        b.setTitle(NSLocalizedString("مواعيدي", comment: ""), for: .normal)
         b.layer.cornerRadius = 20
         b.backgroundColor = .blue
         return b
@@ -116,16 +107,20 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let name = UserDefaults.standard.value(forKey: "NameTF") as? String
+        NameTF.text = name
+        
+        let address = UserDefaults.standard.value(forKey: "addressTF") as? String
+        addressTF.text = address
+        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         imageView.addGestureRecognizer(tapRecognizer)
         
        
         view.backgroundColor = .white
         view.addSubview(imageView)
-        view.addSubview(RegistTF)
-        view.addSubview(passwordTF)
-        //view.addSubview(SaveBtn)
-        view.addSubview(Button)
+        view.addSubview(NameTF)
+        view.addSubview(addressTF)
         view.addSubview(Button1)
         view.addSubview(addserviceButton)
         
@@ -137,72 +132,58 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         ])
 
         NSLayoutConstraint.activate([
-            RegistTF.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 240),
-            RegistTF.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
-            RegistTF.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
-            RegistTF.heightAnchor.constraint(equalToConstant: 40),
 
-            passwordTF.topAnchor.constraint(equalTo: RegistTF.bottomAnchor, constant: 24),
-            passwordTF.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
-            passwordTF.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
-            passwordTF.heightAnchor.constraint(equalToConstant: 40),
+            NameTF.topAnchor.constraint(equalTo: view.topAnchor,constant: 440),
+            NameTF.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 50),
+            NameTF.heightAnchor.constraint(equalToConstant: 40),
+            NameTF.widthAnchor.constraint(equalToConstant: 290),
 
-            
+            addressTF.topAnchor.constraint(equalTo: NameTF.bottomAnchor, constant: 24),
+            addressTF.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            addressTF.heightAnchor.constraint(equalToConstant: 40),
+            addressTF.widthAnchor.constraint(equalToConstant: 290),
+
           
-            addserviceButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 200),
-            addserviceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -250),
+            addserviceButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 120),
+            addserviceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
             addserviceButton.widthAnchor.constraint(equalToConstant: 150),
             addserviceButton.heightAnchor.constraint(equalToConstant: 48),
 
-
-            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 30),
-            Button.heightAnchor.constraint(equalToConstant: 48),
-            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
-            
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button1.topAnchor.constraint(equalTo: Button.bottomAnchor, constant: 30),
+            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 30),
             Button1.heightAnchor.constraint(equalToConstant: 48),
             Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            
+            
             ])
- 
 
-            }
+      }
     
     @objc func addService() {
+        
+        let name = NameTF.text
+        UserDefaults.standard.set(name,forKey: "NameTF")
+        
+        let address = addressTF.text
+        UserDefaults.standard.set(address,forKey: "addressTF")
+        
         let newServiceVC = NewServiceVC()
         present( newServiceVC, animated: true, completion: nil)
+        
+        addserviceButton.startAnimation()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+        }
+        
     }
     
     @objc func imageTapped() {
         print("Image tapped")
         present(imagePicker, animated: true)
     }
-
-    @objc func saveButtone() {
-        guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-        Firestore.firestore().document("users/\(currentUserID)").setData([
-            "name" :RegistTF.text as Any,
-             "id" : currentUserID,
-
-        ],merge: true)
-        let alert1 = UIAlertController(
-            title: (""),
-            message: "هل أنت متأكد من حفظ معلومات حجزك؟",
-            preferredStyle: .alert)
-        alert1.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: .default,
-                handler: { action in
-                    print("OK")
-                }
-            )
-            )
-        present(alert1, animated: true, completion: nil)
-           }
-    
+ 
     // Use error handling
     @objc func signOut() {
         let firebaseAuth = Auth.auth()

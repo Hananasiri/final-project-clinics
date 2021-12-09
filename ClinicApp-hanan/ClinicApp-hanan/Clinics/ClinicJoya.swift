@@ -15,13 +15,13 @@ import FirebaseFirestore
 
   var myTableView: UITableView!
      var list =  [
-                   service(name: " تقويم الأسنان الثابت والشفاف ", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name:  "خطط الرعاية المنزلية" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: " تيجان الأسنان  " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: " تركيبات الفينير " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "علاج أسنان الأطفال" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: " عمليات تقييم حالة الفم " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: " إجراءات إصلاح وتجديد الأسنان " ,drname: "د.محمد خالد", time: "٨-٩ ص"),
+                   service(name:"تقويم الأسنان", drname: "د.بشار خالد", time: "٩-١٠ ص"),
+                   service(name:  "خطط الرعاية المنزلية" , drname: "د.علاء محمد", time: "٨-٩ ص"),
+                   service(name: " تيجان الأسنان " , drname: "لؤي عبدالله", time: "١-٣ م"),
+                   service(name:  "تركيبات الفينير" , drname: "د.سامية علي", time: "٨-٩ ص"),
+                   service(name: "علاج أسنان الأطفال" , drname: "د.محمد فارس", time: "٤-٥ م"),
+                   service(name: "نزع الأعصاب " , drname:"د.هند سامي", time: "٨-٩ ص"),
+                   service(name:  "إصلاح وتجديد الأسنان" ,drname: "د.أمل معتز", time: "٨-٩ ص"),
                    
                    
      ]
@@ -52,6 +52,8 @@ import FirebaseFirestore
               let cell = tableView.dequeueReusableCell(withIdentifier: "ClinicJoyaCell", for: indexPath as! IndexPath) as! ClinicJoyaCell
               let data = list[indexPath.row]
               cell.label2.text = data.name
+              cell.label3.text = data.drname
+              cell.label4.text = data.time
 
 
               return cell
@@ -148,7 +150,7 @@ import FirebaseFirestore
           var servicetype = label2.text ??  ""
           var servicedtype2 = label3.text ?? ""
           var servicetype3 = label4.text ?? ""
-          FavoriteService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
+          ReservitionsService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
   //        let vc = ProfileVC()
   //        vc.modalPresentationStyle = .fullScreen
   //        self.present(vc, animated: true, completion: nil)

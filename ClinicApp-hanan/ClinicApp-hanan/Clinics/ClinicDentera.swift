@@ -27,17 +27,17 @@ let name: String?
 
  class ClinicDentera: UIViewController, UITableViewDelegate, UITableViewDataSource {
      // Set of  list
-     var Set = ["زراعة الأسنان", "زراعة الجذور", "خلع الأسنان", "ارشادات طبية"]
+    var Set = ["زراعة الأسنان", "زراعة الجذور", "خلع الأسنان", "ارشادات طبية"]
 
   var myTableView: UITableView!
      var list =  [ service(name: "الإرشادات الطبية", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "علاج أسنان الأطفال", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "تقييم حالة الفم", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "إصلاح وتجديد الأسنان", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "الحالات الطارئة", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "ابتسامة هوليود", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   
-                   
+                   service(name: "علاج أسنان الأطفال", drname: "د.رانيا شيخ", time: "١-٢ م"),
+                   service(name: "تقييم حالة الفم", drname: "د.مروان معتز", time: "١١-١٢ م"),
+                   service(name: "إصلاح وتجديد الأسنان", drname: "د.ولاء محمد", time: "٨-٩ ص"),
+                   service(name: "الحالات الطارئة", drname:"د.ماجد فهد", time: "١-٣ م"),
+                   service(name: "ابتسامة هوليود", drname: "د.آمال حسن", time: "١٠-١٢ م"),
+
+
      ]
 
    override func viewDidLoad() {
@@ -164,7 +164,7 @@ class ClinicDetalisCell: UITableViewCell {
         var servicetype = label2.text ??  ""
         var servicedtype2 = label3.text ?? ""
         var servicetype3 = label4.text ?? ""
-        FavoriteService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
+        ReservitionsService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
 //        let vc = ProfileVC()
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: true, completion: nil)
@@ -312,3 +312,4 @@ class ClinicDetalisCell: UITableViewCell {
 //
 //
 //
+

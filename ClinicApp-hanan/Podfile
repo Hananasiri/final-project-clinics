@@ -8,4 +8,5 @@ target 'ClinicApp-hanan' do
   # Pods for ClinicApp-hanan
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'TransitionButton'
 end

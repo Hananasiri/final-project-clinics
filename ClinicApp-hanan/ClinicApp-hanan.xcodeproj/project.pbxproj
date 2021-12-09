@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		729205C95D3AC1CBA1C996AC /* Pods_ClinicApp_hanan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */; };
-		8633ED4D276093B400E88B70 /* BookedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4C276093B400E88B70 /* BookedService.swift */; };
+		8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4C276093B400E88B70 /* ReservitionsService.swift */; };
 		8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4E2760A76E00E88B70 /* ProfileVC.swift */; };
 		865C3B44275019CA004917CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Date.swift */; };
 		8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8660D367275CAC6400D2CB9B /* Localizable.strings */; };
@@ -27,7 +27,7 @@
 		8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FC274BA0BA00097E17 /* LoginVC.swift */; };
 		8687F7FF274BA11900097E17 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FE274BA11900097E17 /* TabVC.swift */; };
 		8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F802274BA1DF00097E17 /* ClinicVC.swift */; };
-		868B64A42750EA3700293CAF /* ClinicsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A32750EA3700293CAF /* ClinicsServices.swift */; };
+		868B64A42750EA3700293CAF /* ClinicsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A32750EA3700293CAF /* ClinicsService.swift */; };
 		868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A72750F70700293CAF /* ClinicDentera.swift */; };
 		868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127A274D0FEB004494A2 /* ClinicCell.swift */; };
 		868C127D274D125A004494A2 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127C274D125A004494A2 /* Clinic.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		16674140E9B8973EC14DB475 /* Pods-ClinicApp-hanan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicApp-hanan.debug.xcconfig"; path = "Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan.debug.xcconfig"; sourceTree = "<group>"; };
 		348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicApp_hanan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8633ED4C276093B400E88B70 /* BookedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedService.swift; sourceTree = "<group>"; };
+		8633ED4C276093B400E88B70 /* ReservitionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservitionsService.swift; sourceTree = "<group>"; };
 		8633ED4E2760A76E00E88B70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		865C3B43275019CA004917CF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8660D361275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		8687F7FC274BA0BA00097E17 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8687F7FE274BA11900097E17 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
 		8687F802274BA1DF00097E17 /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
-		868B64A32750EA3700293CAF /* ClinicsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsServices.swift; sourceTree = "<group>"; };
+		868B64A32750EA3700293CAF /* ClinicsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsService.swift; sourceTree = "<group>"; };
 		868B64A72750F70700293CAF /* ClinicDentera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDentera.swift; sourceTree = "<group>"; };
 		868C127A274D0FEB004494A2 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
 		868C127C274D125A004494A2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		868B64A22750E2C200293CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				865C3B43275019CA004917CF /* Date.swift */,
 				868C127C274D125A004494A2 /* Clinic.swift */,
+				865C3B43275019CA004917CF /* Date.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 		868B64A92751348200293CAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				868B64A32750EA3700293CAF /* ClinicsServices.swift */,
-				8633ED4C276093B400E88B70 /* BookedService.swift */,
+				868B64A32750EA3700293CAF /* ClinicsService.swift */,
+				8633ED4C276093B400E88B70 /* ReservitionsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -299,12 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */,
-				868B64A42750EA3700293CAF /* ClinicsServices.swift in Sources */,
+				868B64A42750EA3700293CAF /* ClinicsService.swift in Sources */,
 				868C127D274D125A004494A2 /* Clinic.swift in Sources */,
 				868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */,
 				8687F7FF274BA11900097E17 /* TabVC.swift in Sources */,
 				8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */,
-				8633ED4D276093B400E88B70 /* BookedService.swift in Sources */,
+				8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */,
 				868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */,
 				867A1FFD275E25F40027D716 /* ClinicAbuHathrah.swift in Sources */,
 				8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */,

@@ -9,16 +9,23 @@
 "المواعيد" = "Appointments" ;
 "إرشادات طبية" = "Medical advice" ;
 "الملف الشخصي" = "Profile" ;
+"مواعيدي" = "My Appointments";
+
 "حفظ معلوماتك" = "Save your information" ;
 "تفضل بإدخال رقم جوالك" = "Enter your phone number" ;
 "خروج" = "Exit" ;
 "تغيير اللغة" = "Change language" ;
 "دخول" = "Login" ;
 "تسجيل الدخول" = "Register" ;
-"عيادة استشاري جراحة الأسنان" = "Dental surgery clinic" ;
-"عيادة أطباء جراحة الأسنان" = "Dental Surgeon's Clinic" ;
-"عيادة أطباء أسنان أطفال" = "Pediatric Dentists Clinic" ;
-"عيادة أطباءأسنان صحة عامة" = "Public health dental clinic" ;
+
+
+ "عيادة دنتيرا لطب الأسنان" = "Dental Dentera clinic" ;
+"عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;
+"عيادة المدار لطب الأسنان" = "Dental Al-madar Clinic" ;
+"عيادة برو كلينيك" = " Dental Pro clinic" ;
+
+
+
 "استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس" = "Use fluoride toothpaste to provide the most effective protection against cavities" ;
 "تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم" = "Water is one of the best drinks for health, including oral health" ;
 "توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية" = "go to the dentist at least twice a year, to find health problems" ;

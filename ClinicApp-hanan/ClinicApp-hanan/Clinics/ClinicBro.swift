@@ -15,11 +15,11 @@ import FirebaseFirestore
 
   var myTableView: UITableView!
      var list =  [
-                   service(name:"طب الأسنان والإرشادات الطبية " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name:  "جراحة الفم وخلع الأسنان " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: " خطط الرعاية المنزلية" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "تيجان الأسنان", drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "علاج أسنان الأطفال", drname: "د.محمد خالد", time: "٨-٩ ص"),
+                   service(name:"المراجعات الدورية" , drname: "د.محمد وليد", time: "٨-٩ ص"),
+                   service(name:  "خلع الأسنان" , drname: "د.إىمان فلاح", time: "١-٣ م"),
+                   service(name: "الرعاية المنزلية" , drname: "د.لؤي خالد", time: "٩-١٠ ص"),
+                   service(name: "تيجان الأسنان", drname: "د.نور الدين معتز", time: "٦-٧ م"),
+                   service(name: "علاج أسنان الأطفال", drname: "د.ليلى نهار", time: "٤-٥ م"),
                    
                    
      ]
@@ -50,6 +50,8 @@ import FirebaseFirestore
               let cell = tableView.dequeueReusableCell(withIdentifier: "ClinicBroCell", for: indexPath as! IndexPath) as! ClinicBroCell
               let data = list[indexPath.row]
               cell.label2.text = data.name
+              cell.label3.text = data.drname
+              cell.label4.text = data.time
 
 
               return cell
@@ -144,7 +146,7 @@ import FirebaseFirestore
           var servicetype = label2.text ??  ""
           var servicedtype2 = label3.text ?? ""
           var servicetype3 = label4.text ?? ""
-          FavoriteService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
+          ReservitionsService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
   //        let vc = ProfileVC()
   //        vc.modalPresentationStyle = .fullScreen
   //        self.present(vc, animated: true, completion: nil)

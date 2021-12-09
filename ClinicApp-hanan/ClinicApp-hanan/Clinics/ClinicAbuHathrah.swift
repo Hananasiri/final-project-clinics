@@ -15,12 +15,12 @@ import FirebaseFirestore
 
   var myTableView: UITableView!
      var list =  [
-                   service(name: "علاج وحشو العصب " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "ابتسامة هوليود " , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "ازالة الجير وتلميع الأسنان" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "الكشف الروتيني" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "تركيبات الأسنان الثابتة" , drname: "د.محمد خالد", time: "٨-٩ ص"),
-                   service(name: "علاج أسنان الأطفال" , drname: "د.محمد خالد", time: "٨-٩ ص"),
+                   service(name: "علاج وحشو العصب" , drname: "د.ندى خالد", time: "١-٢ م"),
+                   service(name: "ابتسامة هوليود" , drname:"د.سارة يوسف", time: "٨-٩ ص"),
+                   service(name: "ازالة الجير" , drname: "د.محمد الحسن", time: "٣-٤ م"),
+                   service(name: "الكشف الروتيني" , drname: "د.محمد خالد", time: "٦-٨ م"),
+                   service(name: "تركيبات الأسنان الثابتة" , drname:"د.عيسى صلاح", time: "٨-٩ ص"),
+                   service(name: "علاج أسنان الأطفال" , drname: "د.محمد عطا", time: "٩-١٠ م"),
                    
                    
      ]
@@ -50,6 +50,8 @@ import FirebaseFirestore
               let cell = tableView.dequeueReusableCell(withIdentifier: "ClinicAbuHathrahCell", for: indexPath as! IndexPath) as! ClinicAbuHathrahCell
               let data = list[indexPath.row]
               cell.label2.text = data.name
+              cell.label3.text = data.drname
+              cell.label4.text = data.time
 
 
               return cell
@@ -144,7 +146,7 @@ import FirebaseFirestore
           var servicetype = label2.text ??  ""
           var servicedtype2 = label3.text ?? ""
           var servicetype3 = label4.text ?? ""
-          FavoriteService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
+          ReservitionsService.shared.addToprofile(book: Mawaid(booked: servicetype, booked2: servicedtype2, booked3: servicetype3 ))
   //        let vc = ProfileVC()
   //        vc.modalPresentationStyle = .fullScreen
   //        self.present(vc, animated: true, completion: nil)
