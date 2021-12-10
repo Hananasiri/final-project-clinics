@@ -79,7 +79,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
                 datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 150),
             ])
         
         
@@ -153,10 +153,10 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as! NewService
-        let s = appointment[indexPath.row]
-        cell.nameLabel2.text = s.booked
-        cell.doctorlable.text = s.booked2
-        cell.timelable.text = s.booked3
+        let bservice = appointment[indexPath.row]
+        cell.nameLabel2.text = bservice.bookaservice
+        cell.doctorlable.text = bservice.bookadoctor
+        cell.timelable.text = bservice.bookatime
         
         return cell
     }
@@ -179,8 +179,10 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                  style: UIAlertAction.Style.destructive,
                  handler: { Action in
             if editingStyle == .delete {
-              self.appointment.remove(at: indexPath.row)
-              self.serviceTV.deleteRows(at: [indexPath], with: .fade)
+            Firestore.firestore().collection("reservations").document(cell.bookaservice).delete()
+                
+//              self.appointment.remove(at: indexPath.row)
+//              self.serviceTV.deleteRows(at: [indexPath], with: .fade)
             }
             self.serviceTV.reloadData()
           })

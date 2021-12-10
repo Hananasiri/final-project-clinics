@@ -60,28 +60,28 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
         let data = clinicList[indexPath.row]
         if indexPath.row == 0 {
           let navigationController = UINavigationController(
-            rootViewController: ClinicDentera()
+            rootViewController: DinteraClinic()
           )
           navigationController.navigationBar.prefersLargeTitles = true
           navigationController.modalPresentationStyle = .fullScreen
           present(navigationController, animated: true, completion: nil)
         }else if indexPath.row == 1 {
           let navigationController = UINavigationController(
-            rootViewController: ClinicJoya()
+            rootViewController: JoyaClinic()
           )
           navigationController.navigationBar.prefersLargeTitles = true
           navigationController.modalPresentationStyle = .fullScreen
           present(navigationController, animated: true, completion: nil)
         } else if indexPath.row == 2 {
           let navigationController = UINavigationController(
-            rootViewController: ClinicBro()
+            rootViewController: AlmadarClinic()
           )
           navigationController.modalPresentationStyle = .fullScreen
           navigationController.navigationBar.prefersLargeTitles = true
           present(navigationController, animated: true, completion: nil)
         } else if indexPath.row == 3 {
           let navigationController = UINavigationController(
-            rootViewController: ClinicAbuHathrah()
+            rootViewController: ProClinic()
           )
           navigationController.navigationBar.prefersLargeTitles = true
           navigationController.modalPresentationStyle = .fullScreen

@@ -17,10 +17,10 @@ class ReservitionsService {
     
     
  func addToprofile(book: Mawaid) {
-     favoriteCollection.document(book.booked).setData([
-        "booked" : book.booked,
-        "booked2" : book.booked2,
-        "booked3" : book.booked3
+     favoriteCollection.document(book.bookaservice).setData([
+        "bookaservice" : book.bookaservice,
+        "bookadoctor" : book.bookadoctor,
+        "bookatime" : book.bookatime
   ])
  }
     
@@ -31,19 +31,19 @@ class ReservitionsService {
    }
    guard let documents = snapshot?.documents else { return }
        
-   var favorite: Array<Mawaid> = []
-   for document in documents {
+    var statment: Array<Mawaid> = []
+    for document in documents {
     let data = document.data()
-    let fBook = Mawaid(booked: (data["booked"] as? String) ?? "Nothing",
-                       booked2: (data["booked2"] as? String) ?? "Nothing",
-                       booked3: (data["booked3"] as? String) ?? "Nothing")
+    let Booked = Mawaid(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
+                          bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
+                          bookatime: (data["bookatime"] as? String) ?? "Nothing")
        
 
    
-     favorite.append(fBook)
+  statment.append(Booked)
    }
-   completion(favorite)
+   completion(statment)
   }
- }
-}
+  }
+  }
 

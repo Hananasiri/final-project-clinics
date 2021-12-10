@@ -35,25 +35,25 @@ class LocationVC: UIViewController {
 
 
         let DenteraLocation = MKPointAnnotation()
-        DenteraLocation.title = "عيادة دنتيرا"
+        DenteraLocation.title = NSLocalizedString("عيادة دنتيرا لطب الأسنان", comment: "")
         DenteraLocation.coordinate = CLLocationCoordinate2D(latitude: 18.2194944, longitude: 42.5123316)
 
         mapView.addAnnotation(DenteraLocation)
 
         let JoyaLocation = MKPointAnnotation()
-        JoyaLocation.title = "عيادة جويا "
+        JoyaLocation.title = NSLocalizedString("عيادة جويا لطب الأسنان", comment: "")
         JoyaLocation.coordinate = CLLocationCoordinate2D(latitude: 18.2497107, longitude: 42.4584669)
 
         mapView.addAnnotation(JoyaLocation)
 
         let MadarLocation = MKPointAnnotation()
-        MadarLocation.title = "عيادة المدار الطبي"
+        MadarLocation.title = NSLocalizedString("عيادة المدار لطب الأسنان", comment: "")
         MadarLocation.coordinate = CLLocationCoordinate2D(latitude: 18.2077484, longitude: 42.49057)
 
         mapView.addAnnotation(MadarLocation)
 
         let DrSultanLocation = MKPointAnnotation()
-        DrSultanLocation.title = "عيادة برو كلينيك"
+        DrSultanLocation.title = NSLocalizedString("عيادة برو كلينيك", comment: "")
         DrSultanLocation.coordinate = CLLocationCoordinate2D(latitude: 18.2128453, longitude: 42.529654)
 
         mapView.addAnnotation(DrSultanLocation)

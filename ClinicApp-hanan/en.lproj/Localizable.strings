@@ -19,10 +19,55 @@
 "تسجيل الدخول" = "Register" ;
 
 
- "عيادة دنتيرا لطب الأسنان" = "Dental Dentera clinic" ;
+ "عيادة دنتيرا لطب الأسنان" = "Dental Dintera clinic" ;
 "عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;
 "عيادة المدار لطب الأسنان" = "Dental Al-madar Clinic" ;
 "عيادة برو كلينيك" = " Dental Pro clinic" ;
+
+"الإرشادات الطبية" = "Medical Advice" ;
+"خطط الرعاية المنزلية" = "Home Cares" ;
+"ابتسامة هوليود" = "Hollywood Smile" ;
+"علاج أسنان الأطفال" = "Children's dental" ;
+"الحالات الطارئة" = "Pediatric Dentistr" ;
+"تقويم الأسنان" = "Orthodontics" ;
+"تركيبات الفينير" = "veneer structures" ;
+"نزع الأعصاب " = "Disarmament" ;
+"خلع الأسنان" = "tooth extraction" ;
+"الحالات الطارئة" = "Emergency" ;
+"علاج وحشو العصب" = "Nerve filling" ;
+"ازالة الجير" = "lime removal" ;
+"الكشف الروتيني" = "routine detection" ;
+"تركيبات الأسنان الثابتة" = "fixed dentures" ;
+"د.محمد خالد" = "Dr.Mohammad khaled" ;
+"د.رانيا شيخ" = "Dr.Rania shaikh" ;
+"د.مروان معتز" = "Dr.Marwan Moataz" ;
+"د.ماجد فهد" = "Dr.Majed fahad" ;
+"د.ولاء محمد" = "Dr.Walaa Mohammed" ;
+"د.خالد الفهد" = "Dr.Khalid Alfahad" ;
+"د.علاء محمد" = "Dr.Alaa Mohammad" ;
+"د.سامية علي" = "Dr.samia ali" ;
+"د.محمد فارس" = "Dr. Mohanad fares" ;
+"د.هند سامي" = "Dr.Hend sami" ;
+"د.محمد وليد" = "Dr.Mohammed Waleed" ;
+"د.إىمان فلاح" = "Dr.Eman flah" ;
+"د.مجدي خالد" = "Dr.Majdi Khaled" ;
+"د.نور الدين معتز" = "Dr.Noor aldeen" ;
+"د.ليلى نهار" = "Dr.Laila Nahar" ;
+"د.ندى خالد" = "Dr.NADA KHALID" ;
+"د.محمد الحسن" = "Dr.Mohammed AL-Hassan" ;
+"د.عيسى صلاح" = "Dr.Essa Salah" ;
+"د.محمد عطا" = "Dr.Mohammed Atta" ;
+"د.سارة يوسف" = "Dr.Sara Yousef" ;
+
+"٨-٩ ص" = " 8-9 AM" ;
+"١-٣ م" = "1-3 AM" ;
+"١١-١٢ م" = "11-12 AM" ;
+"٤-٥ م" = "4-5 AM" ;
+" ٩-١٠ ص" = " 9-10 AM" ;
+"٦-٧ م" = "6-7 PM" ;
+"١-٢ م" = "1-2 AM" ;
+"٣-٤ م" = "3-4 AM" ;
+"٦-٨ م" = "6-8 AM" ;
 
 
 

@@ -10,14 +10,13 @@
 		729205C95D3AC1CBA1C996AC /* Pods_ClinicApp_hanan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */; };
 		8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4C276093B400E88B70 /* ReservitionsService.swift */; };
 		8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4E2760A76E00E88B70 /* ProfileVC.swift */; };
-		865C3B44275019CA004917CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Date.swift */; };
+		865C3B44275019CA004917CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Service.swift */; };
 		8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8660D367275CAC6400D2CB9B /* Localizable.strings */; };
 		867326F8275F3B990070E172 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F7275F3B990070E172 /* LocationVC.swift */; };
 		867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F9275F907D0070E172 /* NewServiceVC.swift */; };
-		8677993F274E1D1000F46DC0 /* ClinicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677993E274E1D1000F46DC0 /* ClinicData.swift */; };
-		867A1FFB275E25C50027D716 /* ClinicJoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFA275E25C50027D716 /* ClinicJoya.swift */; };
-		867A1FFD275E25F40027D716 /* ClinicAbuHathrah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */; };
-		867A1FFF275E263E0027D716 /* ClinicBro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFE275E263E0027D716 /* ClinicBro.swift */; };
+		867A1FFB275E25C50027D716 /* JoyaClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFA275E25C50027D716 /* JoyaClinic.swift */; };
+		867A1FFD275E25F40027D716 /* ProClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFC275E25F40027D716 /* ProClinic.swift */; };
+		867A1FFF275E263E0027D716 /* ALmdarClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A1FFE275E263E0027D716 /* ALmdarClinic.swift */; };
 		8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7E6274B6C5400097E17 /* AppDelegate.swift */; };
 		8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7E8274B6C5400097E17 /* SceneDelegate.swift */; };
 		8687F7EE274B6C5400097E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8687F7EC274B6C5400097E17 /* Main.storyboard */; };
@@ -27,8 +26,7 @@
 		8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FC274BA0BA00097E17 /* LoginVC.swift */; };
 		8687F7FF274BA11900097E17 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F7FE274BA11900097E17 /* TabVC.swift */; };
 		8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687F802274BA1DF00097E17 /* ClinicVC.swift */; };
-		868B64A42750EA3700293CAF /* ClinicsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A32750EA3700293CAF /* ClinicsService.swift */; };
-		868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A72750F70700293CAF /* ClinicDentera.swift */; };
+		868B64A82750F70700293CAF /* DinteraClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A72750F70700293CAF /* DinteraClinic.swift */; };
 		868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127A274D0FEB004494A2 /* ClinicCell.swift */; };
 		868C127D274D125A004494A2 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127C274D125A004494A2 /* Clinic.swift */; };
 		86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */; };
@@ -39,17 +37,16 @@
 		348B18A0E288D345DD148B53 /* Pods_ClinicApp_hanan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicApp_hanan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8633ED4C276093B400E88B70 /* ReservitionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservitionsService.swift; sourceTree = "<group>"; };
 		8633ED4E2760A76E00E88B70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		865C3B43275019CA004917CF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		865C3B43275019CA004917CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8660D361275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8660D362275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8660D366275CAC6400D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8660D368275CAC6600D2CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		867326F7275F3B990070E172 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		867326F9275F907D0070E172 /* NewServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceVC.swift; sourceTree = "<group>"; tabWidth = 5; };
-		8677993E274E1D1000F46DC0 /* ClinicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicData.swift; sourceTree = "<group>"; };
-		867A1FFA275E25C50027D716 /* ClinicJoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicJoya.swift; sourceTree = "<group>"; };
-		867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAbuHathrah.swift; sourceTree = "<group>"; };
-		867A1FFE275E263E0027D716 /* ClinicBro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicBro.swift; sourceTree = "<group>"; };
+		867A1FFA275E25C50027D716 /* JoyaClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyaClinic.swift; sourceTree = "<group>"; };
+		867A1FFC275E25F40027D716 /* ProClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProClinic.swift; sourceTree = "<group>"; };
+		867A1FFE275E263E0027D716 /* ALmdarClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALmdarClinic.swift; sourceTree = "<group>"; };
 		8687F7E3274B6C5400097E17 /* ClinicApp-hanan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClinicApp-hanan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8687F7E6274B6C5400097E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8687F7E8274B6C5400097E17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +58,7 @@
 		8687F7FC274BA0BA00097E17 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8687F7FE274BA11900097E17 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
 		8687F802274BA1DF00097E17 /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
-		868B64A32750EA3700293CAF /* ClinicsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsService.swift; sourceTree = "<group>"; };
-		868B64A72750F70700293CAF /* ClinicDentera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDentera.swift; sourceTree = "<group>"; };
+		868B64A72750F70700293CAF /* DinteraClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinic.swift; sourceTree = "<group>"; };
 		868C127A274D0FEB004494A2 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
 		868C127C274D125A004494A2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };
@@ -116,11 +112,10 @@
 			children = (
 				8687F802274BA1DF00097E17 /* ClinicVC.swift */,
 				868C127A274D0FEB004494A2 /* ClinicCell.swift */,
-				8677993E274E1D1000F46DC0 /* ClinicData.swift */,
-				868B64A72750F70700293CAF /* ClinicDentera.swift */,
-				867A1FFA275E25C50027D716 /* ClinicJoya.swift */,
-				867A1FFE275E263E0027D716 /* ClinicBro.swift */,
-				867A1FFC275E25F40027D716 /* ClinicAbuHathrah.swift */,
+				868B64A72750F70700293CAF /* DinteraClinic.swift */,
+				867A1FFA275E25C50027D716 /* JoyaClinic.swift */,
+				867A1FFE275E263E0027D716 /* ALmdarClinic.swift */,
+				867A1FFC275E25F40027D716 /* ProClinic.swift */,
 				86779945274E22A900F46DC0 /* Controllers */,
 			);
 			path = Clinics;
@@ -166,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				868C127C274D125A004494A2 /* Clinic.swift */,
-				865C3B43275019CA004917CF /* Date.swift */,
+				865C3B43275019CA004917CF /* Service.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,7 +169,6 @@
 		868B64A92751348200293CAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				868B64A32750EA3700293CAF /* ClinicsService.swift */,
 				8633ED4C276093B400E88B70 /* ReservitionsService.swift */,
 			);
 			path = Services;
@@ -299,24 +293,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */,
-				868B64A42750EA3700293CAF /* ClinicsService.swift in Sources */,
 				868C127D274D125A004494A2 /* Clinic.swift in Sources */,
-				868B64A82750F70700293CAF /* ClinicDentera.swift in Sources */,
+				868B64A82750F70700293CAF /* DinteraClinic.swift in Sources */,
 				8687F7FF274BA11900097E17 /* TabVC.swift in Sources */,
 				8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */,
 				8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */,
 				868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */,
-				867A1FFD275E25F40027D716 /* ClinicAbuHathrah.swift in Sources */,
+				867A1FFD275E25F40027D716 /* ProClinic.swift in Sources */,
 				8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */,
-				865C3B44275019CA004917CF /* Date.swift in Sources */,
+				865C3B44275019CA004917CF /* Service.swift in Sources */,
 				867326F8275F3B990070E172 /* LocationVC.swift in Sources */,
 				86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */,
 				867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */,
 				8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */,
-				8677993F274E1D1000F46DC0 /* ClinicData.swift in Sources */,
-				867A1FFB275E25C50027D716 /* ClinicJoya.swift in Sources */,
+				867A1FFB275E25C50027D716 /* JoyaClinic.swift in Sources */,
 				8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */,
-				867A1FFF275E263E0027D716 /* ClinicBro.swift in Sources */,
+				867A1FFF275E263E0027D716 /* ALmdarClinic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
