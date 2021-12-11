@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var appointment : Array<Mawaid> = []
+    var post : Array<Appointment> = []
     
     
     lazy var serviceTV: UITableView = {
@@ -64,6 +64,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "bgColor")
         
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
         phoneTF.text = name
@@ -101,8 +102,8 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             Button.heightAnchor.constraint(equalToConstant: 40),
             Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
         ])
-        ReservitionsService.shared.listenToMawaid(completion: { mawaid in
-            self.appointment = mawaid
+        ReservitionsService.shared.listenToAppointment(completion: { appointment in
+            self.post = appointment
             self.serviceTV.reloadData()
         })
     }
@@ -117,7 +118,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             "phone" :phoneTF.text as Any,
             "date" :datePicker.date as Any,
              "id"  :currentUserID,
-
+  // Use alert controller
         ],merge: true)
         let alert1 = UIAlertController(
             title: (""),
@@ -148,12 +149,12 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appointment.count
+        return post.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as! NewService
-        let bservice = appointment[indexPath.row]
+        let bservice = post[indexPath.row]
         cell.nameLabel2.text = bservice.bookaservice
         cell.doctorlable.text = bservice.bookadoctor
         cell.timelable.text = bservice.bookatime
@@ -163,7 +164,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let cell = appointment[indexPath.row]
+        let cell = post[indexPath.row]
         let alertcontroller = UIAlertController(title: "Delete"
                             , message: "Are you sure you want to delete?"
                             , preferredStyle: UIAlertController.Style.alert
@@ -230,7 +231,7 @@ class NewService: UITableViewCell {
         contentView.addSubview(nameLabel2)
         contentView.addSubview(doctorlable)
         contentView.addSubview(timelable)
-        
+        contentView.backgroundColor = .white
         contentView.clipsToBounds = true
       }
     

@@ -17,6 +17,7 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "bgColor")
         
       // Use auto layout
         let layout = UICollectionViewFlowLayout()
@@ -56,6 +57,7 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
               return cell
     }
     
+    // use navigation controller
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = clinicList[indexPath.row]
         if indexPath.row == 0 {

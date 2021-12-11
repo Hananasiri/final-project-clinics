@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 
+// Use tab controller
 class TabVC: UITabBarController {
     fileprivate func createNavController(for rootViewController: UIViewController,
                                          title: String,
@@ -15,11 +16,11 @@ class TabVC: UITabBarController {
         let navController = UINavigationController(rootViewController: rootViewController)
 
         navController.tabBarItem.title = title
-        navController.tabBarItem.badgeColor = .blue
+        navController.tabBarItem.badgeColor = UIColor(named: "bgColor")
         navController.tabBarItem.image = image
         navController.tabBarItem.accessibilityTextualContext = .console
         navController.navigationBar.prefersLargeTitles = true
-         rootViewController.navigationItem.title = title
+        rootViewController.navigationItem.title = title
         return navController
     }
     
@@ -44,6 +45,7 @@ class TabVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "bgColor")
         NotificationCenter.default.removeObserver(self)
         UITabBar.appearance().barTintColor = .systemBackground
         tabBar.tintColor = .label

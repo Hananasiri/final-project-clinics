@@ -106,6 +106,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "bgColor")
         
         let name = UserDefaults.standard.value(forKey: "NameTF") as? String
         NameTF.text = name
@@ -162,20 +163,21 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     
     @objc func addService() {
         
+        // use animation
+        addserviceButton.startAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            let newServiceVC = NewServiceVC()
+            self.present( newServiceVC, animated: true, completion: nil)
+        }
+        }
+        
         let name = NameTF.text
         UserDefaults.standard.set(name,forKey: "NameTF")
         
         let address = addressTF.text
         UserDefaults.standard.set(address,forKey: "addressTF")
-        
-        let newServiceVC = NewServiceVC()
-        present( newServiceVC, animated: true, completion: nil)
-        
-        addserviceButton.startAnimation()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
-        }
         
     }
     

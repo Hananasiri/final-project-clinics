@@ -13,28 +13,30 @@ class ReservitionsService {
     
  static let shared = ReservitionsService()
     
- let favoriteCollection = Firestore.firestore().collection("reservations")
+ let serviceCollection = Firestore.firestore().collection("reservations")
     
-    
- func addToprofile(book: Mawaid) {
-     favoriteCollection.document(book.bookaservice).setData([
+    // Added to Appointment:
+ func addToAppointment(book: Appointment) {
+     serviceCollection.document(book.bookaservice).setData([
         "bookaservice" : book.bookaservice,
         "bookadoctor" : book.bookadoctor,
         "bookatime" : book.bookatime
   ])
  }
     
- func listenToMawaid(completion: @escaping (([Mawaid]) -> Void)) {
-   favoriteCollection.addSnapshotListener { snapshot, error in
+    
+    // Listen to Appointment:
+ func listenToAppointment(completion: @escaping (([Appointment]) -> Void)) {
+     serviceCollection.addSnapshotListener { snapshot, error in
    if error != nil {
     return
    }
    guard let documents = snapshot?.documents else { return }
        
-    var statment: Array<Mawaid> = []
+    var statment: Array<Appointment> = []
     for document in documents {
     let data = document.data()
-    let Booked = Mawaid(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
+    let Booked = Appointment(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
                           bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
                           bookatime: (data["bookatime"] as? String) ?? "Nothing")
        

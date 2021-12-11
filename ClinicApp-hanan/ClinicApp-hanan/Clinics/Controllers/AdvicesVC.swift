@@ -5,30 +5,13 @@
 //  Created by  HANAN ASIRI on 24/04/1443 AH.
 //
 
-  import UIKit
-    struct Arr {
-    let name: String
-    let image: String
-     }
+import UIKit
 
 
-let ar = [ Arr(name:NSLocalizedString("استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس", comment: ""), image: "tt"),
-          
-   Arr(name:NSLocalizedString("تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم", comment: ""), image: "tt"),
-   Arr(name:NSLocalizedString("توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية", comment: ""), image: "tt"),
-          
-   Arr(name:NSLocalizedString("يساعد غسول الفم على تقليل نسبة الحمض الموجودة بالفم، وينظف المناطق التي يصعب تنظيفها", comment: ""), image: "tt"),
-          
-   Arr(name:NSLocalizedString("احرص على تناول الأطعمة التي تعزز من صحة الفم والأسنان، مثل منتجات الألبان، والبيض، والبقوليات", comment: ""), image: "tt"),
-          
-   Arr(name:NSLocalizedString("تجنب تناول المشروبات الغازية، وقلل من الشاي، والقهوة", comment: ""), image: "tt"),
-  ]
-
-
-      class AdvicesVC: UIViewController , UITableViewDataSource, UITableViewDelegate {
-        override func viewDidLoad() {
-           super.viewDidLoad()
-     
+class AdvicesVC: UIViewController {
+ override func viewDidLoad() {
+        view.backgroundColor = UIColor(named: "bgColor")
+        super.viewDidLoad()
      
            //table
   let tabelView = UITableView()
@@ -50,6 +33,9 @@ let ar = [ Arr(name:NSLocalizedString("استعمل معجون الأسنان ا
      ])
             
  }
+}
+// use extension
+ extension AdvicesVC: UITableViewDataSource, UITableViewDelegate {
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
   return ar.count
  }
@@ -66,14 +52,13 @@ let ar = [ Arr(name:NSLocalizedString("استعمل معجون الأسنان ا
  }
  //cell class
  class Cell: UITableViewCell {
- 
  let imagecell = UIImageView()
 
      
           let namecell: UILabel = {
           let label = UILabel()
           label.font = UIFont(name: "Light", size: 2)
-          label.textColor = .black
+              label.textColor = .black
           label.textAlignment = .right
           label.numberOfLines = 0
           label.lineBreakMode = .byWordWrapping
@@ -82,9 +67,12 @@ let ar = [ Arr(name:NSLocalizedString("استعمل معجون الأسنان ا
          return label
          
      }()
- override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
- super.init(style: style , reuseIdentifier: reuseIdentifier )
-  imagecell.translatesAutoresizingMaskIntoConstraints = false
+     
+ 
+     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
+     super.init(style: style , reuseIdentifier: reuseIdentifier )
+     contentView.backgroundColor = UIColor(named: "bgColor")
+     imagecell.translatesAutoresizingMaskIntoConstraints = false
 
 
      self.addSubview(imagecell)
@@ -106,4 +94,5 @@ let ar = [ Arr(name:NSLocalizedString("استعمل معجون الأسنان ا
  required init?(coder: NSCoder) {
  super.init(coder: coder)
  }
+ 
  }

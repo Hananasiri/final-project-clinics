@@ -10,12 +10,14 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
+
+//  Add authentication for users
 class LoginVC: UIViewController {
    
 
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named:"ImageSet")
+        imageView.image = UIImage(named:"BB")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .black
@@ -72,20 +74,18 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = UIColor(named: "bgColor")
         
       // useing switch for light and dark mode ..
-        let lable = UILabel()
-        switch traitCollection.userInterfaceStyle {
-        case .unspecified:
-            lable.text = "Light mode"
-        case .dark:
-            lable.text = "Dark mode"
-        @unknown default:
-            lable.text = "unspecified"
-        }
-        
-        view.backgroundColor = .white
+//        let lable = UILabel()
+//        switch traitCollection.userInterfaceStyle {
+//        case .unspecified:
+//            lable.text = "Light mode"
+//        case .dark:
+//            lable.text = "Dark mode"
+//        @unknown default:
+//            lable.text = "unspecified"
+//        }
         
         view.addSubview(emailTF)
         view.addSubview(passwordTF)

@@ -51,7 +51,9 @@ let name: String?
 
    override func viewDidLoad() {
         super.viewDidLoad()
-       navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
+       view.backgroundColor = UIColor(named: "bgColor")
+       
+       navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
      
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let displayWidth: CGFloat = self.view.frame.width
@@ -72,7 +74,7 @@ let name: String?
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DinteraClinicCell", for: indexPath as! IndexPath) as! DinteraClinicCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DinteraClinicCell", for: indexPath ) as! DinteraClinicCell
             let data = list[indexPath.row]
             cell.labelname.text = data.name
             cell.labeldrname.text = data.drname
@@ -82,14 +84,11 @@ let name: String?
             return cell
         }
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           let data = list[indexPath.row]
-            let newVC = ProfileVC()
-         // Use navigationController
-            newVC.navigationItem.largeTitleDisplayMode = .never
-            navigationController?.pushViewController(newVC,animated: true)
-        
+        let data = list[indexPath.row]
+        let newVC = NewServiceVC()
+         newVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(newVC,animated: true)
     
-
          }
          }
 
@@ -131,6 +130,7 @@ class DinteraClinicCell: UITableViewCell {
     
    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+       
     contentView.backgroundColor = .white
     contentView.addSubview(labelname)
     contentView.addSubview(labeldrname)
@@ -176,7 +176,7 @@ class DinteraClinicCell: UITableViewCell {
         let servicetype1 = labelname.text ??  ""
         let servicedtype2 = labeldrname.text ?? ""
         let servicetype3 = labeltime.text ?? ""
-        ReservitionsService.shared.addToprofile(book: Mawaid(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
+        ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
 
         }
     

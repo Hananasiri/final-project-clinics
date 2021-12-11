@@ -11,6 +11,7 @@
 		8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4C276093B400E88B70 /* ReservitionsService.swift */; };
 		8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4E2760A76E00E88B70 /* ProfileVC.swift */; };
 		865C3B44275019CA004917CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Service.swift */; };
+		865CC3DF2764FE9400A7A8BD /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC3DE2764FE9400A7A8BD /* Advice.swift */; };
 		8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8660D367275CAC6400D2CB9B /* Localizable.strings */; };
 		867326F8275F3B990070E172 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F7275F3B990070E172 /* LocationVC.swift */; };
 		867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F9275F907D0070E172 /* NewServiceVC.swift */; };
@@ -38,6 +39,7 @@
 		8633ED4C276093B400E88B70 /* ReservitionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservitionsService.swift; sourceTree = "<group>"; };
 		8633ED4E2760A76E00E88B70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		865C3B43275019CA004917CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		865CC3DE2764FE9400A7A8BD /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 		8660D361275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8660D362275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8660D366275CAC6400D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				868C127C274D125A004494A2 /* Clinic.swift */,
 				865C3B43275019CA004917CF /* Service.swift */,
+				865CC3DE2764FE9400A7A8BD /* Advice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */,
 				865C3B44275019CA004917CF /* Service.swift in Sources */,
 				867326F8275F3B990070E172 /* LocationVC.swift in Sources */,
+				865CC3DF2764FE9400A7A8BD /* Advice.swift in Sources */,
 				86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */,
 				867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */,
 				8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Mawaid {
+struct Appointment {
     
   var bookaservice: String
   var bookadoctor: String

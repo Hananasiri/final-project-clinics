@@ -30,7 +30,8 @@ import FirebaseFirestore
 
      override func viewDidLoad() {
           super.viewDidLoad()
-         navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
+         view.backgroundColor = UIColor(named: "bgColor")
+         navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
        
           let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
           let displayWidth: CGFloat = self.view.frame.width
@@ -152,7 +153,7 @@ import FirebaseFirestore
             let servicetype1 = labelname.text ??  ""
             let servicedtype2 = labeldrname.text ?? ""
             let servicetype3 = labeltime.text ?? ""
-            ReservitionsService.shared.addToprofile(book: Mawaid(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
+            ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
 
             }
         

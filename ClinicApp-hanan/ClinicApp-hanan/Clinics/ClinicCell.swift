@@ -39,10 +39,8 @@ class ClinicCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
-        
         super.init(frame: frame)
-
-       
+        contentView.backgroundColor = UIColor(named: "bgColor")
         contentView.addSubview(myImage)
         contentView.addSubview(myLabel)
         contentView.clipsToBounds = true
@@ -55,6 +53,7 @@ class ClinicCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundColor = UIColor(named: "bgColor")
         
         myImage.frame = CGRect(x: 1,
                                y: 10 ,
