@@ -15,6 +15,14 @@ class ReservitionsService {
     
  let serviceCollection = Firestore.firestore().collection("reservations")
     
+    //  // Update to Appointment:
+//    func updateOrAdd(book: Appointment) {
+//        serviceCollection.document(book.bookaservice,
+//           "bookadoctor" : book.bookadoctor,
+//           "bookatime" : book.bookatime
+//        ], merge: true)
+//    }
+    
     // Added to Appointment:
  func addToAppointment(book: Appointment) {
      serviceCollection.document(book.bookaservice).setData([

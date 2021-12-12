@@ -9,7 +9,13 @@ import UIKit
   struct Advice {
   let name: String
   let image: String
+      
+// A computed property
+  var filename: String {
+  return name + ""
    }
+   }
+
 
 
 let ar = [ Advice(name:NSLocalizedString("استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس", comment: ""), image: "tt"),

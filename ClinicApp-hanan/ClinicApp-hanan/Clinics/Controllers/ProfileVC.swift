@@ -85,7 +85,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let b = TransitionButton()
         b.addTarget(self, action: #selector(addService), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle(NSLocalizedString("مواعيدي", comment: ""), for: .normal)
+        b.setTitle(NSLocalizedString("إرشادات طبية", comment: ""), for: .normal)
         b.layer.cornerRadius = 20
         b.backgroundColor = .blue
         return b
@@ -168,7 +168,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            let newServiceVC = NewServiceVC()
+            let newServiceVC = AdvicesVC()
             self.present( newServiceVC, animated: true, completion: nil)
         }
         }

@@ -12,6 +12,7 @@ class AdvicesVC: UIViewController {
  override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
+
      
            //table
   let tabelView = UITableView()
@@ -39,6 +40,7 @@ class AdvicesVC: UIViewController {
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
   return ar.count
  }
+    
  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let r = ar[indexPath.row]
  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Cell

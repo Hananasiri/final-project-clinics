@@ -10,6 +10,7 @@
 "إرشادات طبية" = "Medical advice" ;
 "الملف الشخصي" = "Profile" ;
 "مواعيدي" = "My Appointments";
+"مواقع العيادات" = "Clinics Locations" ;
 
 "حفظ معلوماتك" = "Save your information" ;
 "تفضل بإدخال رقم جوالك" = "Enter your phone number" ;
@@ -18,47 +19,84 @@
 "دخول" = "Login" ;
 "تسجيل الدخول" = "Register" ;
 "رجوع" = "Back" ;
+"حجز" = "Add" ;
 
 
  "عيادة دنتيرا لطب الأسنان" = "Dental Dintera clinic" ;
 "عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;
 "عيادة المدار لطب الأسنان" = "Dental Al-madar Clinic" ;
 "عيادة برو كلينيك" = " Dental Pro clinic" ;
+"عيادة دنتيرا" = "Dintera Dental" ;
+"عيادة جويا" = "Joya Dental" ;
+"عيادة المدار" = "Almadar Dental" ;
+"عيادة برو كلينيك" = "Proclinic Dental" ;
+
+
+
 
 "الإرشادات الطبية" = "Medical Advice" ;
+"دنتيرا-إرشادات طبية" = "Dentera-advices" ;
 "خطط الرعاية المنزلية" = "Home Cares" ;
 "ابتسامة هوليود" = "Hollywood Smile" ;
+"دنتيرا-ابتسامة هوليود" = "Dentera-S Hollywood" ;
+"جويا-ابتسامة هوليود" = "Joya-S Hollywood" ;
+"المدار-خلع أسنان" = "Madar-tooth extraction" ;
 "علاج أسنان الأطفال" = "Children's dental" ;
 "الحالات الطارئة" = "Pediatric Dentistr" ;
+"دنتيرا-الحالات الطارئة" = "Dentera-Emergency" ;
+"جويا-الحالات الطارئة" = "Joya-Emergency" ;
+"جويا-تركيبات الأسنان" = "Joya-tooth install" ;
 "تقويم الأسنان" = "Orthodontics" ;
+"دنتيرا-تقويم الأسنان" = "Dentera-Orthodontics" ;
+"جويا-تقويم الأسنان" = "Joya-orthodontics" ;
+"المدار-تقويم الأسنان" = "Madar-orthodontics" ;
+"المدار-مراجعة دورية" = "Madar-periodic review";
+"المدار-ابتسامة هوليود" = "Madar-S Hollywood" ;
+"برو-تقويم الأسنان" = "Pro-orthodontics" ;
+"المدار-الحالات الطارئة" = "Madar-Emergency" ;
+"المدار-نزع العصب" = "Madar-Disarmament" ;
+"بروكلينيك-قسم الأطفال" = "Proclinic-Children" ;
+"بروكلينيك-ابتسامة هوليود" = "Proclinic-S Hollywood" ;
+"بروكلينيك-تقويم أسنان" = "Proclinic-Orthodontics" ;
+"بروكلينيك-الكشف الروتيني" = "Proclinic-Appointment" ;
+"بروكلينيك-علاج العصب" = "Proclinic-Disarmament" ;
+
 "تركيبات الفينير" = "veneer structures" ;
 "نزع الأعصاب " = "Disarmament" ;
+"دنتيرا-نزع العصب" = "Dentera-Disarmament" ;
+"جويا-نزع العصب" = "Joya-Disarmament" ;
 "خلع الأسنان" = "tooth extraction" ;
 "الحالات الطارئة" = "Emergency" ;
-"علاج وحشو العصب" = "Nerve filling" ;
+"علاج العصب" = "Nerve filling" ;
 "ازالة الجير" = "lime removal" ;
 "الكشف الروتيني" = "routine detection" ;
-"تركيبات الأسنان الثابتة" = "fixed dentures" ;
-"د.محمد خالد" = "Dr.Mohammad khaled" ;
-"د.رانيا شيخ" = "Dr.Rania shaikh" ;
-"د.مروان معتز" = "Dr.Marwan Moataz" ;
-"د.ماجد فهد" = "Dr.Majed fahad" ;
-"د.ولاء محمد" = "Dr.Walaa Mohammed" ;
-"د.خالد الفهد" = "Dr.Khalid Alfahad" ;
-"د.علاء محمد" = "Dr.Alaa Mohammad" ;
-"د.سامية علي" = "Dr.samia ali" ;
-"د.محمد فارس" = "Dr. Mohanad fares" ;
-"د.هند سامي" = "Dr.Hend sami" ;
-"د.محمد وليد" = "Dr.Mohammed Waleed" ;
-"د.إىمان فلاح" = "Dr.Eman flah" ;
-"د.مجدي خالد" = "Dr.Majdi Khaled" ;
-"د.نور الدين معتز" = "Dr.Noor aldeen" ;
-"د.ليلى نهار" = "Dr.Laila Nahar" ;
-"د.ندى خالد" = "Dr.NADA KHALID" ;
-"د.محمد الحسن" = "Dr.Mohammed AL-Hassan" ;
-"د.عيسى صلاح" = "Dr.Essa Salah" ;
-"د.محمد عطا" = "Dr.Mohammed Atta" ;
-"د.سارة يوسف" = "Dr.Sara Yousef" ;
+"تركيبات الأسنان" = "fixed dentures" ;
+"المراجعات الدورية" = "Periodic reviews" ;
+"د.علي الحسن" = "Dr.Ali" ;
+"د.علي خالد" = "Dr.Ali khaled" ;
+"د.رانيا شيخ" = "Dr.Rania " ;
+"د.مروان معتز" = "Dr.Marwan " ;
+"د.ماجد فهد" = "Dr.Majed " ;
+"د.ولاء عز" =  "Dr.Walaa" ;
+"د.خالد الفهد" = "Dr.Khalid" ;
+"د.نور علي" = "Dr.Noor " ;
+"د.علاء مجد" = "Dr.Alaa " ;
+"د.سامية علي" = "Dr.samia " ;
+"د.محمد فارس" = "Dr. Mohanad " ;
+"د.هند سامي" = "Dr.Hend " ;
+"د.محمد وليد" = "Dr.Mohammed " ;
+"د.إىمان فلاح" = "Dr.Eman " ;
+"د.مجدي خالد" = "Dr.Majdi " ;
+"د.نور الدين معتز" = "Dr.Noor " ;
+"د.ليلى نهار" = "Dr.Laila " ;
+"د.فارس سعد" = "Dr.Fares" ;
+"د.ندى خالد" = "Dr.Nada" ;
+"د.محمد الحسن" = "Dr.Mohammed " ;
+"د.عيسى صلاح" = "Dr.Essa " ;
+"د.محمد عطا" = "Dr.Mohammed " ;
+"د.سارة يوسف" = "Dr.Sara " ;
+"د.ناجي فارس" = "Dr.Naji" ;
+"د.فهد وليد" = "DR.Fahad" ;
 
 "٨-٩ ص" = " 8-9 AM" ;
 "١-٣ م" = "1-3 AM" ;
@@ -69,6 +107,7 @@
 "١-٢ م" = "1-2 AM" ;
 "٣-٤ م" = "3-4 AM" ;
 "٦-٨ م" = "6-8 AM" ;
+"٩-١٠ ص" = "9-10 AM" ;
 
 
 

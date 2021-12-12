@@ -32,25 +32,26 @@ let name: String?
   var myTableView: UITableView!
      
      var list =  [
-                   service(name:NSLocalizedString("الإرشادات الطبية", comment: ""), drname:NSLocalizedString("د.محمد خالد", comment: ""),
+                   service(name:NSLocalizedString("دنتيرا-إرشادات طبية", comment: ""), drname:NSLocalizedString("د.علي خالد", comment: ""),
                            time:NSLocalizedString("٨-٩ ص", comment: "") ),
                    
-                   service(name:NSLocalizedString("خطط الرعاية المنزلية", comment: ""), drname:NSLocalizedString("د.رانيا شيخ", comment: ""),
+                   service(name:NSLocalizedString("دنتيرا-نزع العصب", comment: ""), drname:NSLocalizedString("د.رانيا شيخ", comment: ""),
                            time:NSLocalizedString("١-٣ م", comment: "") ),
                    
-                   service(name:NSLocalizedString("ابتسامة هوليود", comment: ""), drname:NSLocalizedString("د.مروان معتز", comment: ""),
+                   service(name:NSLocalizedString("دنتيرا-ابتسامة هوليود", comment: ""), drname:NSLocalizedString("د.مروان معتز", comment: ""),
                            time:NSLocalizedString("١١-١٢ م", comment: "") ),
                    
-                   service(name:NSLocalizedString("علاج أسنان الأطفال", comment: ""), drname:NSLocalizedString("د.ماجد فهد", comment: ""),
+                   service(name:NSLocalizedString("دنتيرا-الحالات الطارئة", comment: ""), drname:NSLocalizedString("د.ماجد فهد", comment: ""),
                            time:NSLocalizedString("٤-٥ م", comment: "") ),
                    
-                   service(name:NSLocalizedString( "الحالات الطارئة", comment: ""), drname:NSLocalizedString("د.ولاء محمد", comment: ""),
+                   service(name:NSLocalizedString( "دنتيرا-تقويم الأسنان", comment: ""), drname:NSLocalizedString("د.ولاء عز", comment: ""),
                            time:NSLocalizedString(" ٩-١٠ ص", comment: "") ),
      ]
   
 
    override func viewDidLoad() {
         super.viewDidLoad()
+       title = NSLocalizedString("عيادة دنتيرا", comment: "")
        view.backgroundColor = UIColor(named: "bgColor")
        
        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
@@ -113,20 +114,20 @@ class DinteraClinicCell: UITableViewCell {
     
     public let labeltime: UILabel = {
      let label = UILabel()
-     label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+     label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
      label.textColor = UIColor(red: (10/255), green: (47/255), blue: (67/255), alpha: 1)
      return label
     }()
     
     let button: UIButton = {
-           let btn = UIButton()
-              btn.setTitle("حجز", for: .normal)
-              btn.backgroundColor = .systemPink
-              btn.layer.cornerRadius = 7
-              btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-              btn.addTarget(self, action: #selector(addData), for: .touchUpInside)
-                return btn
-            }()
+        let btn = UIButton()
+        btn.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
+        btn.backgroundColor = .systemPink
+        btn.layer.cornerRadius = 7
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.addTarget(self, action: #selector(addData), for: .touchUpInside)
+        return btn
+        }()
     
    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -146,24 +147,26 @@ class DinteraClinicCell: UITableViewCell {
   override func layoutSubviews() {
       
     super.layoutSubviews()
-      labelname.frame = CGRect(x: -120,
-                 y: 10,
-                 width: 500,
-                 height: contentView.frame.size.height-30)
-        
-      labeldrname.frame = CGRect(x: -250,
-                   y: 10,
-                   width: 500,
-                   height: contentView.frame.size.height-30)
-        
-      labeltime.frame = CGRect(x: -350,
-                   y: 10,
-                   width: 500,
-                   height: contentView.frame.size.height-30)
-        
+     labelname.translatesAutoresizingMaskIntoConstraints = false
+     labelname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+     labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 220).isActive = true
+      labelname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
+      
+      
+      labeldrname.translatesAutoresizingMaskIntoConstraints = false
+      labeldrname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+      labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 120).isActive = true
+      labeldrname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
+      
+      labeltime.translatesAutoresizingMaskIntoConstraints = false
+      labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+      labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 60).isActive = true
+      labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
+      
+
         button.frame = CGRect(x: 10,
                       y: 20,
-                      width: 90,
+                      width: 40,
                       height: contentView.frame.size.height-30)
         
       
@@ -177,9 +180,28 @@ class DinteraClinicCell: UITableViewCell {
         let servicedtype2 = labeldrname.text ?? ""
         let servicetype3 = labeltime.text ?? ""
         ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
+        
+        let alert1 = UIAlertController(
+            title: (""),
+            message: "هل أنت متأكد من حفظ معلومات حجزك؟",
+            preferredStyle: .alert)
+        alert1.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { action in
+                    print("OK")
+                }
+               )
+            )
+       //self.present(alert1, animated: true, completion: nil)
 
-        }
+     
     
-       }
-
+      }
+    @objc func upDate() {
+        let appointment = Appointment(bookaservice: "", bookadoctor: "", bookatime: "")
+        ReservitionsService.shared.addToAppointment(book: appointment)
+    }
+}
 
