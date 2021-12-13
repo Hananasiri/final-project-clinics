@@ -76,7 +76,7 @@ import FirebaseFirestore
   class JoyaClinicCell: UITableViewCell {
 
     static let identifire = "Cell"
-      
+      // Use labels
       public let labelname: UILabel = {
        let label = UILabel()
        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
@@ -101,8 +101,8 @@ import FirebaseFirestore
       let button: UIButton = {
           let btn = UIButton()
           btn.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
-          btn.backgroundColor = .systemPink
-          btn.layer.cornerRadius = 7
+          btn.setImage(UIImage(systemName: "circle"), for: .normal)
+          btn.layer.cornerRadius = 15
           btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
           btn.addTarget(self, action: #selector(addData), for: .touchUpInside)
           return btn
@@ -142,23 +142,31 @@ import FirebaseFirestore
           labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
           
 
-            button.frame = CGRect(x: 10,
-                          y: 20,
-                          width: 40,
-                          height: contentView.frame.size.height-30)
+          button.frame = CGRect(x: 10,
+                        y: 10,
+                        width: 40,
+                        height: contentView.frame.size.height-10)
             
           
            }
         
         var distraint: service?
         
-        @objc func addData() {
-            
-            let servicetype1 = labelname.text ??  ""
-            let servicedtype2 = labeldrname.text ?? ""
-            let servicetype3 = labeltime.text ?? ""
-            ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
-
-            }
-        
-           }
+      @objc func addData() {
+          
+          if isActive {
+                isActive = true
+              button.setImage(UIImage(named: "circle"), for: .normal)
+              } else {
+                  isActive = false
+              button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
+              }
+          
+          let servicetype1 = labelname.text ??  ""
+          let servicedtype2 = labeldrname.text ?? ""
+          let servicetype3 = labeltime.text ?? ""
+          ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
+          
+       
+      }
+      }

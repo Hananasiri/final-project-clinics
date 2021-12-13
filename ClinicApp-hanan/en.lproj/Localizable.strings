@@ -5,12 +5,16 @@
   Created by  HANAN ASIRI on 01/05/1443 AH.
   
 */
+
+// Internationalization & Localization (e.g. Arabic/English language
 "العيادات" = "Clinics" ;
 "المواعيد" = "Appointments" ;
 "إرشادات طبية" = "Medical advice" ;
 "الملف الشخصي" = "Profile" ;
 "مواعيدي" = "My Appointments";
 "مواقع العيادات" = "Clinics Locations" ;
+"تفضل بإدخال اسمك" = "Enter your name" ;
+"تفضل بإدخال عنوانك" = "Enter your Address" ;
 
 "حفظ معلوماتك" = "Save your information" ;
 "تفضل بإدخال رقم جوالك" = "Enter your phone number" ;

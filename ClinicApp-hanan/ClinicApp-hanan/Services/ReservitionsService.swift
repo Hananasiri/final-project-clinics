@@ -14,23 +14,15 @@ class ReservitionsService {
  static let shared = ReservitionsService()
     
  let serviceCollection = Firestore.firestore().collection("reservations")
-    
-    //  // Update to Appointment:
-//    func updateOrAdd(book: Appointment) {
-//        serviceCollection.document(book.bookaservice,
-//           "bookadoctor" : book.bookadoctor,
-//           "bookatime" : book.bookatime
-//        ], merge: true)
-//    }
-    
-    // Added to Appointment:
+
+    // Added - Update to Appointment:
  func addToAppointment(book: Appointment) {
      serviceCollection.document(book.bookaservice).setData([
         "bookaservice" : book.bookaservice,
         "bookadoctor" : book.bookadoctor,
         "bookatime" : book.bookatime
-  ])
- }
+     ], merge: true)
+     }
     
     
     // Listen to Appointment:
@@ -42,6 +34,7 @@ class ReservitionsService {
    guard let documents = snapshot?.documents else { return }
        
     var statment: Array<Appointment> = []
+         // Use loops
     for document in documents {
     let data = document.data()
     let Booked = Appointment(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",

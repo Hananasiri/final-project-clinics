@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+// Use structs
 struct Clinic {
     
     let name: String
@@ -25,3 +25,5 @@ let clinicList = [Clinic(name:NSLocalizedString("عيادة دنتيرا لطب 
 ]
  // Dictionary for ClinicList
 var Dictonary: [String: Int] = ["مساعد طبيب أسنان": 1  , "مساعد استشاري أسنان": 2]
+// Use Sets for clinics
+let names: Set = ["عيادة دنتيرا", "عيادة جويا" , "عيادة بروكلينيك", "عيادة المدار"]

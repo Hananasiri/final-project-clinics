@@ -14,7 +14,7 @@ class AdvicesVC: UIViewController {
         super.viewDidLoad()
 
      
-           //table
+ // Use table views
   let tabelView = UITableView()
   tabelView.dataSource = self
   tabelView.delegate = self

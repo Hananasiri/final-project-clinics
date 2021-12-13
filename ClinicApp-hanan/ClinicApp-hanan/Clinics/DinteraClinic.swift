@@ -8,6 +8,8 @@
 import UIKit
 import FirebaseFirestore
 
+var isActive:Bool = false
+
 // use protocol with struct ..
 
 protocol someDelegate {
@@ -118,13 +120,12 @@ class DinteraClinicCell: UITableViewCell {
      label.textColor = UIColor(red: (10/255), green: (47/255), blue: (67/255), alpha: 1)
      return label
     }()
-    
+    //  Use button
     let button: UIButton = {
         let btn = UIButton()
-        btn.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
-        btn.backgroundColor = .systemPink
-        btn.layer.cornerRadius = 7
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.layer.cornerRadius = 15
+        btn.setImage(UIImage(systemName: "circle"), for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         btn.addTarget(self, action: #selector(addData), for: .touchUpInside)
         return btn
         }()
@@ -132,7 +133,7 @@ class DinteraClinicCell: UITableViewCell {
    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
        
-    contentView.backgroundColor = .white
+   contentView.backgroundColor =  UIColor(named: "bgColor")
     contentView.addSubview(labelname)
     contentView.addSubview(labeldrname)
     contentView.addSubview(labeltime)
@@ -165,9 +166,9 @@ class DinteraClinicCell: UITableViewCell {
       
 
         button.frame = CGRect(x: 10,
-                      y: 20,
+                      y: 10,
                       width: 40,
-                      height: contentView.frame.size.height-30)
+                      height: contentView.frame.size.height-10)
         
       
        }
@@ -175,33 +176,21 @@ class DinteraClinicCell: UITableViewCell {
     var distraint: service?
     
     @objc func addData() {
+        //  Use conditionals if
+        if isActive {
+              isActive = true
+            button.setImage(UIImage(named: "circle"), for: .normal)
+            } else {
+                isActive = false
+            button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
+            }
         
         let servicetype1 = labelname.text ??  ""
         let servicedtype2 = labeldrname.text ?? ""
         let servicetype3 = labeltime.text ?? ""
         ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
         
-        let alert1 = UIAlertController(
-            title: (""),
-            message: "هل أنت متأكد من حفظ معلومات حجزك؟",
-            preferredStyle: .alert)
-        alert1.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: .default,
-                handler: { action in
-                    print("OK")
-                }
-               )
-            )
-       //self.present(alert1, animated: true, completion: nil)
-
      
-    
-      }
-    @objc func upDate() {
-        let appointment = Appointment(bookaservice: "", bookadoctor: "", bookatime: "")
-        ReservitionsService.shared.addToAppointment(book: appointment)
     }
-}
+    }
 

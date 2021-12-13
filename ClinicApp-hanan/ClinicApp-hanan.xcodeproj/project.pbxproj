@@ -60,7 +60,7 @@
 		8687F7FC274BA0BA00097E17 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8687F7FE274BA11900097E17 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
 		8687F802274BA1DF00097E17 /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
-		868B64A72750F70700293CAF /* DinteraClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinic.swift; sourceTree = "<group>"; };
+		868B64A72750F70700293CAF /* DinteraClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinic.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		868C127A274D0FEB004494A2 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
 		868C127C274D125A004494A2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };

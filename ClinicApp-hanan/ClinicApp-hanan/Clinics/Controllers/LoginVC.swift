@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 
 //  Add authentication for users
+// Use classes with an initializer
 class LoginVC: UIViewController {
    
 
@@ -76,16 +77,16 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
         
-      // useing switch for light and dark mode ..
-//        let lable = UILabel()
-//        switch traitCollection.userInterfaceStyle {
-//        case .unspecified:
-//            lable.text = "Light mode"
-//        case .dark:
-//            lable.text = "Dark mode"
-//        @unknown default:
-//            lable.text = "unspecified"
-//        }
+       // useing switch conditionals for light and dark mode ..
+        let lable = UILabel()
+        switch traitCollection.userInterfaceStyle {
+        case .unspecified:
+            lable.text = "Light mode"
+        case .dark:
+            lable.text = "Dark mode"
+        @unknown default:
+            lable.text = "unspecified"
+        }
         
         view.addSubview(emailTF)
         view.addSubview(passwordTF)

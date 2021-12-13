@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Use structs
 struct Appointment {
     
   var bookaservice: String

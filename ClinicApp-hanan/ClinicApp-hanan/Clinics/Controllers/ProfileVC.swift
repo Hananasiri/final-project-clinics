@@ -31,7 +31,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     }
     }
 
-  
+  //  Use image views
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "BB")
@@ -57,7 +57,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         tf.backgroundColor = .systemGray5
         tf.layer.cornerRadius = 12
         tf.textAlignment = .right
-        tf.placeholder = "تفضل بإدخال اسمك"
+        tf.placeholder = NSLocalizedString("تفضل بإدخال اسمك", comment: "")
         return tf
     }()
     var addressTF: UITextField = {
@@ -66,7 +66,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         tf.layer.cornerRadius = 12
         tf.backgroundColor = .systemGray5
         tf.textAlignment = .right
-        tf.placeholder = "تفضل بإدخال عنوانك"
+        tf.placeholder = NSLocalizedString("تفضل بإدخال عنوانك", comment: "")
         return tf
     }()
 
@@ -85,9 +85,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let b = TransitionButton()
         b.addTarget(self, action: #selector(addService), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle(NSLocalizedString("إرشادات طبية", comment: ""), for: .normal)
+        b.setTitle(NSLocalizedString("حفظ", comment: ""), for: .normal)
+        b.setTitleColor(UIColor.black, for: .normal)
         b.layer.cornerRadius = 20
-        b.backgroundColor = .blue
+        b.backgroundColor = .systemTeal
         return b
     }()
     
@@ -113,12 +114,11 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         
         let address = UserDefaults.standard.value(forKey: "addressTF") as? String
         addressTF.text = address
-        
+        //  gesture recognizer
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         imageView.addGestureRecognizer(tapRecognizer)
         
        
-        view.backgroundColor = .white
         view.addSubview(imageView)
         view.addSubview(NameTF)
         view.addSubview(addressTF)
@@ -145,14 +145,19 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             addressTF.widthAnchor.constraint(equalToConstant: 290),
 
           
-            addserviceButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 120),
-            addserviceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
-            addserviceButton.widthAnchor.constraint(equalToConstant: 150),
+//            addserviceButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 120),
+//            addserviceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
+//            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+//            addserviceButton.heightAnchor.constraint(equalToConstant: 48),
+            
+            addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 50),
             addserviceButton.heightAnchor.constraint(equalToConstant: 48),
+            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 30),
+            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 15),
             Button1.heightAnchor.constraint(equalToConstant: 48),
             Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
@@ -168,8 +173,8 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            let newServiceVC = AdvicesVC()
-            self.present( newServiceVC, animated: true, completion: nil)
+            //let newServiceVC = ProfileVC()
+            //self.present( newServiceVC, animated: true, completion: nil)
         }
         }
         

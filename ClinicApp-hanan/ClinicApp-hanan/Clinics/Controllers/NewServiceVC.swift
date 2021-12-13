@@ -12,9 +12,9 @@ import Firebase
 import FirebaseFirestore
 
 class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    //setUse arrays
     var post : Array<Appointment> = []
-    
+    var time = NSDate()
     
     lazy var serviceTV: UITableView = {
         let t = UITableView()
@@ -25,7 +25,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return t
     }()
     
-    lazy var datePicker: UIDatePicker = {
+    var datePicker: UIDatePicker = {
         let dp = UIDatePicker()
         dp.translatesAutoresizingMaskIntoConstraints = false
         dp.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
@@ -69,6 +69,8 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
         phoneTF.text = name
         
+        _ = UserDefaults.standard.value(forKey: "datePicker") as? NSDate
+       
         
         view.addSubview(serviceTV)
         NSLayoutConstraint.activate([
@@ -111,7 +113,9 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @objc func saveButtone() {
         let name = phoneTF.text
+        _ = datePicker.date
         UserDefaults.standard.set(name,forKey: "phoneTF")
+        UserDefaults.standard.set(name,forKey: "datePicker")
         
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore().document("services/\(currentUserID)").setData([
@@ -165,6 +169,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let cell = post[indexPath.row]
+        // Use alert controller
         let alertcontroller = UIAlertController(title: "Delete"
                             , message: "Are you sure you want to delete?"
                             , preferredStyle: UIAlertController.Style.alert
@@ -194,7 +199,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
 
 class NewService: UITableViewCell {
-    
+    var note: Appointment?
     static let identfir = "ServiceCell"
     
     
@@ -227,11 +232,11 @@ class NewService: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = UIColor(named: "bgColor")
 
         contentView.addSubview(nameLabel2)
         contentView.addSubview(doctorlable)
         contentView.addSubview(timelable)
-        contentView.backgroundColor = .white
         contentView.clipsToBounds = true
       }
     
@@ -256,4 +261,5 @@ class NewService: UITableViewCell {
                 width: 500,
                 height: contentView.frame.size.height-20)
        }
+    
     }

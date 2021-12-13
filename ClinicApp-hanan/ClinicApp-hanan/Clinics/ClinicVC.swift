@@ -9,7 +9,7 @@ import UIKit
 
 class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     
-   
+   // Use collecton views
     private var ClinicC: UICollectionView?
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

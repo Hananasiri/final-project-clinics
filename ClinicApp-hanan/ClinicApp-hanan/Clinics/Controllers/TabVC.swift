@@ -45,7 +45,6 @@ class TabVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = UIColor(named: "bgColor")
         NotificationCenter.default.removeObserver(self)
         UITabBar.appearance().barTintColor = .systemBackground
         tabBar.tintColor = .label
