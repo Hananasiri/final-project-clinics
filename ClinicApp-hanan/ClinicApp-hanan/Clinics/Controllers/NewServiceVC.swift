@@ -48,9 +48,9 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     let Button : UIButton = {
         $0.backgroundColor = .red
         $0.setTitle(NSLocalizedString("حفظ معلوماتك", comment: ""), for: .normal)
-        $0.tintColor = .blue
+        $0.tintColor = .white
         $0.layer.cornerRadius = 20
-        $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .light)
+        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .black)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(saveButtone), for: .touchUpInside)
         return $0
@@ -248,15 +248,15 @@ class NewService: UITableViewCell {
         super.layoutSubviews()
         // x: right and left
         // y: up and down
-        nameLabel2.frame = CGRect(x: -120,
+        nameLabel2.frame = CGRect(x: -150,
               y: 10,
               width: 500,
               height: contentView.frame.size.height-20)
-          doctorlable.frame = CGRect(x: -270,
+          doctorlable.frame = CGRect(x: -290,
                 y: 10,
                 width: 500,
                 height: contentView.frame.size.height-20)
-          timelable.frame = CGRect(x: -370,
+          timelable.frame = CGRect(x: -390,
                 y: 10,
                 width: 500,
                 height: contentView.frame.size.height-20)

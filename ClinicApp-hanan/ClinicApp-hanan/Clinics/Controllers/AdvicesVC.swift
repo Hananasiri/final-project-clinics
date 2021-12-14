@@ -19,7 +19,6 @@ class AdvicesVC: UIViewController {
   tabelView.dataSource = self
   tabelView.delegate = self
   tabelView.register(Cell.self, forCellReuseIdentifier: "cell")
-  tabelView.backgroundColor = .white
   tabelView.rowHeight = 80
   tabelView.translatesAutoresizingMaskIntoConstraints = false
   
@@ -60,8 +59,8 @@ class AdvicesVC: UIViewController {
           let namecell: UILabel = {
           let label = UILabel()
           label.font = UIFont(name: "Light", size: 2)
-              label.textColor = .black
-          label.textAlignment = .right
+          label.textColor = .black
+              label.textAlignment = .right
           label.numberOfLines = 0
           label.lineBreakMode = .byWordWrapping
           label.frame.size.width = 300
@@ -88,7 +87,7 @@ class AdvicesVC: UIViewController {
   NSLayoutConstraint.activate(
   [
     namecell.centerYAnchor.constraint(equalTo: centerYAnchor),
-   namecell.rightAnchor.constraint(equalTo: imagecell.rightAnchor , constant: -94),
+   namecell.rightAnchor.constraint(equalTo: imagecell.rightAnchor , constant:-90),
    namecell.heightAnchor.constraint(equalToConstant: 200),
    namecell.widthAnchor.constraint(equalToConstant: 280),
   ])

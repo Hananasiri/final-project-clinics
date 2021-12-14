@@ -24,7 +24,6 @@ class ReservitionsService {
      ], merge: true)
      }
     
-    
     // Listen to Appointment:
  func listenToAppointment(completion: @escaping (([Appointment]) -> Void)) {
      serviceCollection.addSnapshotListener { snapshot, error in
@@ -38,11 +37,8 @@ class ReservitionsService {
     for document in documents {
     let data = document.data()
     let Booked = Appointment(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
-                          bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
-                          bookatime: (data["bookatime"] as? String) ?? "Nothing")
-       
-
-   
+    bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
+    bookatime: (data["bookatime"] as? String) ?? "Nothing")
   statment.append(Booked)
    }
    completion(statment)

@@ -12,7 +12,8 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
    // Use collecton views
     private var ClinicC: UICollectionView?
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+           UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            return CGSize(width: 210, height: 240)
     }
     override func viewDidLoad() {
@@ -91,4 +92,6 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
         }
     
        }
+    
+    
        }

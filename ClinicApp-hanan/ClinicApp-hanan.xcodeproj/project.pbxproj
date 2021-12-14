@@ -12,6 +12,10 @@
 		8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4E2760A76E00E88B70 /* ProfileVC.swift */; };
 		865C3B44275019CA004917CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Service.swift */; };
 		865CC3DF2764FE9400A7A8BD /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC3DE2764FE9400A7A8BD /* Advice.swift */; };
+		865DE4382768B7CA00F7896F /* DinteraClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE4372768B7CA00F7896F /* DinteraClinicCell.swift */; };
+		865DE43A2768B84600F7896F /* JoyaClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE4392768B84600F7896F /* JoyaClinicCell.swift */; };
+		865DE43C2768B88300F7896F /* AlmadarClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE43B2768B88300F7896F /* AlmadarClinicCell.swift */; };
+		865DE43E2768B92200F7896F /* ProClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE43D2768B92200F7896F /* ProClinicCell.swift */; };
 		8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8660D367275CAC6400D2CB9B /* Localizable.strings */; };
 		867326F8275F3B990070E172 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F7275F3B990070E172 /* LocationVC.swift */; };
 		867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867326F9275F907D0070E172 /* NewServiceVC.swift */; };
@@ -40,6 +44,10 @@
 		8633ED4E2760A76E00E88B70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		865C3B43275019CA004917CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		865CC3DE2764FE9400A7A8BD /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		865DE4372768B7CA00F7896F /* DinteraClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinicCell.swift; sourceTree = "<group>"; };
+		865DE4392768B84600F7896F /* JoyaClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyaClinicCell.swift; sourceTree = "<group>"; };
+		865DE43B2768B88300F7896F /* AlmadarClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmadarClinicCell.swift; sourceTree = "<group>"; };
+		865DE43D2768B92200F7896F /* ProClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProClinicCell.swift; sourceTree = "<group>"; };
 		8660D361275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8660D362275CABC500D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8660D366275CAC6400D2CB9B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -96,6 +104,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		865DE4362768B73D00F7896F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				868C127A274D0FEB004494A2 /* ClinicCell.swift */,
+				865DE4372768B7CA00F7896F /* DinteraClinicCell.swift */,
+				865DE4392768B84600F7896F /* JoyaClinicCell.swift */,
+				865DE43B2768B88300F7896F /* AlmadarClinicCell.swift */,
+				865DE43D2768B92200F7896F /* ProClinicCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		86779945274E22A900F46DC0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				8687F802274BA1DF00097E17 /* ClinicVC.swift */,
-				868C127A274D0FEB004494A2 /* ClinicCell.swift */,
 				868B64A72750F70700293CAF /* DinteraClinic.swift */,
 				867A1FFA275E25C50027D716 /* JoyaClinic.swift */,
 				867A1FFE275E263E0027D716 /* ALmdarClinic.swift */,
@@ -145,6 +164,7 @@
 		8687F7E5274B6C5400097E17 /* ClinicApp-hanan */ = {
 			isa = PBXGroup;
 			children = (
+				865DE4362768B73D00F7896F /* Views */,
 				868B64A92751348200293CAF /* Services */,
 				868B64A22750E2C200293CAF /* Models */,
 				8677994B274E23FF00F46DC0 /* Clinics */,
@@ -301,6 +321,7 @@
 				8687F7FF274BA11900097E17 /* TabVC.swift in Sources */,
 				8687F7E7274B6C5400097E17 /* AppDelegate.swift in Sources */,
 				8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */,
+				865DE4382768B7CA00F7896F /* DinteraClinicCell.swift in Sources */,
 				868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */,
 				867A1FFD275E25F40027D716 /* ProClinic.swift in Sources */,
 				8687F7FD274BA0BA00097E17 /* LoginVC.swift in Sources */,
@@ -310,9 +331,12 @@
 				86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */,
 				867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */,
 				8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */,
+				865DE43A2768B84600F7896F /* JoyaClinicCell.swift in Sources */,
 				867A1FFB275E25C50027D716 /* JoyaClinic.swift in Sources */,
+				865DE43C2768B88300F7896F /* AlmadarClinicCell.swift in Sources */,
 				8687F803274BA1DF00097E17 /* ClinicVC.swift in Sources */,
 				867A1FFF275E263E0027D716 /* ALmdarClinic.swift in Sources */,
+				865DE43E2768B92200F7896F /* ProClinicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

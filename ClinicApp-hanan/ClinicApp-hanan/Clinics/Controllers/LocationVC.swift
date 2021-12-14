@@ -23,12 +23,7 @@ class LocationVC: UIViewController {
         view.backgroundColor = UIColor(named: "bgColor")
         setMapConstraints()
         configureMap()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
     }
-    
-    @objc func handleCancel() {
-         dismiss(animated: true, completion: nil)
-      }
     
     func configureMap() {
          let center = CLLocationCoordinate2D(latitude: 18.222302509549063, longitude: 42.51460111562375)
