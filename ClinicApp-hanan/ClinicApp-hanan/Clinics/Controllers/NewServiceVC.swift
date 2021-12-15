@@ -124,6 +124,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
              "id"  :currentUserID,
   // Use alert controller
         ],merge: true)
+        
         let alert1 = UIAlertController(
             title: (""),
             message: "هل أنت متأكد من حفظ معلومات حجزك؟",
@@ -195,7 +196,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         )
         self.present(alertcontroller, animated: true, completion: nil)
       }
-    }
+      }
 
 
 class NewService: UITableViewCell {
@@ -248,18 +249,18 @@ class NewService: UITableViewCell {
         super.layoutSubviews()
         // x: right and left
         // y: up and down
-        nameLabel2.frame = CGRect(x: -150,
+        nameLabel2.frame = CGRect(x: -130,
               y: 10,
               width: 500,
               height: contentView.frame.size.height-20)
-          doctorlable.frame = CGRect(x: -290,
+          doctorlable.frame = CGRect(x: -300,
                 y: 10,
                 width: 500,
                 height: contentView.frame.size.height-20)
-          timelable.frame = CGRect(x: -390,
+          timelable.frame = CGRect(x: -410,
                 y: 10,
                 width: 500,
                 height: contentView.frame.size.height-20)
        }
     
-    }
+       }

@@ -116,7 +116,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         addressTF.text = address
         
         let image = UserDefaults.standard.value(forKey: "imageView") as? String
-
         
         //  gesture recognizer
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
@@ -171,16 +170,23 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
       }
     
     @objc func addService() {
+      
+        guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+        Firestore.firestore().document("usersdata/\(currentUserID)").setData([
+            "name" : NameTF.text as Any,
+            "addres" :addressTF.text as Any,
+            "image" : "\(String(describing: imageView.image))" as Any,
+        ],merge: true)
+        
+        
         // use animation
         addserviceButton.startAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-           let newServiceVC = LoginVC()
-            self.present( newServiceVC, animated: true, completion: nil)
+
         }
         }
-        
         let name = NameTF.text
         UserDefaults.standard.set(name,forKey: "NameTF")
         
@@ -189,7 +195,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         
         let image = imageView.image
         UserDefaults.standard.set(address,forKey: "imageView")
-        
     }
     
     @objc func imageTapped() {

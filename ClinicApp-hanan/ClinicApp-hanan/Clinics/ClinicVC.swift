@@ -62,8 +62,8 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = clinicList[indexPath.row]
         if indexPath.row == 0 {
-          let navigationController = UINavigationController(
-            rootViewController: DinteraClinic()
+        let navigationController = UINavigationController(
+        rootViewController: DinteraClinic()
           )
           navigationController.navigationBar.prefersLargeTitles = true
           navigationController.modalPresentationStyle = .fullScreen

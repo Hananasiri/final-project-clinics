@@ -69,5 +69,5 @@ class LocationVC: UIViewController {
         mapView.addAnnotation(DrSultanLocation)
 
     }
-}
+    }
 

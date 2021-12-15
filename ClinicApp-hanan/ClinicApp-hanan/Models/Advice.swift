@@ -6,7 +6,7 @@
 //
 import UIKit
 
-// Use structs
+// Use structs 
   struct Advice {
   let name: String
   let image: String

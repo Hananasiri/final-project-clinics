@@ -20,7 +20,7 @@ class TabVC: UITabBarController {
         navController.tabBarItem.image = image
         navController.tabBarItem.accessibilityTextualContext = .console
         navController.navigationBar.prefersLargeTitles = true
-        rootViewController.navigationItem.title = title
+        //rootViewController.navigationItem.title = title
         return navController
     }
     
@@ -30,7 +30,7 @@ class TabVC: UITabBarController {
            
             createNavController(for: ClinicVC() , title: NSLocalizedString ("العيادات", comment: ""),image: UIImage(systemName: "cross.case.fill")!),
             
-           createNavController(for: LocationVC() , title: NSLocalizedString("مواقع العيادات" , comment: ""), image: UIImage(systemName: "globe.asia.australia.fill")!),
+           createNavController(for: LocationVC() , title: NSLocalizedString("مواقع العيادات" , comment: ""), image: UIImage(systemName: "location.circle")!),
             
             createNavController(for: AdvicesVC() , title: NSLocalizedString("إرشادات طبية" , comment: ""), image: UIImage(systemName: "heart.text.square")!),
             

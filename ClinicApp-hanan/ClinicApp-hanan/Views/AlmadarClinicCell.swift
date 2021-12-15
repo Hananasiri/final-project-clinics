@@ -59,7 +59,7 @@ class AlmadarClinicCell: UITableViewCell {
       super.layoutSubviews()
        labelname.translatesAutoresizingMaskIntoConstraints = false
        labelname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-       labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 210).isActive = true
+       labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 230).isActive = true
         labelname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
         

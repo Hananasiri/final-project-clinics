@@ -60,7 +60,7 @@ class AdvicesVC: UIViewController {
           let label = UILabel()
           label.font = UIFont(name: "Light", size: 2)
           label.textColor = .black
-              label.textAlignment = .right
+          label.textAlignment = .right
           label.numberOfLines = 0
           label.lineBreakMode = .byWordWrapping
           label.frame.size.width = 300
@@ -86,7 +86,7 @@ class AdvicesVC: UIViewController {
   self.addSubview(namecell)
   NSLayoutConstraint.activate(
   [
-    namecell.centerYAnchor.constraint(equalTo: centerYAnchor),
+   namecell.centerYAnchor.constraint(equalTo: centerYAnchor),
    namecell.rightAnchor.constraint(equalTo: imagecell.rightAnchor , constant:-90),
    namecell.heightAnchor.constraint(equalToConstant: 200),
    namecell.widthAnchor.constraint(equalToConstant: 280),

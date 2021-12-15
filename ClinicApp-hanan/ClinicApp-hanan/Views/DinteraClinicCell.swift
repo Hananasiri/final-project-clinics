@@ -61,7 +61,7 @@ class DinteraClinicCell: UITableViewCell {
       
      labelname.translatesAutoresizingMaskIntoConstraints = false
      labelname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-     labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 220).isActive = true
+     labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 240).isActive = true
      labelname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
       
