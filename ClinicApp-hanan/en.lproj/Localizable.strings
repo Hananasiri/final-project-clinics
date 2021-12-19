@@ -10,6 +10,7 @@
 "العيادات" = "Clinics" ;
 "المواعيد" = "Appointments" ;
 "إرشادات طبية" = "Medical advice" ;
+"بياناتي" = "Profile" ;
 "الملف الشخصي" = "Profile" ;
 "مواعيدي" = "My Appointments";
 "مواقع العيادات" = "Clinics Locations" ;
@@ -25,6 +26,7 @@
 "رجوع" = "Back" ;
 "حجز" = "Add" ;
 "حفظ" = "Save" ;
+"سجل دخولك" = "Sign Up" ;
 
  "عيادة دنتيرا لطب الأسنان" = "Dental Dintera clinic" ;
 "عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;

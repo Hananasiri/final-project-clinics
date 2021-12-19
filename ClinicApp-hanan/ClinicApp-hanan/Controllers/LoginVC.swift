@@ -18,6 +18,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         name.placeholder = "Name"
+        name.text = "Hanan"
         name.textAlignment = .center
         name.translatesAutoresizingMaskIntoConstraints = false
         name.textColor = .black
@@ -63,8 +64,8 @@ class LoginVC: UIViewController {
     }(UITextField())
     
     let logInButton : UIButton = {
-        $0.setTitle("LogIn", for: .normal)
-        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        $0.setTitle(NSLocalizedString("دخول", comment: "") , for: .normal)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         $0.backgroundColor = .systemTeal
         $0.layer.cornerRadius = 16
         $0.tintColor = .white
@@ -73,8 +74,8 @@ class LoginVC: UIViewController {
     }(UIButton(type: .system))
     
     let signUp : UIButton = {
-        $0.setTitle("Sign Up", for: .normal)
-        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        $0.setTitle(NSLocalizedString("سجل دخولك", comment: "") , for: .normal)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         $0.backgroundColor = .blue
         $0.layer.cornerRadius = 16
         $0.tintColor = .white
@@ -126,7 +127,6 @@ class LoginVC: UIViewController {
                     "name" : self.name.text as Any,
                     "id" : currentUserID,
                     "email" : self.email.text as Any,
-                    "status" : "online"
                 ])
               }
               }
@@ -159,9 +159,9 @@ class LoginVC: UIViewController {
         ])
         
         segmentedControl.insertSegment(withTitle: "Rigester", at: 0, animated: true)
-        segmentedControl.setTitle("Rigester", forSegmentAt: 0)
+        segmentedControl.setTitle(NSLocalizedString("تسجيل الدخول", comment: ""), forSegmentAt: 0)
         segmentedControl.insertSegment(withTitle: "Login", at: 1, animated: true)
-        segmentedControl.setTitle("Login", forSegmentAt: 1)
+        segmentedControl.setTitle(NSLocalizedString("دخول", comment: ""), forSegmentAt: 1)
         segmentedControl.addTarget(self, action: #selector(Segment), for: .valueChanged)
         
         NSLayoutConstraint.activate([

@@ -19,6 +19,7 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
+        title = NSLocalizedString("العيادات", comment: "")
         
       // Use auto layout
         let layout = UICollectionViewFlowLayout()

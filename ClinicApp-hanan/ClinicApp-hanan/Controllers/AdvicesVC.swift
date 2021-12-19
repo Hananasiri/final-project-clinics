@@ -12,6 +12,7 @@ class AdvicesVC: UIViewController {
  override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
+        title = NSLocalizedString("إرشادات طبية", comment: "")
 
      
  // Use table views

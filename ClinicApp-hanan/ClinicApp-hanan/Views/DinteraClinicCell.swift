@@ -30,6 +30,7 @@ class DinteraClinicCell: UITableViewCell {
      label.textColor = UIColor(red: (10/255), green: (47/255), blue: (67/255), alpha: 1)
      return label
     }()
+    
     //  Use button
     let button: UIButton = {
         let btn = UIButton()
@@ -72,13 +73,13 @@ class DinteraClinicCell: UITableViewCell {
       
       labeltime.translatesAutoresizingMaskIntoConstraints = false
       labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-      labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 40).isActive = true
+      labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 60).isActive = true
       labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
 
         button.frame = CGRect(x: 10,
-                      y: 10,
-                      width: 40,
+                      y: 3,
+                      width: 50,
                       height: contentView.frame.size.height-10)
         
       
@@ -93,7 +94,7 @@ class DinteraClinicCell: UITableViewCell {
             button.setImage(UIImage(named: "circle"), for: .normal)
             } else {
                 isActive = false
-            button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
+            button.setImage(UIImage(named: "red-"), for: .normal)
             }
         
         let servicetype1 = labelname.text ??  ""
@@ -101,6 +102,6 @@ class DinteraClinicCell: UITableViewCell {
         let servicetype3 = labeltime.text ?? ""
         ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
         
-     
+
     }
     }

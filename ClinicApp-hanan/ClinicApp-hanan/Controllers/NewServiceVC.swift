@@ -65,6 +65,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
+        title = NSLocalizedString("مواعيدي", comment: "")
         
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
         phoneTF.text = name

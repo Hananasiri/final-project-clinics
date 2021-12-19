@@ -43,7 +43,7 @@ import FirebaseFirestore
               myTableView.register(JoyaClinicCell.self, forCellReuseIdentifier: "JoyaClinicCell")
               myTableView.dataSource = self
               myTableView.delegate = self
-              self.view.addSubview(myTableView)
+         self.view.addSubview(myTableView)
 
           }
        @objc func handleCancel() {

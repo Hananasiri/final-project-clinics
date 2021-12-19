@@ -108,6 +108,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
+        title = NSLocalizedString("بياناتي", comment: "")
         
         let name = UserDefaults.standard.value(forKey: "NameTF") as? String
         NameTF.text = name

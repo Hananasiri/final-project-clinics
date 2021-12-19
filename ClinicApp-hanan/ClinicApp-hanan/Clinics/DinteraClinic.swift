@@ -51,7 +51,8 @@ let name: String?
      ]
      // Use Sets for clinics
      let names: Set = ["عيادة دنتيرا", "عيادة جويا" , "عيادة بروكلينيك", "عيادة المدار"]
-  
+     
+ 
 
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,7 @@ let name: String?
             myTableView.dataSource = self
             myTableView.delegate = self
             self.view.addSubview(myTableView)
+       
 
         }
      @objc func handleCancel() {

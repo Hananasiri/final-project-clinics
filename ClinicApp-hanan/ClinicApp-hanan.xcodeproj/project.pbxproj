@@ -116,15 +116,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		86779945274E22A900F46DC0 /* Controllers */ = {
+		8670B734276DF8C00088BE9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8687F7FC274BA0BA00097E17 /* LoginVC.swift */,
-				8687F7FE274BA11900097E17 /* TabVC.swift */,
-				86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */,
-				867326F7275F3B990070E172 /* LocationVC.swift */,
-				867326F9275F907D0070E172 /* NewServiceVC.swift */,
 				8633ED4E2760A76E00E88B70 /* ProfileVC.swift */,
+				8687F7FC274BA0BA00097E17 /* LoginVC.swift */,
+				86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */,
+				867326F9275F907D0070E172 /* NewServiceVC.swift */,
+				867326F7275F3B990070E172 /* LocationVC.swift */,
+				8687F7FE274BA11900097E17 /* TabVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,7 +137,6 @@
 				867A1FFA275E25C50027D716 /* JoyaClinic.swift */,
 				867A1FFE275E263E0027D716 /* ALmdarClinic.swift */,
 				867A1FFC275E25F40027D716 /* ProClinic.swift */,
-				86779945274E22A900F46DC0 /* Controllers */,
 			);
 			path = Clinics;
 			sourceTree = "<group>";
@@ -164,6 +163,7 @@
 		8687F7E5274B6C5400097E17 /* ClinicApp-hanan */ = {
 			isa = PBXGroup;
 			children = (
+				8670B734276DF8C00088BE9C /* Controllers */,
 				865DE4362768B73D00F7896F /* Views */,
 				868B64A92751348200293CAF /* Services */,
 				868B64A22750E2C200293CAF /* Models */,
