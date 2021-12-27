@@ -24,7 +24,7 @@ class LoginVC: UIViewController {
         name.textColor = .black
         name.font = UIFont.systemFont(ofSize: 18)
         name.backgroundColor = .systemGray5
-        name.layer.cornerRadius = 22.5
+        name.layer.cornerRadius = 16
  
     }
         lazy var imageView: UIImageView = {
@@ -41,7 +41,7 @@ class LoginVC: UIViewController {
         $0.text = "Hanan@gmail.com"
         $0.textAlignment = .center
         $0.backgroundColor = .init(white: 0.90, alpha: 1)
-        $0.layer.cornerRadius = 22.5
+        $0.layer.cornerRadius = 16
         return $0
     }(UITextField())
     
@@ -59,7 +59,7 @@ class LoginVC: UIViewController {
         $0.isSecureTextEntry = true
         $0.textAlignment = .center
         $0.backgroundColor = .init(white: 0.90, alpha: 1)
-        $0.layer.cornerRadius = 22.5
+        $0.layer.cornerRadius = 16
         return $0
     }(UITextField())
     

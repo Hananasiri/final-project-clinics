@@ -27,10 +27,30 @@ import FirebaseFirestore
                    service(name:NSLocalizedString("بروكلينيك-علاج العصب", comment: ""), drname:NSLocalizedString("د.فارس سعد", comment: ""),
                            time:NSLocalizedString(" ٩-١٠ ص", comment: "") ),
      ]
+     lazy var imageView: UIImageView = {
+             let imageView = UIImageView()
+             imageView.image = UIImage(named: "عيادة ابو حثرة")
+             imageView.layer.cornerRadius = 200
+             imageView.contentMode = .scaleAspectFill
+             imageView.translatesAutoresizingMaskIntoConstraints = false
+             imageView.isUserInteractionEnabled = true
+             imageView.backgroundColor = .blue
+
+             return imageView
+         }()
+     lazy var myLabel: UILabel = {
+         let label = UILabel()
+         label.translatesAutoresizingMaskIntoConstraints = false
+         label.text = NSLocalizedString("عيادة برو كلينيك", comment: "")
+         label.font = UIFont.systemFont(ofSize: 30)
+         return label
+     }()
 
      override func viewDidLoad() {
           super.viewDidLoad()
-         title = NSLocalizedString("عيادة برو كلينيك", comment: "")
+         view.addSubview(imageView)
+         view.addSubview(myLabel)
+         //title = NSLocalizedString("عيادة برو كلينيك", comment: "")
          view.backgroundColor = UIColor(named: "bgColor")
          navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
        
@@ -38,11 +58,25 @@ import FirebaseFirestore
           let displayWidth: CGFloat = self.view.frame.width
           let displayHeight: CGFloat = self.view.frame.height
 
-              myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+              myTableView = UITableView(frame: CGRect(x: 0, y: 400 , width: displayWidth, height: displayHeight - barHeight))
               myTableView.register(ProClinicCell.self, forCellReuseIdentifier: "ProClinicCell")
               myTableView.dataSource = self
               myTableView.delegate = self
               self.view.addSubview(myTableView)
+         
+         NSLayoutConstraint.activate([
+         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 80),
+         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 4),
+         myLabel.heightAnchor.constraint(equalToConstant: 40),
+         myLabel.widthAnchor.constraint(equalToConstant: 290),
+         ])
+         
+         NSLayoutConstraint.activate([
+                    imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+                    imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                    imageView.heightAnchor.constraint(equalToConstant: 250),
+                    imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
+                ])
 
           }
        @objc func handleCancel() {

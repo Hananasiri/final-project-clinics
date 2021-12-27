@@ -32,6 +32,7 @@ let name: String?
     var Set = ["زراعة الأسنان", "زراعة الجذور", "خلع الأسنان", "ارشادات طبية"]
 
   var myTableView: UITableView!
+  
      
      var list =  [
                    service(name:NSLocalizedString("دنتيرا-إرشادات طبية", comment: ""), drname:NSLocalizedString("د.علي خالد", comment: ""),
@@ -51,12 +52,32 @@ let name: String?
      ]
      // Use Sets for clinics
      let names: Set = ["عيادة دنتيرا", "عيادة جويا" , "عيادة بروكلينيك", "عيادة المدار"]
+     lazy var imageView: UIImageView = {
+             let imageView = UIImageView()
+             imageView.image = UIImage(named: "kk")
+             imageView.layer.cornerRadius = 200
+             imageView.contentMode = .scaleAspectFill
+             imageView.translatesAutoresizingMaskIntoConstraints = false
+             imageView.isUserInteractionEnabled = true
+             imageView.backgroundColor = .blue
+
+             return imageView
+         }()
      
+     lazy var myLabel: UILabel = {
+         let label = UILabel()
+         label.translatesAutoresizingMaskIntoConstraints = false
+         label.text = NSLocalizedString("عيادة دنتيرا", comment: "")
+         label.font = UIFont.systemFont(ofSize: 30)
+         return label
+     }()
  
 
    override func viewDidLoad() {
         super.viewDidLoad()
-       title = NSLocalizedString("عيادة دنتيرا", comment: "")
+       view.addSubview(imageView)
+       view.addSubview(myLabel)
+       //title = NSLocalizedString("عيادة دنتيرا", comment: "")
        view.backgroundColor = UIColor(named: "bgColor")
        
        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("رجوع", comment: ""), style: .plain, target: self, action: #selector(handleCancel))
@@ -65,12 +86,25 @@ let name: String?
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
 
-            myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+            myTableView = UITableView(frame: CGRect(x: 0, y: 400, width: displayWidth, height: displayHeight - barHeight))
             myTableView.register(DinteraClinicCell.self, forCellReuseIdentifier: "DinteraClinicCell")
             myTableView.dataSource = self
             myTableView.delegate = self
             self.view.addSubview(myTableView)
+
+       NSLayoutConstraint.activate([
+       myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 80),
+       myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: -10),
+       myLabel.heightAnchor.constraint(equalToConstant: 40),
+       myLabel.widthAnchor.constraint(equalToConstant: 290),
+       ])
        
+       NSLayoutConstraint.activate([
+                  imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+                  imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                  imageView.heightAnchor.constraint(equalToConstant: 250),
+                  imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
+              ])
 
         }
      @objc func handleCancel() {
@@ -90,6 +124,7 @@ let name: String?
 
             return cell
         }
+     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = list[indexPath.row]
         let newVC = NewServiceVC()
