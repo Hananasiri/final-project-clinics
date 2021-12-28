@@ -9,10 +9,11 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 import TransitionButton
+import FirebaseStorage
 
 class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-    
+    let storage = Storage.storage().reference()
     
     // Add stack view ..
     let stackView = UIStackView()
@@ -38,7 +39,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.isUserInteractionEnabled = true
-        imageView.backgroundColor = .blue
+        imageView.backgroundColor = .white
 
         return imageView
     }()
@@ -72,7 +73,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
     
     let Button1 : UIButton = {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .blue
         $0.setTitle(NSLocalizedString("خروج", comment: ""), for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.layer.cornerRadius = 22.5
@@ -98,17 +99,47 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         pick.delegate = self
         present(pick, animated: true)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage;
-        imageView.image = image
-        dismiss(animated: false)
+//        let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage;
+//        imageView.image = image
+//        dismiss(animated: false)
+        picker.dismiss(animated: true, completion: nil)
+            guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+              return
+            }
+            guard let imageData = image.pngData() else {
+              return
+            }
+            storage.child("image/file.png").putData(imageData,
+                                metadata: nil,
+                                completion: {_, error in
+                        guard error == nil else {
+                          print("Faild to upload")
+                               return
+                          }
+          self.storage.child("image/file.png").downloadURL(completion: { url, error in
+            guard let url = url, error == nil else {
+              return
+            }
+            let urlString = url.absoluteString
+            DispatchQueue.main.async {
+              self.imageView.image = image
+            }
+            print("Download URL: \(urlString)")
+            UserDefaults.standard.set(urlString, forKey: "url")
+              })
+            })
     }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss (animated: true, completion: nil)
+      }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
-        title = NSLocalizedString("بياناتي", comment: "")
+        // title = NSLocalizedString("بياناتي", comment: "")
         
         let name = UserDefaults.standard.value(forKey: "NameTF") as? String
         NameTF.text = name
@@ -157,16 +188,31 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 50),
             addserviceButton.heightAnchor.constraint(equalToConstant: 48),
-            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 15),
             Button1.heightAnchor.constraint(equalToConstant: 48),
-            Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
             
             
             ])
+        guard let urlstring = UserDefaults.standard.value(forKey: "url") as? String,
+              let url = URL (string: urlstring) else {
+                return
+            }
+           let task = URLSession.shared.dataTask(with: url, completionHandler: {
+              data, _, error in
+                guard let data = data, error == nil else {
+                  return
+                }
+             DispatchQueue.main.async {
+               let image = UIImage(data: data)
+               self.imageView.image = image
+             }
+            })
+            task.resume()
 
       }
     
@@ -216,5 +262,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         }
 
         }
+
 
 

@@ -54,7 +54,7 @@ let name: String?
      let names: Set = ["عيادة دنتيرا", "عيادة جويا" , "عيادة بروكلينيك", "عيادة المدار"]
      lazy var imageView: UIImageView = {
              let imageView = UIImageView()
-             imageView.image = UIImage(named: "kk")
+             imageView.image = UIImage(named: "kl")
              imageView.layer.cornerRadius = 200
              imageView.contentMode = .scaleAspectFill
              imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +68,7 @@ let name: String?
          let label = UILabel()
          label.translatesAutoresizingMaskIntoConstraints = false
          label.text = NSLocalizedString("عيادة دنتيرا لطب الأسنان", comment: "")
-         label.font = UIFont.systemFont(ofSize:21)
+         label.font = UIFont.systemFont(ofSize:23)
          return label
      }()
  
