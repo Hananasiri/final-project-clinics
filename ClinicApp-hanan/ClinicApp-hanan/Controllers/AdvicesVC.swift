@@ -9,10 +9,19 @@ import UIKit
 
 
 class AdvicesVC: UIViewController {
+    lazy var myLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = NSLocalizedString("إرشادات طبية" , comment: "")
+        label.textAlignment = .right
+        label.font = UIFont.systemFont(ofSize:28 , weight: .bold)
+        return label
+    }()
  override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
-        title = NSLocalizedString("إرشادات طبية", comment: "")
+        view.addSubview(myLabel)
+       // title = NSLocalizedString("إرشادات طبية", comment: "")
 
      
  // Use table views
@@ -27,9 +36,16 @@ class AdvicesVC: UIViewController {
  view.addSubview(tabelView)
   
             //constraint
- NSLayoutConstraint.activate([tabelView.leftAnchor.constraint(equalTo: view.leftAnchor),
+   NSLayoutConstraint.activate([
+    myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
+    myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
+    myLabel.heightAnchor.constraint(equalToConstant: 30),
+    myLabel.widthAnchor.constraint(equalToConstant: 300),
+    ])
+    NSLayoutConstraint.activate([
+     tabelView.leftAnchor.constraint(equalTo: view.leftAnchor),
      tabelView.rightAnchor.constraint(equalTo: view.rightAnchor),
-     tabelView.topAnchor.constraint(equalTo: view.topAnchor),
+     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 60),
      tabelView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
      ])
             

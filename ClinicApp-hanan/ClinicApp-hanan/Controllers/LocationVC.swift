@@ -63,7 +63,7 @@ class LocationVC: UIViewController {
         mapView.addAnnotation(MadarLocation)
 
         let DrSultanLocation = MKPointAnnotation()
-        DrSultanLocation.title = NSLocalizedString("عيادة برو كلينيك", comment: "")
+        DrSultanLocation.title = NSLocalizedString("عيادة برو كلينيك لطب الأسنان", comment: "")
         DrSultanLocation.coordinate = CLLocationCoordinate2D(latitude: 18.2128453, longitude: 42.529654)
 
         mapView.addAnnotation(DrSultanLocation)

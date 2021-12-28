@@ -65,7 +65,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
-        title = NSLocalizedString("مواعيدي", comment: "")
+       title = NSLocalizedString("مواعيدي", comment: "")
         
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
         phoneTF.text = name
@@ -73,17 +73,20 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         _ = UserDefaults.standard.value(forKey: "datePicker") as? NSDate
        
         
+        
         view.addSubview(serviceTV)
         NSLayoutConstraint.activate([
             serviceTV.topAnchor.constraint(equalTo: view.topAnchor),
             serviceTV.leftAnchor.constraint(equalTo: view.leftAnchor),
             serviceTV.rightAnchor.constraint(equalTo: view.rightAnchor),
+            serviceTV.heightAnchor.constraint(equalTo: view.heightAnchor , constant: 20),
             serviceTV.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
                 datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 150),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 80),
             ])
         
         
@@ -91,7 +94,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         NSLayoutConstraint.activate([
 
             phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            phoneTF.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 30),
+            phoneTF.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 20),
             phoneTF.heightAnchor.constraint(equalToConstant: 40),
             phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -100),
             
@@ -101,7 +104,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         view.addSubview(Button)
         NSLayoutConstraint.activate([
             Button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 30),
+            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 20),
             Button.heightAnchor.constraint(equalToConstant: 40),
             Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
         ])
@@ -146,11 +149,12 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var selectedIndex = -1
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == selectedIndex {
-         return 354
-        }else {
-         return 100
-        }
+        return 50
+//        if indexPath.row == selectedIndex {
+//         return 354
+//        }else {
+//         return 100
+//        }
        }
     
     
@@ -253,15 +257,15 @@ class NewService: UITableViewCell {
         nameLabel2.frame = CGRect(x: -130,
               y: 10,
               width: 500,
-              height: contentView.frame.size.height-20)
+              height: contentView.frame.size.height-10)
           doctorlable.frame = CGRect(x: -300,
                 y: 10,
                 width: 500,
-                height: contentView.frame.size.height-20)
+                height: contentView.frame.size.height-10)
           timelable.frame = CGRect(x: -410,
                 y: 10,
                 width: 500,
-                height: contentView.frame.size.height-20)
+                height: contentView.frame.size.height-10)
        }
     
        }

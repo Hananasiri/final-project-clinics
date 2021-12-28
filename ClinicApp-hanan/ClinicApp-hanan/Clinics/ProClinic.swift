@@ -41,8 +41,8 @@ import FirebaseFirestore
      lazy var myLabel: UILabel = {
          let label = UILabel()
          label.translatesAutoresizingMaskIntoConstraints = false
-         label.text = NSLocalizedString("عيادة برو كلينيك", comment: "")
-         label.font = UIFont.systemFont(ofSize: 30)
+         label.text = NSLocalizedString("عيادة برو كلينيك لطب الأسنان", comment: "")
+         label.font = UIFont.systemFont(ofSize: 19)
          return label
      }()
 
@@ -65,8 +65,8 @@ import FirebaseFirestore
               self.view.addSubview(myTableView)
          
          NSLayoutConstraint.activate([
-         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 80),
-         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 4),
+         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 85),
+         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
          myLabel.heightAnchor.constraint(equalToConstant: 40),
          myLabel.widthAnchor.constraint(equalToConstant: 290),
          ])

@@ -20,7 +20,7 @@ struct Clinic {
 let clinicList = [Clinic(name:NSLocalizedString("عيادة دنتيرا لطب الأسنان", comment: ""), image: "دنتيرا-"),
                   Clinic(name:NSLocalizedString("عيادة جويا لطب الأسنان", comment: "") , image: "جويا"),
                   Clinic(name:NSLocalizedString("عيادة المدار لطب الأسنان", comment: ""), image: "المدار-"),
-                  Clinic(name:NSLocalizedString("عيادة برو كلينيك", comment: "") , image: "بروكلنك"),
+                  Clinic(name:NSLocalizedString("عيادة برو كلينيك لطب الأسنان", comment: "") , image: "بروكلنك"),
 
 ]
  // Dictionary for ClinicList
