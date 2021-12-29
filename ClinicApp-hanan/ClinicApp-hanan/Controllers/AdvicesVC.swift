@@ -45,7 +45,7 @@ class AdvicesVC: UIViewController {
     NSLayoutConstraint.activate([
      tabelView.leftAnchor.constraint(equalTo: view.leftAnchor),
      tabelView.rightAnchor.constraint(equalTo: view.rightAnchor),
-     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 60),
+     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 30),
      tabelView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
      ])
             

@@ -48,7 +48,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = false
-        tf.layer.cornerRadius = 10
+        tf.layer.cornerRadius = 5
         tf.backgroundColor = .systemGray5
         tf.textAlignment = .right
         tf.placeholder = "تفضل بإدخال رقم جوالك"
@@ -59,7 +59,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         $0.backgroundColor = .red
         $0.setTitle(NSLocalizedString("حفظ معلوماتك", comment: ""), for: .normal)
         $0.tintColor = .white
-        $0.layer.cornerRadius = 20
+        $0.layer.cornerRadius = 10
         $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .black)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(saveButtone), for: .touchUpInside)
@@ -139,14 +139,14 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
                 datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 110),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 63),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 20),
             ])
         
         
         view.addSubview(phoneTF)
         NSLayoutConstraint.activate([
             phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -70),
-            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 643),
+            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 602),
             phoneTF.heightAnchor.constraint(equalToConstant: 40),
             phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             datePicker.leftAnchor.constraint(equalTo: datePicker.leftAnchor),

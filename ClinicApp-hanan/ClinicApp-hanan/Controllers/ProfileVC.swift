@@ -14,7 +14,6 @@ import FirebaseStorage
 class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     let storage = Storage.storage().reference()
-    
     // Add stack view ..
     let stackView = UIStackView()
     
@@ -31,7 +30,15 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         stackView.axis = .horizontal
     }
     }
-
+    lazy var myLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = NSLocalizedString("بياناتي" , comment: "")
+        label.textAlignment = .right
+        label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
+        //label.backgroundColor = .blue
+        return label
+    }()
   //  Use image views
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -73,10 +80,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
     
     let Button1 : UIButton = {
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .systemGray2
         $0.setTitle(NSLocalizedString("خروج", comment: ""), for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
-        $0.layer.cornerRadius = 22.5
+        $0.layer.cornerRadius = 16
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(signOut), for: .touchUpInside)
         return $0
@@ -88,7 +95,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         b.translatesAutoresizingMaskIntoConstraints = false
         b.setTitle(NSLocalizedString("حفظ", comment: ""), for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
-        b.layer.cornerRadius = 20
+        b.layer.cornerRadius = 16
         b.backgroundColor = .systemTeal
         return b
     }()
@@ -153,7 +160,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         imageView.addGestureRecognizer(tapRecognizer)
         
-       
+        view.addSubview(myLabel)
         view.addSubview(imageView)
         view.addSubview(NameTF)
         view.addSubview(addressTF)
@@ -161,7 +168,14 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         view.addSubview(addserviceButton)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
+         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
+         myLabel.heightAnchor.constraint(equalToConstant: 30),
+         myLabel.widthAnchor.constraint(equalToConstant: 300),
+         ])
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 250),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
@@ -187,17 +201,18 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 50),
-            addserviceButton.heightAnchor.constraint(equalToConstant: 48),
-            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
+            addserviceButton.heightAnchor.constraint(equalToConstant: 40),
+            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 15),
-            Button1.heightAnchor.constraint(equalToConstant: 48),
-            Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
-            
+            Button1.heightAnchor.constraint(equalToConstant: 40),
+            Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
             ])
+     
+        
         guard let urlstring = UserDefaults.standard.value(forKey: "url") as? String,
               let url = URL (string: urlstring) else {
                 return
@@ -226,12 +241,12 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         ],merge: true)
         
         
-        // use animation
+        // use Animation
         addserviceButton.startAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-
+            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         }
         }
         let name = NameTF.text
@@ -251,7 +266,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
  
     // Use error handling
     @objc func signOut() {
-
+        
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
@@ -262,6 +277,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         }
 
         }
-
+        
 
 

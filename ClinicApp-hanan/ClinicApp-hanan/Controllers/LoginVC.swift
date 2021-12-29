@@ -25,8 +25,10 @@ class LoginVC: UIViewController {
         name.font = UIFont.systemFont(ofSize: 18)
         name.backgroundColor = .systemGray5
         name.layer.cornerRadius = 16
- 
+        
     }
+    
+    
         lazy var imageView: UIImageView = {
             let imageView = UIImageView()
             imageView.image = UIImage(named:"BB")
@@ -147,10 +149,10 @@ class LoginVC: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 250),
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
 
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

@@ -71,8 +71,7 @@ let name: String?
          label.font = UIFont.systemFont(ofSize:23)
          return label
      }()
- 
-
+  
    override func viewDidLoad() {
         super.viewDidLoad()
        view.addSubview(imageView)
