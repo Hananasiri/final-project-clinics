@@ -79,9 +79,9 @@ class ProClinicCell: UITableViewCell {
       
 
         button.frame = CGRect(x: 10,
-                      y: 3,
-                      width: 50,
-                      height: contentView.frame.size.height-10)
+                      y: 5,
+                      width: 70,
+                      height: contentView.frame.size.height-5)
         
       
        }
@@ -95,7 +95,7 @@ class ProClinicCell: UITableViewCell {
             button.setImage(UIImage(named: "circle"), for: .normal)
             } else {
                 isActive = false
-            button.setImage(UIImage(named: "red-"), for: .normal)
+            button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
             }
         
         let servicetype1 = labelname.text ??  ""

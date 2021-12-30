@@ -27,6 +27,11 @@
 "حجز" = "Add" ;
 "حفظ" = "Save" ;
 "سجل دخولك" = "Sign Up" ;
+"هل أنت متأكد من حذف الموعد؟" = "Are you sure you want to delete?" ;
+"لا" = "cancel" ;
+"هل أنت متأكد من حفظ معلومات حجزك؟" = "Are you sure to save your reservation information?" ;
+"نعم" = "Delete" ;
+"نعم " = "Ok" ;
 
  "عيادة دنتيرا لطب الأسنان" = "Dental Dintera Clinic" ;
 "عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;

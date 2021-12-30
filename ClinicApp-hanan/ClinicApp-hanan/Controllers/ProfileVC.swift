@@ -77,13 +77,25 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         tf.placeholder = NSLocalizedString("تفضل بإدخال عنوانك", comment: "")
         return tf
     }()
+    
+       lazy var button: UIButton = {
+       let bAction = UIButton()
+        bAction.backgroundColor = .systemTeal
+        bAction.tintColor = .black
+        bAction.titleColor(for: .highlighted)
+        bAction.setTitle(NSLocalizedString("تغيير اللغة", comment: ""), for: .normal)
+        bAction.translatesAutoresizingMaskIntoConstraints = false
+        bAction.layer.cornerRadius = 18
+        bAction.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+       return bAction
+        }()
 
     
     let Button1 : UIButton = {
-        $0.backgroundColor = .systemGray2
+        $0.backgroundColor = .white
         $0.setTitle(NSLocalizedString("خروج", comment: ""), for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
-        $0.layer.cornerRadius = 16
+        $0.layer.cornerRadius = 18
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(signOut), for: .touchUpInside)
         return $0
@@ -95,8 +107,8 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         b.translatesAutoresizingMaskIntoConstraints = false
         b.setTitle(NSLocalizedString("حفظ", comment: ""), for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
-        b.layer.cornerRadius = 16
-        b.backgroundColor = .systemTeal
+        b.layer.cornerRadius = 18
+        b.backgroundColor = .systemGray2
         return b
     }()
     
@@ -153,7 +165,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         
         let address = UserDefaults.standard.value(forKey: "addressTF") as? String
         addressTF.text = address
-        
+       
         let image = UserDefaults.standard.value(forKey: "imageView") as? String
         
         //  gesture recognizer
@@ -164,6 +176,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         view.addSubview(imageView)
         view.addSubview(NameTF)
         view.addSubview(addressTF)
+        view.addSubview(button)
         view.addSubview(Button1)
         view.addSubview(addserviceButton)
         
@@ -175,15 +188,15 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
          ])
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 230),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
         ])
 
         NSLayoutConstraint.activate([
 
-            NameTF.topAnchor.constraint(equalTo: view.topAnchor,constant: 440),
+            NameTF.topAnchor.constraint(equalTo: view.topAnchor,constant: 420),
             NameTF.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 50),
             NameTF.heightAnchor.constraint(equalToConstant: 40),
             NameTF.widthAnchor.constraint(equalToConstant: 290),
@@ -193,21 +206,23 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             addressTF.heightAnchor.constraint(equalToConstant: 40),
             addressTF.widthAnchor.constraint(equalToConstant: 290),
 
-          
-//            addserviceButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 120),
-//            addserviceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
-//            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
-//            addserviceButton.heightAnchor.constraint(equalToConstant: 48),
+            
+            button.topAnchor.constraint(equalTo: view.topAnchor,constant: 540),
+           // button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 100),
+            button.heightAnchor.constraint(equalToConstant: 35),
+            button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            
             
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 50),
-            addserviceButton.heightAnchor.constraint(equalToConstant: 40),
+            addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 70),
+            addserviceButton.heightAnchor.constraint(equalToConstant: 35),
             addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 15),
-            Button1.heightAnchor.constraint(equalToConstant: 40),
+            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 60),
+            Button1.heightAnchor.constraint(equalToConstant: 35),
             Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
             ])
@@ -275,8 +290,19 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             print ("Error signing out: \(signOutError.localizedDescription)")
         }
         }
+    @objc func buttonAction() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+               }
+               if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)")
+                })
+               }
+      print("Button tapped")
+    }
 
-        }
+    }
         
 
 

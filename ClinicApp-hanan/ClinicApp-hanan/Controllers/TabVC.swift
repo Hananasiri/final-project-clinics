@@ -47,7 +47,7 @@ class TabVC: UITabBarController {
         super.viewDidLoad()
         NotificationCenter.default.removeObserver(self)
         UITabBar.appearance().barTintColor = .systemBackground
-        tabBar.tintColor = .label
+        tabBar.tintColor = .black
         tabBar.backgroundColor = .systemGray2
         setupVCs()
         

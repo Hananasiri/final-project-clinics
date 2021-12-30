@@ -62,7 +62,7 @@ class AlmadarClinicCell: UITableViewCell {
       
      labelname.translatesAutoresizingMaskIntoConstraints = false
      labelname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-     labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 240).isActive = true
+     labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 220).isActive = true
      labelname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
       
@@ -77,11 +77,11 @@ class AlmadarClinicCell: UITableViewCell {
       labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
 
-        button.frame = CGRect(x: 10,
-                      y: 3,
-                      width: 50,
-                      height: contentView.frame.size.height-10)
-        
+      
+      button.frame = CGRect(x: 10,
+                    y: 5,
+                    width: 70,
+                    height: contentView.frame.size.height-5)
       
        }
     
@@ -94,7 +94,7 @@ class AlmadarClinicCell: UITableViewCell {
             button.setImage(UIImage(named: "circle"), for: .normal)
             } else {
                 isActive = false
-            button.setImage(UIImage(named: "red-"), for: .normal)
+            button.setImage(UIImage(systemName:"circle.circle.fill"), for: .normal)
             }
         
         let servicetype1 = labelname.text ??  ""

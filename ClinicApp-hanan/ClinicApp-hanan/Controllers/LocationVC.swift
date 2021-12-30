@@ -26,7 +26,7 @@ class LocationVC: UIViewController {
     }
     
     func configureMap() {
-         let center = CLLocationCoordinate2D(latitude: 18.222302509549063, longitude: 42.51460111562375)
+         let center = CLLocationCoordinate2D(latitude: 18.222442509549063, longitude: 42.51460111562375)
          let span = MKCoordinateSpan(latitudeDelta: 0.125, longitudeDelta: 0.125)
          let region = MKCoordinateRegion(center: center, span: span)
           mapView.setRegion(region, animated: true)

@@ -187,11 +187,11 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let alert1 = UIAlertController(
             title: (""),
-            message: "هل أنت متأكد من حفظ معلومات حجزك؟",
+            message: NSLocalizedString("هل أنت متأكد من حفظ معلومات حجزك؟", comment: ""),
             preferredStyle: .alert)
         alert1.addAction(
             UIAlertAction(
-                title: "OK",
+                title: NSLocalizedString("نعم ", comment: ""),
                 style: .default,
                 handler: { action in
                     print("OK")
@@ -232,18 +232,18 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let cell = post[indexPath.row]
         // Use alert controller
-        let alertcontroller = UIAlertController(title: "Delete"
-                            , message: "Are you sure you want to delete?"
+        let alertcontroller = UIAlertController(title: ""
+                            , message: NSLocalizedString("هل أنت متأكد من حذف الموعد؟", comment: "")
                             , preferredStyle: UIAlertController.Style.alert
         )
            alertcontroller.addAction(
-               UIAlertAction(title: "cancel",
+            UIAlertAction(title: NSLocalizedString("لا", comment: ""),
                       style: UIAlertAction.Style.default,
                       handler: { Action in print("...")
           })
         )
         alertcontroller.addAction(
-          UIAlertAction(title: "Delete",
+          UIAlertAction(title:  NSLocalizedString("نعم", comment: ""),
                  style: UIAlertAction.Style.destructive,
                  handler: { Action in
             if editingStyle == .delete {

@@ -93,7 +93,7 @@ let name: String?
 
        NSLayoutConstraint.activate([
        myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 85),
-       myLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+       myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 10),
        myLabel.heightAnchor.constraint(equalToConstant: 40),
        myLabel.widthAnchor.constraint(equalToConstant: 290),
        ])

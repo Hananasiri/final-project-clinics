@@ -15,9 +15,12 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            return CGSize(width: 210, height: 240)
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         view.backgroundColor = UIColor(named: "bgColor")
         title = NSLocalizedString("العيادات", comment: "")
         
@@ -28,8 +31,9 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
         layout.minimumInteritemSpacing = 1
         layout.itemSize = CGSize(width: 150,
                                  height: 210)
+        
         ClinicC = UICollectionView(frame: .zero,
-                                          collectionViewLayout: layout)
+        collectionViewLayout: layout)
         
         
         guard let ClinicC = ClinicC else {
@@ -44,7 +48,6 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
 
     }
     
-
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return clinicList.count
