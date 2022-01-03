@@ -16,8 +16,8 @@
 "مواقع العيادات" = "Clinics Locations" ;
 "تفضل بإدخال اسمك" = "Enter your name" ;
 "تفضل بإدخال عنوانك" = "Enter your Address" ;
-
-"حفظ معلوماتك" = "Save your information" ;
+"حفظ معلوماتك" = "Save information" ;
+"حجز" = "Reserved" ;
 "تفضل بإدخال رقم جوالك" = "Enter your phone number" ;
 "خروج" = "Exit" ;
 "تغيير اللغة" = "Change language" ;
@@ -32,7 +32,6 @@
 "هل أنت متأكد من حفظ معلومات حجزك؟" = "Are you sure to save your reservation information?" ;
 "نعم" = "Delete" ;
 "نعم " = "Ok" ;
-
  "عيادة دنتيرا لطب الأسنان" = "Dental Dintera Clinic" ;
 "عيادة جويا لطب الأسنان" = "Dental Joya Clinic" ;
 "عيادة المدار لطب الأسنان" = "Dental Al-madar Clinic" ;
@@ -42,10 +41,6 @@
 "عيادة جويا" = "Joya Dental" ;
 "عيادة المدار" = "Almadar Dental" ;
 "عيادة برو كلينيك" = "Proclinic Dental" ;
-
-
-
-
 "الإرشادات الطبية" = "Medical Advice" ;
 "دنتيرا-إرشادات طبية" = "Dentera-advices" ;
 "خطط الرعاية المنزلية" = "Home Cares" ;
@@ -72,7 +67,6 @@
 "بروكلينيك-تقويم أسنان" = "Proclinic-Orthodontics" ;
 "بروكلينيك-الكشف الروتيني" = "Proclinic-Appointment" ;
 "بروكلينيك-علاج العصب" = "Proclinic-Disarmament" ;
-
 "تركيبات الفينير" = "veneer structures" ;
 "نزع الأعصاب " = "Disarmament" ;
 "دنتيرا-نزع العصب" = "Dentera-Disarmament" ;
@@ -85,7 +79,7 @@
 "تركيبات الأسنان" = "fixed dentures" ;
 "المراجعات الدورية" = "Periodic reviews" ;
 "د.علي الحسن" = "Dr.Ali" ;
-"د.علي خالد" = "Dr.Ali khaled" ;
+"د.علي خالد" = "Dr.Ali" ;
 "د.رانيا شيخ" = "Dr.Rania " ;
 "د.مروان معتز" = "Dr.Marwan " ;
 "د.ماجد فهد" = "Dr.Majed " ;
@@ -109,7 +103,6 @@
 "د.سارة يوسف" = "Dr.Sara " ;
 "د.ناجي فارس" = "Dr.Naji" ;
 "د.فهد وليد" = "DR.Fahad" ;
-
 "٨-٩ ص" = " 8-9 AM" ;
 "١-٣ م" = "1-3 AM" ;
 "١١-١٢ م" = "11-12 AM" ;
@@ -120,9 +113,6 @@
 "٣-٤ م" = "3-4 AM" ;
 "٦-٨ م" = "6-8 AM" ;
 "٩-١٠ ص" = "9-10 AM" ;
-
-
-
 "استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس" = "Use fluoride toothpaste to provide the most effective protection against cavities" ;
 "تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم" = "Water is one of the best drinks for health, including oral health" ;
 "توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية" = "go to the dentist at least twice a year, to find health problems" ;

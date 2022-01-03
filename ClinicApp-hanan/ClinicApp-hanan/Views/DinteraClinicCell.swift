@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 class DinteraClinicCell: UITableViewCell {
 
   static let identifire = "Cell"
@@ -68,20 +69,20 @@ class DinteraClinicCell: UITableViewCell {
       
       labeldrname.translatesAutoresizingMaskIntoConstraints = false
       labeldrname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-      labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 120).isActive = true
+      labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 130).isActive = true
       labeldrname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
       labeltime.translatesAutoresizingMaskIntoConstraints = false
       labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-      labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 60).isActive = true
+      labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 65).isActive = true
       labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
       
 
       
-      button.frame = CGRect(x: 10,
-                    y: 5,
-                    width: 70,
-                    height: contentView.frame.size.height-5)
+      button.frame = CGRect(x: 8,
+                    y: 20,
+                    width: 60,
+                    height: contentView.frame.size.height-30)
         
        }
     
@@ -91,12 +92,15 @@ class DinteraClinicCell: UITableViewCell {
         //  Use conditionals if
         if isActive {
               isActive = true
-            button.setImage(UIImage(named: "circle"), for: .normal)
+            button.setImage(UIImage(systemName: "circle"), for: .normal)
             } else {
                 isActive = false
-            button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
-                
-                
+                button.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
+                button.backgroundColor = .systemBlue
+                button.layer.cornerRadius = 7
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+                button.titleLabel?.textAlignment = .right
+              
             }
         
         let servicetype1 = labelname.text ??  ""

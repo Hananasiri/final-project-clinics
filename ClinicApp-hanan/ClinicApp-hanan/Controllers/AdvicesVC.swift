@@ -21,7 +21,6 @@ class AdvicesVC: UIViewController {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
         view.addSubview(myLabel)
-       // title = NSLocalizedString("إرشادات طبية", comment: "")
 
      
  // Use table views
@@ -50,7 +49,7 @@ class AdvicesVC: UIViewController {
      ])
             
  }
-}
+ }
 // use extension
  extension AdvicesVC: UITableViewDataSource, UITableViewDelegate {
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
