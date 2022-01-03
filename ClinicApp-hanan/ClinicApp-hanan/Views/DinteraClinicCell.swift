@@ -95,6 +95,8 @@ class DinteraClinicCell: UITableViewCell {
             } else {
                 isActive = false
             button.setImage(UIImage(systemName: "circle.circle.fill"), for: .normal)
+                
+                
             }
         
         let servicetype1 = labelname.text ??  ""
@@ -102,6 +104,9 @@ class DinteraClinicCell: UITableViewCell {
         let servicetype3 = labeltime.text ?? ""
         ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
         
-
+    
+        
     }
+    
+    
     }
