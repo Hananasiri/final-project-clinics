@@ -39,8 +39,12 @@ class ClinicCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "00")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+       //contentView.insertSubview(backgroundImage, at: 0)
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor(named: "bgColor")
+       // contentView.backgroundColor = UIColor(named: "bgColor")
         contentView.addSubview(myImage)
         contentView.addSubview(myLabel)
         contentView.clipsToBounds = true

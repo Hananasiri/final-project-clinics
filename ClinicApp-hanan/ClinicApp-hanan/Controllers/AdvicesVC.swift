@@ -14,12 +14,16 @@ class AdvicesVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("إرشادات طبية" , comment: "")
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize:28 , weight: .bold)
+        label.font = UIFont.systemFont(ofSize:32 , weight: .bold)
         return label
     }()
  override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
+     let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+     backgroundImage.image = UIImage(named: "00")
+     backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+     self.view.insertSubview(backgroundImage, at: 0)
         view.addSubview(myLabel)
 
      
@@ -28,7 +32,7 @@ class AdvicesVC: UIViewController {
   tabelView.dataSource = self
   tabelView.delegate = self
   tabelView.register(Cell.self, forCellReuseIdentifier: "cell")
-  tabelView.rowHeight = 80
+  tabelView.rowHeight = 90
   tabelView.translatesAutoresizingMaskIntoConstraints = false
   
             //add table to view
@@ -44,7 +48,7 @@ class AdvicesVC: UIViewController {
     NSLayoutConstraint.activate([
      tabelView.leftAnchor.constraint(equalTo: view.leftAnchor),
      tabelView.rightAnchor.constraint(equalTo: view.rightAnchor),
-     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 30),
+     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 50),
      tabelView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
      ])
             
@@ -62,10 +66,15 @@ class AdvicesVC: UIViewController {
   cell.imagecell.image = UIImage(named: r.image)
   cell.namecell.text = r.name
   cell.imagecell.layer.masksToBounds = true
-  cell.imagecell.layer.cornerRadius = 20
+  cell.imagecell.layer.cornerRadius = 40
 
   return cell
  }
+//     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//         return 90
+//
+// //        }
+//        }
  }
  //cell class
  class Cell: UITableViewCell {
@@ -88,8 +97,9 @@ class AdvicesVC: UIViewController {
  
      override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
      super.init(style: style , reuseIdentifier: reuseIdentifier )
-     contentView.backgroundColor = UIColor(named: "bgColor")
-     imagecell.translatesAutoresizingMaskIntoConstraints = false
+         
+       contentView.backgroundColor = UIColor(named: "bgColor")
+        imagecell.translatesAutoresizingMaskIntoConstraints = false
 
 
      self.addSubview(imagecell)

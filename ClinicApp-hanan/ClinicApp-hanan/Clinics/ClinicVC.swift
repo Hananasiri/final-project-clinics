@@ -18,10 +18,16 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
         
     }
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-       
-        view.backgroundColor = UIColor(named: "bgColor")
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "00")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+            
+        //view.backgroundColor = UIColor(named: "bgColor")
+            
         title = NSLocalizedString("العيادات", comment: "")
         
       // Use auto layout

@@ -36,7 +36,7 @@ class JoyaClinicCell: UITableViewCell {
     let button: UIButton = {
         let btn = UIButton()
         btn.layer.cornerRadius = 15
-        btn.setImage(UIImage(systemName: "circle"), for: .normal)
+        btn.setImage(UIImage(systemName: "square"), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         btn.addTarget(self, action: #selector(addData), for: .touchUpInside)
         return btn
@@ -92,7 +92,7 @@ class JoyaClinicCell: UITableViewCell {
           //  Use conditionals if
           if isActive {
                 isActive = true
-              button.setImage(UIImage(systemName: "circle"), for: .normal)
+              button.setImage(UIImage(systemName: "square"), for: .normal)
               } else {
                   isActive = false
                   button.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)

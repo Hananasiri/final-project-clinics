@@ -19,7 +19,7 @@
       ],
       "color" : {
         "platform" : "osx",
-        "reference" : "selectedMenuItemTextColor"
+        "reference" : "alternateSelectedControlTextColor"
       },
       "idiom" : "universal"
     },

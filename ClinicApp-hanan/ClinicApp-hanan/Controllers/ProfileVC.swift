@@ -33,21 +33,22 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     lazy var myLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = NSLocalizedString("بياناتي" , comment: "")
+        label.text = NSLocalizedString("الملف الشخصي" , comment: "")
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
         //label.backgroundColor = .blue
         return label
     }()
+
   //  Use image views
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "BB")
-        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isUserInteractionEnabled = true
         imageView.backgroundColor = .white
-
+        //imageView.image = UIImage(named: "BB")
+        imageView.layer.cornerRadius = 100
+        imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
@@ -92,7 +93,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
     
     let Button1 : UIButton = {
-        $0.backgroundColor = .white
+        //$0.backgroundColor = .white
         $0.setTitle(NSLocalizedString("خروج", comment: ""), for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.layer.cornerRadius = 18
@@ -120,9 +121,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage;
-//        imageView.image = image
-//        dismiss(animated: false)
+
         picker.dismiss(animated: true, completion: nil)
             guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
               return
@@ -157,6 +156,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "0000")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
         view.backgroundColor = UIColor(named: "bgColor")
         // title = NSLocalizedString("بياناتي", comment: "")
         
@@ -188,10 +191,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
          ])
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 180),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 230),
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
+            imageView.heightAnchor.constraint(equalToConstant: 200),
+            imageView.widthAnchor.constraint(equalToConstant: 200)
         ])
 
         NSLayoutConstraint.activate([
@@ -221,7 +224,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 60),
+            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 40),
             Button1.heightAnchor.constraint(equalToConstant: 35),
             Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             

@@ -70,25 +70,18 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         print("New date = \(datePicker.date)")
     }
 
-//
-//    func datePickerValueChanged(_ sender: UIDatePicker){
-//
-//           // Create date formatter
-//           let dateFormatter: DateFormatter = DateFormatter()
-//
-//           // Set date format
-//           dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
-//
-//           // Apply date format
-//           let selectedDate: String = dateFormatter.string(from: sender.date)
-//
-//           print("Selected value \(selectedDate)")
-//       }
+
         override func viewDidLoad() {
         super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "00")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
         view.addSubview(myLabel)
         view.addSubview(datePicker)
-        view.backgroundColor = UIColor(named: "bgColor")
+            self.view.backgroundColor = .blue
+            //ColorLiteral
+            //UIColor(named: "bgColor")
         //title = NSLocalizedString("مواعيدي", comment: "")
         
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
@@ -110,32 +103,9 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             serviceTV.leftAnchor.constraint(equalTo: view.leftAnchor),
             serviceTV.rightAnchor.constraint(equalTo: view.rightAnchor),
             serviceTV.heightAnchor.constraint(equalTo: view.heightAnchor , constant: 20),
-            serviceTV.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            serviceTV.bottomAnchor.constraint(equalTo: view.bottomAnchor , constant: 300),
         ])
-//            view.addSubview(datePicker)
-//            NSLayoutConstraint.activate([
-//            datePicker.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
-//            datePicker.leftAnchor.constraint(equalTo: myLabel.leftAnchor),
-//            datePicker.heightAnchor.constraint(equalToConstant: 30),
-//            datePicker.widthAnchor.constraint(equalToConstant: 80),
-////            datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor ),
-////            datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//             ])
-//        view.addSubview(phoneTF)
-//        NSLayoutConstraint.activate([
-//
-//            phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            phoneTF.topAnchor.constraint(equalTo: serviceTV.topAnchor, constant: 500),
-//            phoneTF.heightAnchor.constraint(equalToConstant: 40),
-//            phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -160),
-//        ])
-//        view.addSubview(Button)
-//        NSLayoutConstraint.activate([
-//            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 10),
-//            Button.heightAnchor.constraint(equalToConstant: 40),
-//            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
-//        ])
+
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
                 datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 110),
@@ -205,7 +175,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var selectedIndex = -1
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
 //        if indexPath.row == selectedIndex {
 //         return 354
 //        }else {
@@ -295,8 +265,8 @@ class NewService: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = UIColor(named: "bgColor")
-
+        //contentView.backgroundColor = UIColor(named: "bgColor")
+        contentView.backgroundColor = .blue
         contentView.addSubview(nameLabel2)
         contentView.addSubview(doctorlable)
         contentView.addSubview(timelable)
@@ -308,7 +278,11 @@ class NewService: UITableViewCell {
       }
     
       override func layoutSubviews() {
-        super.layoutSubviews()
+          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+          backgroundImage.image = UIImage(named: "00")
+          backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+          self.contentView.insertSubview(backgroundImage, at: 0)
+          super.layoutSubviews()
         // x: right and left
         // y: up and down
         nameLabel2.frame = CGRect(x: -130,

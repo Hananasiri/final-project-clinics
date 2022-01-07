@@ -17,6 +17,11 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "0000")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         name.placeholder = "Name"
         name.text = "Hanan"
         name.textAlignment = .center
@@ -29,15 +34,15 @@ class LoginVC: UIViewController {
     }
     
     
-        lazy var imageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.image = UIImage(named:"BB")
-            imageView.contentMode = .scaleAspectFill
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.backgroundColor = .black
-            imageView.layer.cornerRadius = 10
-            return imageView
-        }()
+//        lazy var imageView: UIImageView = {
+//            let imageView = UIImageView()
+//            imageView.image = UIImage(named:"BB")
+//            imageView.contentMode = .scaleAspectFill
+//            imageView.translatesAutoresizingMaskIntoConstraints = false
+//            imageView.backgroundColor = .black
+//            imageView.layer.cornerRadius = 10
+//            return imageView
+//        }()
     let email : UITextField = {
         $0.placeholder = "Enter your Email"
         $0.text = "Hanan@gmail.com"
@@ -145,19 +150,19 @@ class LoginVC: UIViewController {
         stackView.addArrangedSubview(password)
         stackView.addArrangedSubview(logInButton)
         stackView.addArrangedSubview(signUp)
-        view.addSubview(imageView)
+        //view.addSubview(imageView)
         
         NSLayoutConstraint.activate([
             
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 250),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
+//            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+//            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            imageView.heightAnchor.constraint(equalToConstant: 250),
+//            imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
 
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            imageView.heightAnchor.constraint(equalToConstant: 200),
-            imageView.widthAnchor.constraint(equalToConstant: 200),
+//            imageView.heightAnchor.constraint(equalToConstant: 200),
+//            imageView.widthAnchor.constraint(equalToConstant: 200),
         ])
         
         segmentedControl.insertSegment(withTitle: "Rigester", at: 0, animated: true)
@@ -167,7 +172,7 @@ class LoginVC: UIViewController {
         segmentedControl.addTarget(self, action: #selector(Segment), for: .valueChanged)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 250),
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 540),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             stackView.heightAnchor.constraint(equalToConstant: 250)
