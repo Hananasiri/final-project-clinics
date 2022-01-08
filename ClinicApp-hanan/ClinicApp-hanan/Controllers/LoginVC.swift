@@ -73,9 +73,9 @@ class LoginVC: UIViewController {
     let logInButton : UIButton = {
         $0.setTitle(NSLocalizedString("دخول", comment: "") , for: .normal)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.backgroundColor = .systemTeal
+        $0.backgroundColor = .systemBlue
         $0.layer.cornerRadius = 16
-        $0.tintColor = .white
+        $0.tintColor = .black
         $0.addTarget(self, action: #selector(login), for: .touchUpInside)
         return $0
     }(UIButton(type: .system))
@@ -83,9 +83,9 @@ class LoginVC: UIViewController {
     let signUp : UIButton = {
         $0.setTitle(NSLocalizedString("سجل دخولك", comment: "") , for: .normal)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .systemTeal
         $0.layer.cornerRadius = 16
-        $0.tintColor = .white
+        $0.tintColor = .black
         $0.addTarget(self, action: #selector(SignupVC), for: .touchUpInside)
         return $0
     }(UIButton(type: .system))
@@ -173,8 +173,9 @@ class LoginVC: UIViewController {
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 540),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -130),
+//          stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 60),
             stackView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }

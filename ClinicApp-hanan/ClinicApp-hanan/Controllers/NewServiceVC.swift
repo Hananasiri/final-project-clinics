@@ -21,7 +21,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("مواعيدي" , comment: "")
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize:30 , weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
         //label.backgroundColor = .blue
         return label
     }()
@@ -48,9 +48,9 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = false
-        tf.layer.cornerRadius = 5
+        tf.layer.cornerRadius = 9
         tf.backgroundColor = .systemGray5
-        tf.textAlignment = .right
+        tf.textAlignment = .center
         tf.placeholder = "تفضل بإدخال رقم جوالك"
         return tf
     }()
@@ -59,7 +59,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         $0.backgroundColor = .red
         $0.setTitle(NSLocalizedString("حفظ معلوماتك", comment: ""), for: .normal)
         $0.tintColor = .white
-        $0.layer.cornerRadius = 10
+        $0.layer.cornerRadius = 2
         $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .black)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(saveButtone), for: .touchUpInside)
@@ -108,15 +108,15 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
-                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 110),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 20),
+                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 108),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 125),
             ])
         
         
         view.addSubview(phoneTF)
         NSLayoutConstraint.activate([
-            phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -70),
-            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 602),
+            phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 20),
+            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 650),
             phoneTF.heightAnchor.constraint(equalToConstant: 40),
             phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             datePicker.leftAnchor.constraint(equalTo: datePicker.leftAnchor),
@@ -126,9 +126,9 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         view.addSubview(Button)
         NSLayoutConstraint.activate([
-            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 17),
-            Button.heightAnchor.constraint(equalToConstant: 40),
+            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -60),
+            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 18),
+            Button.heightAnchor.constraint(equalToConstant: 38),
             Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -250),
         ])
             

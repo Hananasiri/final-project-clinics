@@ -14,7 +14,7 @@ class ClinicCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"p")
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 20
+        imageView.layer.cornerRadius = 15
         imageView.contentMode = .scaleAspectFill
         
         return imageView
@@ -24,7 +24,8 @@ class ClinicCell: UICollectionViewCell {
     private let myLabel: UILabel = {
         let label = UILabel()
         label.text = "عيادات طب الأسنان"
-        label.font = UIFont(name: "Light", size: 10.0)
+        //label.font = UIFont(name: "Light", size: 10)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .black
         label.textAlignment = .center
       
@@ -39,12 +40,8 @@ class ClinicCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "00")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-       //contentView.insertSubview(backgroundImage, at: 0)
         super.init(frame: frame)
-       // contentView.backgroundColor = UIColor(named: "bgColor")
+        contentView.backgroundColor = UIColor(named: "bgColor")
         contentView.addSubview(myImage)
         contentView.addSubview(myLabel)
         contentView.clipsToBounds = true
@@ -59,14 +56,14 @@ class ClinicCell: UICollectionViewCell {
         super.layoutSubviews()
         backgroundColor = UIColor(named: "bgColor")
         
-        myImage.frame = CGRect(x: 1,
+        myImage.frame = CGRect(x: 5,
                                y: 10 ,
                                width: 185,
                                height: 185)
 
         myLabel.frame = CGRect(x: 5,
                                y: contentView.frame.size.height-50 ,
-                               width: contentView.frame.size.width-10,
+                               width: contentView.frame.size.width ,
                                height: 50)
         
        

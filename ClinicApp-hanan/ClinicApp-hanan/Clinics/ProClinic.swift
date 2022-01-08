@@ -42,12 +42,16 @@ import FirebaseFirestore
          let label = UILabel()
          label.translatesAutoresizingMaskIntoConstraints = false
          label.text = NSLocalizedString("عيادة برو كلينيك لطب الأسنان", comment: "")
-         label.font = UIFont.systemFont(ofSize: 19)
+         label.font = UIFont.boldSystemFont(ofSize: 23)
          return label
      }()
 
      override func viewDidLoad() {
           super.viewDidLoad()
+         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+         backgroundImage.image = UIImage(named: "00")
+         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+         self.view.insertSubview(backgroundImage, at: 0)
          view.addSubview(imageView)
          view.addSubview(myLabel)
          //title = NSLocalizedString("عيادة برو كلينيك", comment: "")
@@ -65,14 +69,14 @@ import FirebaseFirestore
               self.view.addSubview(myTableView)
          
          NSLayoutConstraint.activate([
-         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 85),
-         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-         myLabel.heightAnchor.constraint(equalToConstant: 40),
-         myLabel.widthAnchor.constraint(equalToConstant: 290),
+            myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
+            myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 35),
+            myLabel.heightAnchor.constraint(equalToConstant: 40),
+            myLabel.widthAnchor.constraint(equalToConstant: 290),
          ])
          
          NSLayoutConstraint.activate([
-                    imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+                    imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 180),
                     imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                     imageView.heightAnchor.constraint(equalToConstant: 250),
                     imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,multiplier: 100/100)
