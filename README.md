@@ -54,7 +54,7 @@ informationClinicPage |   user only    | information clinic page, link to nameOf
 |    profilePage      |   user only    | profile page, link to edit User Address, navigate to edite user address after tap on address field.                      | 
 |     profilePage     |   user only    | profile page, link to changeLanguage, navigate to changeLanguage after pressed on change button.                         |
 |    profilePage      |   user only    | profile page, link to signOut, navigate to login page after pressed on SignOut button.                                   |
-|
+
 
 
 

@@ -72,12 +72,8 @@ let name: String?
          return label
      }()
   
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-       let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-       backgroundImage.image = UIImage(named: "00")
-       backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-       self.view.insertSubview(backgroundImage, at: 0)
        view.addSubview(imageView)
        view.addSubview(myLabel)
        //title = NSLocalizedString("عيادة دنتيرا", comment: "")

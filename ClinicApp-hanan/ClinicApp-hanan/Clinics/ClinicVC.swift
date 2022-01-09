@@ -14,38 +14,35 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
            UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           return CGSize(width: 210, height: 240)
+        return CGSize(width: (view.frame.width - 1) / 2, height: (view.frame.width - 1) / 2)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         view.backgroundColor = UIColor(named: "bgColor")
         title = NSLocalizedString("العيادات", comment: "")
         
       // Use auto layout
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 1
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 2, bottom: 90, right: 2)
         layout.minimumInteritemSpacing = 1
-        layout.itemSize = CGSize(width: 150,
-                                 height: 210)
+        layout.minimumLineSpacing = 1
+        layout.scrollDirection = .horizontal
         
         ClinicC = UICollectionView(frame: .zero,
         collectionViewLayout: layout)
-        
-        
+        //ClinicC?.backgroundColor = #colorLiteral(red: 0.9557257295, green: 0.9008562565, blue: 0.9714898467, alpha: 1)
         guard let ClinicC = ClinicC else {
             return
         }
-        
         ClinicC.register(ClinicCell.self, forCellWithReuseIdentifier: ClinicCell.identifier)
         ClinicC.dataSource = self
         ClinicC.delegate = self
         view.addSubview(ClinicC)
         ClinicC.frame = view.bounds
-
+ 
     }
     
         
@@ -64,6 +61,7 @@ class ClinicVC : UIViewController, UICollectionViewDelegate  , UICollectionViewD
     
     // use navigation controller
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let data = clinicList[indexPath.row]
         if indexPath.row == 0 {
         let navigationController = UINavigationController(

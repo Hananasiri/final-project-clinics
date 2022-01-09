@@ -14,7 +14,7 @@ class ClinicCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"p")
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 15
+        imageView.layer.cornerRadius = 6
         imageView.contentMode = .scaleAspectFill
         
         return imageView
@@ -24,9 +24,8 @@ class ClinicCell: UICollectionViewCell {
     private let myLabel: UILabel = {
         let label = UILabel()
         label.text = "عيادات طب الأسنان"
-        //label.font = UIFont(name: "Light", size: 10)
-        label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.textColor = .label
         label.textAlignment = .center
       
         return label
@@ -42,9 +41,9 @@ class ClinicCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = UIColor(named: "bgColor")
-        contentView.addSubview(myImage)
         contentView.addSubview(myLabel)
-        contentView.clipsToBounds = true
+        contentView.addSubview(myImage)
+        //contentView.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -55,18 +54,16 @@ class ClinicCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = UIColor(named: "bgColor")
+        myLabel.frame = CGRect(x: 5,
+                               y: contentView.frame.size.height-10 ,
+                               width: contentView.frame.size.width ,
+                               height: 50)
+        
         
         myImage.frame = CGRect(x: 5,
                                y: 10 ,
                                width: 185,
                                height: 185)
 
-        myLabel.frame = CGRect(x: 5,
-                               y: contentView.frame.size.height-50 ,
-                               width: contentView.frame.size.width ,
-                               height: 50)
-        
-       
     }
-   
     }
