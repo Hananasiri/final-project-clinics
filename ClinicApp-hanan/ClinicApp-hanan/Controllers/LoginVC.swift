@@ -28,21 +28,11 @@ class LoginVC: UIViewController {
         name.translatesAutoresizingMaskIntoConstraints = false
         name.textColor = .black
         name.font = UIFont.systemFont(ofSize: 18)
-        name.backgroundColor = .systemGray5
+        name.backgroundColor = .init(white: 0.90, alpha: 1)
         name.layer.cornerRadius = 16
         
     }
-    
-    
-//        lazy var imageView: UIImageView = {
-//            let imageView = UIImageView()
-//            imageView.image = UIImage(named:"BB")
-//            imageView.contentMode = .scaleAspectFill
-//            imageView.translatesAutoresizingMaskIntoConstraints = false
-//            imageView.backgroundColor = .black
-//            imageView.layer.cornerRadius = 10
-//            return imageView
-//        }()
+
     let email : UITextField = {
         $0.placeholder = "Enter your Email"
         $0.text = "Hanan@gmail.com"

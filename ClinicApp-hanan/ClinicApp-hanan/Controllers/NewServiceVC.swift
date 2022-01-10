@@ -20,8 +20,8 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("مواعيدي" , comment: "")
-        label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 33 , weight: .bold)
         //label.backgroundColor = .blue
         return label
     }()
@@ -265,8 +265,8 @@ class NewService: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //contentView.backgroundColor = UIColor(named: "bgColor")
-        contentView.backgroundColor = .blue
+        contentView.backgroundColor = UIColor(named: "bgColor")
+        // contentView.backgroundColor = .blue
         contentView.addSubview(nameLabel2)
         contentView.addSubview(doctorlable)
         contentView.addSubview(timelable)
@@ -278,10 +278,10 @@ class NewService: UITableViewCell {
       }
     
       override func layoutSubviews() {
-          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-          backgroundImage.image = UIImage(named: "00")
-          backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-          self.contentView.insertSubview(backgroundImage, at: 0)
+//          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//          backgroundImage.image = UIImage(named: "00")
+//          backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+//          self.contentView.insertSubview(backgroundImage, at: 0)
           super.layoutSubviews()
         // x: right and left
         // y: up and down

@@ -113,10 +113,14 @@
 "٣-٤ م" = "3-4 AM" ;
 "٦-٨ م" = "6-8 AM" ;
 "٩-١٠ ص" = "9-10 AM" ;
-"استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس" = "Use fluoride toothpaste to provide the most effective protection against cavities" ;
-"تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم" = "Water is one of the best drinks for health, including oral health" ;
-"توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية" = "go to the dentist at least twice a year, to find health problems" ;
+"استعمل معجون الأسنان المحتوي على الفلورايد وذلك لتوفير الحماية الأكثر ‫فعالية ضد التسوس." = "Use fluoride toothpaste to provide the most effective protection against cavities" ;
+"تناول الماء من أفضل المشروبات للصحة، بما فيها صحة الفم." = "Water is one of the best drinks for health, including oral health" ;
+"توجه إلى طبيب الأسنان مرتين بحد أدنى خلال السنة، ليتم اكتشاف المشكلات الصحية." = "Go to the dentist at least twice a year, to find health problems" ;
 "يساعد غسول الفم على تقليل نسبة الحمض الموجودة بالفم، وينظف المناطق التي يصعب تنظيفها" = "Mouthwash helps reduce acid in the mouth and cleans hard-to-clean areas" ;
 "احرص على تناول الأطعمة التي تعزز من صحة الفم والأسنان، مثل منتجات الألبان، والبيض، والبقوليات" = "Eat foods that promote oral health, such as dairy products, eggs, and legumes" ;
-"تجنب تناول المشروبات الغازية، وقلل من الشاي، والقهوة" = "Avoid soft drinks, cut back on tea and coffee" ;
+"تجنب تناول المشروبات الغازية، وقلل من الشاي، والقهوة." = "Avoid soft drinks, cut back on tea and coffee" ;
+
+"تجنب الفرك الشديد للأسنان لأنه يؤدي إلى تهيج اللثة." =
+"Avoid vigorous brushing of the teeth as it irritates the gums" ;
+"تناول الأطعمة التي تحتوي على الحديد والزنك حيث تعمل على تجديد الخلايا المبطنة للثة." = "Eating foods that contain iron and zinc as they work to regenerate the cells lining the gums" ;
 

@@ -34,9 +34,9 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("الملف الشخصي" , comment: "")
-        label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
-        //label.backgroundColor = .blue
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 30 , weight: .bold)
+        label.tintColor = .label
         return label
     }()
 
@@ -63,7 +63,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
     var NameTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.backgroundColor = .systemGray5
+        tf.backgroundColor = .init(white: 0.90, alpha: 1)
         tf.layer.cornerRadius = 12
         tf.textAlignment = .right
         tf.placeholder = NSLocalizedString("تفضل بإدخال اسمك", comment: "")
@@ -73,7 +73,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.layer.cornerRadius = 12
-        tf.backgroundColor = .systemGray5
+        tf.backgroundColor = .init(white: 0.90, alpha: 1)
         tf.textAlignment = .right
         tf.placeholder = NSLocalizedString("تفضل بإدخال عنوانك", comment: "")
         return tf
