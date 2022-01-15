@@ -10,6 +10,8 @@ import FirebaseFirestore
 import FirebaseAuth
 import TransitionButton
 import FirebaseStorage
+import AVFoundation
+import UIKit
 
 class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -83,10 +85,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
        let bAction = UIButton()
         bAction.backgroundColor = .systemTeal
         bAction.tintColor = .black
-        bAction.titleColor(for: .highlighted)
+        bAction.setTitleColor(UIColor.black, for: .normal)
         bAction.setTitle(NSLocalizedString("تغيير اللغة", comment: ""), for: .normal)
         bAction.translatesAutoresizingMaskIntoConstraints = false
-        bAction.layer.cornerRadius = 18
+        bAction.layer.cornerRadius = 4
         bAction.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
        return bAction
         }()
@@ -96,7 +98,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         //$0.backgroundColor = .white
         $0.setTitle(NSLocalizedString("خروج", comment: ""), for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.layer.cornerRadius = 4
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(signOut), for: .touchUpInside)
         return $0
@@ -106,9 +108,10 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         let b = TransitionButton()
         b.addTarget(self, action: #selector(addService), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle(NSLocalizedString("حفظ", comment: ""), for: .normal)
+        b.setTitle(NSLocalizedString("لصحة أسنان أفضل", comment: ""), for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
-        b.layer.cornerRadius = 18
+        b.layer.cornerRadius = 4
+       // b.addTarget(self, action: #selector(adviceButtone), for: .touchUpInside)
         b.backgroundColor = .systemGray2
         return b
     }()
@@ -154,8 +157,17 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
       }
     
     
+//           @objc func adviceButtone() {
+//               let newVC = VideoVC()
+//               present(newVC, animated: true, completion: nil)
+//   //            let noteVC = VideoVC()
+//   //            navigationController?.pushViewController(noteVC,animated: true)
+//      }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //adviceButtone()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "0000")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
@@ -212,15 +224,16 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             
             button.topAnchor.constraint(equalTo: view.topAnchor,constant: 540),
            // button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 100),
+            //button.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 114),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 35),
-            button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -220),
             
             
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 70),
             addserviceButton.heightAnchor.constraint(equalToConstant: 35),
-            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
+            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -220),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -264,7 +277,9 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+           self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+            let newVC = VideoVC()
+            self.navigationController?.pushViewController(newVC,animated: true)
         }
         }
         let name = NameTF.text
@@ -275,6 +290,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         
         let image = imageView.image
         UserDefaults.standard.set(address,forKey: "imageView")
+        
     }
     
     @objc func imageTapped() {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Lottie
+
 class DinteraClinicCell: UITableViewCell {
 
   static let identifire = "Cell"
@@ -78,12 +78,12 @@ class DinteraClinicCell: UITableViewCell {
       
 
       
-      button.frame = CGRect(x: 8,
+      button.frame = CGRect(x: 20,
                     y: 20,
-                    width: 60,
+                    width: 40,
                     height: contentView.frame.size.height-30)
         
-       }
+    }
     
     var distraint: service?
     
@@ -94,22 +94,19 @@ class DinteraClinicCell: UITableViewCell {
             button.setImage(UIImage(systemName: "square"), for: .normal)
             } else {
                 isActive = false
+                button.setImage(UIImage(systemName: ""), for: .normal)
                 button.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
-                button.backgroundColor = .systemBlue
-                button.layer.cornerRadius = 7
+                button.backgroundColor = .red
+                button.layer.cornerRadius = 4
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
                 button.titleLabel?.textAlignment = .right
               
             }
-        
-        let servicetype1 = labelname.text ??  ""
-        let servicedtype2 = labeldrname.text ?? ""
-        let servicetype3 = labeltime.text ?? ""
-        ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
-        
-    
-        
-    }
-    
-    
-    }
+      let servicetype1 = labelname.text ??  ""
+      let servicedtype2 = labeldrname.text ?? ""
+      let servicetype3 = labeltime.text ?? ""
+      ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
+      
+
+  }
+  }

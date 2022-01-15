@@ -4,26 +4,21 @@
 //
 //  Created by  HANAN ASIRI on 24/04/1443 AH.
 //
-
 import UIKit
 
 
-class AdvicesVC: UIViewController {
+  class AdvicesVC: UIViewController {
     lazy var myLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("إرشادات طبية" , comment: "")
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:32 , weight: .bold)
+        label.font = UIFont.systemFont(ofSize:28 , weight: .bold)
         return label
     }()
- override func viewDidLoad() {
+   override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "bgColor")
         super.viewDidLoad()
-     let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-     backgroundImage.image = UIImage(named: "00")
-     backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-     self.view.insertSubview(backgroundImage, at: 0)
         view.addSubview(myLabel)
 
      
@@ -42,13 +37,13 @@ class AdvicesVC: UIViewController {
    NSLayoutConstraint.activate([
     myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
     myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
-    myLabel.heightAnchor.constraint(equalToConstant: 30),
+    myLabel.heightAnchor.constraint(equalToConstant: 25),
     myLabel.widthAnchor.constraint(equalToConstant: 300),
     ])
     NSLayoutConstraint.activate([
      tabelView.leftAnchor.constraint(equalTo: view.leftAnchor),
      tabelView.rightAnchor.constraint(equalTo: view.rightAnchor),
-     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 50),
+     tabelView.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 30),
      tabelView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
      ])
             

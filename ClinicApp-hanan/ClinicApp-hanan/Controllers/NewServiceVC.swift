@@ -48,7 +48,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = false
-        tf.layer.cornerRadius = 9
+        tf.layer.cornerRadius = 4
         tf.backgroundColor = .systemGray5
         tf.textAlignment = .center
         tf.placeholder = "تفضل بإدخال رقم جوالك"
@@ -56,11 +56,11 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }()
     
     let Button : UIButton = {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .white
         $0.setTitle(NSLocalizedString("حفظ معلوماتك", comment: ""), for: .normal)
-        $0.tintColor = .white
+        $0.setTitleColor(UIColor.black, for: .normal)
         $0.layer.cornerRadius = 2
-        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .black)
+        $0.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(saveButtone), for: .touchUpInside)
         return $0
@@ -73,23 +73,16 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "00")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+        
         view.addSubview(myLabel)
         view.addSubview(datePicker)
-            self.view.backgroundColor = .blue
-            //ColorLiteral
-            //UIColor(named: "bgColor")
+        self.view.backgroundColor = UIColor(named: "bgColor")
         //title = NSLocalizedString("مواعيدي", comment: "")
-        
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
         phoneTF.text = name
         
         _ = UserDefaults.standard.value(forKey: "datePicker") as? NSDate
-       
-        
+    
         NSLayoutConstraint.activate([
          myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
          myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
@@ -108,15 +101,15 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
-                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 108),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 125),
+                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 100),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 76),
             ])
         
         
         view.addSubview(phoneTF)
         NSLayoutConstraint.activate([
-            phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 20),
-            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 650),
+            phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -60),
+            phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 660),
             phoneTF.heightAnchor.constraint(equalToConstant: 40),
             phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             datePicker.leftAnchor.constraint(equalTo: datePicker.leftAnchor),
@@ -126,10 +119,10 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         view.addSubview(Button)
         NSLayoutConstraint.activate([
-            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -60),
-            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 18),
+            Button.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 5),
+            Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 12),
             Button.heightAnchor.constraint(equalToConstant: 38),
-            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -250),
+            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
         ])
             
             

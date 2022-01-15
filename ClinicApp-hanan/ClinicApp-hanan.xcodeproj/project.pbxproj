@@ -11,6 +11,7 @@
 		8633ED4D276093B400E88B70 /* ReservitionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4C276093B400E88B70 /* ReservitionsService.swift */; };
 		8633ED4F2760A76F00E88B70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633ED4E2760A76E00E88B70 /* ProfileVC.swift */; };
 		865C3B44275019CA004917CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C3B43275019CA004917CF /* Service.swift */; };
+		865C5879279062F0004BF897 /* نصائح طبية.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 865C5878279062F0004BF897 /* نصائح طبية.mp4 */; };
 		865CC3DF2764FE9400A7A8BD /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC3DE2764FE9400A7A8BD /* Advice.swift */; };
 		865DE4382768B7CA00F7896F /* DinteraClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE4372768B7CA00F7896F /* DinteraClinicCell.swift */; };
 		865DE43A2768B84600F7896F /* JoyaClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE4392768B84600F7896F /* JoyaClinicCell.swift */; };
@@ -34,6 +35,7 @@
 		868B64A82750F70700293CAF /* DinteraClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B64A72750F70700293CAF /* DinteraClinic.swift */; };
 		868C127B274D0FEB004494A2 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127A274D0FEB004494A2 /* ClinicCell.swift */; };
 		868C127D274D125A004494A2 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C127C274D125A004494A2 /* Clinic.swift */; };
+		868D9EC5278DA82700411360 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D9EC4278DA82700411360 /* VideoVC.swift */; };
 		86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,7 @@
 		8633ED4C276093B400E88B70 /* ReservitionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservitionsService.swift; sourceTree = "<group>"; };
 		8633ED4E2760A76E00E88B70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		865C3B43275019CA004917CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		865C5878279062F0004BF897 /* نصائح طبية.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "نصائح طبية.mp4"; sourceTree = "<group>"; };
 		865CC3DE2764FE9400A7A8BD /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 		865DE4372768B7CA00F7896F /* DinteraClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinicCell.swift; sourceTree = "<group>"; };
 		865DE4392768B84600F7896F /* JoyaClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyaClinicCell.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		868B64A72750F70700293CAF /* DinteraClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinteraClinic.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		868C127A274D0FEB004494A2 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
 		868C127C274D125A004494A2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		868D9EC4278DA82700411360 /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		86B4412A2754C4A1001BC5DE /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };
 		9404CD29C2C2B28EAA988FC7 /* Pods-ClinicApp-hanan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicApp-hanan.release.xcconfig"; path = "Target Support Files/Pods-ClinicApp-hanan/Pods-ClinicApp-hanan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +129,7 @@
 				867326F9275F907D0070E172 /* NewServiceVC.swift */,
 				867326F7275F3B990070E172 /* LocationVC.swift */,
 				8687F7FE274BA11900097E17 /* TabVC.swift */,
+				868D9EC4278DA82700411360 /* VideoVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				8687F7E8274B6C5400097E17 /* SceneDelegate.swift */,
 				8687F7EC274B6C5400097E17 /* Main.storyboard */,
 				8687F7EF274B6C5600097E17 /* Assets.xcassets */,
+				865C5878279062F0004BF897 /* نصائح طبية.mp4 */,
 				8687F7F1274B6C5600097E17 /* LaunchScreen.storyboard */,
 				8687F7F4274B6C5600097E17 /* Info.plist */,
 				8687F7FA274B6D4200097E17 /* GoogleService-Info.plist */,
@@ -261,6 +267,7 @@
 				8660D365275CAC6400D2CB9B /* Localizable.strings in Resources */,
 				8687F7FB274B6D4200097E17 /* GoogleService-Info.plist in Resources */,
 				8687F7F3274B6C5600097E17 /* LaunchScreen.storyboard in Resources */,
+				865C5879279062F0004BF897 /* نصائح طبية.mp4 in Resources */,
 				8687F7F0274B6C5600097E17 /* Assets.xcassets in Resources */,
 				8687F7EE274B6C5400097E17 /* Main.storyboard in Resources */,
 			);
@@ -328,6 +335,7 @@
 				865C3B44275019CA004917CF /* Service.swift in Sources */,
 				867326F8275F3B990070E172 /* LocationVC.swift in Sources */,
 				865CC3DF2764FE9400A7A8BD /* Advice.swift in Sources */,
+				868D9EC5278DA82700411360 /* VideoVC.swift in Sources */,
 				86B4412B2754C4A1001BC5DE /* AdvicesVC.swift in Sources */,
 				867326FA275F907D0070E172 /* NewServiceVC.swift in Sources */,
 				8687F7E9274B6C5400097E17 /* SceneDelegate.swift in Sources */,
