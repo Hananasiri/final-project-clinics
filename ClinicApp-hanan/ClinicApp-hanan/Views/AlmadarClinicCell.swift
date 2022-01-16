@@ -62,18 +62,18 @@ class AlmadarClinicCell: UITableViewCell {
         
        labelname.translatesAutoresizingMaskIntoConstraints = false
        labelname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-       labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 220).isActive = true
+       labelname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 200).isActive = true
        labelname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
         
         labeldrname.translatesAutoresizingMaskIntoConstraints = false
         labeldrname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 130).isActive = true
+        labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 105).isActive = true
         labeldrname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
         labeltime.translatesAutoresizingMaskIntoConstraints = false
         labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 65).isActive = true
+        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 45).isActive = true
         labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
 

@@ -38,7 +38,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         label.text = NSLocalizedString("الملف الشخصي" , comment: "")
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 30 , weight: .bold)
-        label.tintColor = .label
+        label.textColor = .label
         return label
     }()
 
@@ -88,7 +88,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         bAction.setTitleColor(UIColor.black, for: .normal)
         bAction.setTitle(NSLocalizedString("تغيير اللغة", comment: ""), for: .normal)
         bAction.translatesAutoresizingMaskIntoConstraints = false
-        bAction.layer.cornerRadius = 4
+        bAction.layer.cornerRadius = 5
         bAction.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
        return bAction
         }()
@@ -110,7 +110,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         b.translatesAutoresizingMaskIntoConstraints = false
         b.setTitle(NSLocalizedString("لصحة أسنان أفضل", comment: ""), for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
-        b.layer.cornerRadius = 4
+        b.layer.cornerRadius = 5
        // b.addTarget(self, action: #selector(adviceButtone), for: .touchUpInside)
         b.backgroundColor = .systemGray2
         return b
@@ -222,18 +222,18 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
             addressTF.widthAnchor.constraint(equalToConstant: 290),
 
             
-            button.topAnchor.constraint(equalTo: view.topAnchor,constant: 540),
+            button.topAnchor.constraint(equalTo: view.topAnchor,constant: 560),
            // button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             //button.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 114),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 35),
-            button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -220),
+            button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
             
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            addserviceButton.topAnchor.constraint(equalTo: addressTF.bottomAnchor, constant: 70),
+            addserviceButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
             addserviceButton.heightAnchor.constraint(equalToConstant: 35),
-            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -220),
+            addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),

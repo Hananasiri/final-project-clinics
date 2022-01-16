@@ -142,30 +142,19 @@ class LoginVC: UIViewController {
         stackView.addArrangedSubview(signUp)
         //view.addSubview(imageView)
         
-        NSLayoutConstraint.activate([
-            
-//            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-//            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            imageView.heightAnchor.constraint(equalToConstant: 250),
-//            imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
-
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-//            imageView.heightAnchor.constraint(equalToConstant: 200),
-//            imageView.widthAnchor.constraint(equalToConstant: 200),
-        ])
         
         segmentedControl.insertSegment(withTitle: "Rigester", at: 0, animated: true)
         segmentedControl.setTitle(NSLocalizedString("تسجيل الدخول", comment: ""), forSegmentAt: 0)
         segmentedControl.insertSegment(withTitle: "Login", at: 1, animated: true)
         segmentedControl.setTitle(NSLocalizedString("دخول", comment: ""), forSegmentAt: 1)
         segmentedControl.addTarget(self, action: #selector(Segment), for: .valueChanged)
-        
+        segmentedControl.backgroundColor = .systemGray4
+
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 540),
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -130),
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -160),
 //          stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 60),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }

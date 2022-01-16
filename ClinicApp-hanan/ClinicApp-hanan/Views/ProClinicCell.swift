@@ -69,12 +69,12 @@ class ProClinicCell: UITableViewCell {
         
         labeldrname.translatesAutoresizingMaskIntoConstraints = false
         labeldrname.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 95).isActive = true
+        labeldrname.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 110).isActive = true
         labeldrname.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
         labeltime.translatesAutoresizingMaskIntoConstraints = false
         labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 45).isActive = true
+        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 50).isActive = true
         labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
 

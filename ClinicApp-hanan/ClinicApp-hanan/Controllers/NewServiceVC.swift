@@ -21,7 +21,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("مواعيدي" , comment: "")
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 33 , weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 28 , weight: .bold)
         //label.backgroundColor = .blue
         return label
     }()
@@ -84,15 +84,15 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         _ = UserDefaults.standard.value(forKey: "datePicker") as? NSDate
     
         NSLayoutConstraint.activate([
-         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
+         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 90),
          myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
-         myLabel.heightAnchor.constraint(equalToConstant: 30),
+         myLabel.heightAnchor.constraint(equalToConstant: 70),
          myLabel.widthAnchor.constraint(equalToConstant: 300),
          ])
         
         view.addSubview(serviceTV)
         NSLayoutConstraint.activate([
-            serviceTV.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 50),
+            serviceTV.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 70),
             serviceTV.leftAnchor.constraint(equalTo: view.leftAnchor),
             serviceTV.rightAnchor.constraint(equalTo: view.rightAnchor),
             serviceTV.heightAnchor.constraint(equalTo: view.heightAnchor , constant: 20),
@@ -102,7 +102,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             view.addSubview(datePicker)
             NSLayoutConstraint.activate([
                 datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 100),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 76),
+                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 88),
             ])
         
         
@@ -122,7 +122,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             Button.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 5),
             Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 12),
             Button.heightAnchor.constraint(equalToConstant: 38),
-            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -260),
+            Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -230),
         ])
             
             
@@ -168,7 +168,7 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var selectedIndex = -1
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
 //        if indexPath.row == selectedIndex {
 //         return 354
 //        }else {

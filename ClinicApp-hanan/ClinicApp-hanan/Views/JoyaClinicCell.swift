@@ -74,7 +74,7 @@ class JoyaClinicCell: UITableViewCell {
         
         labeltime.translatesAutoresizingMaskIntoConstraints = false
         labeltime.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 65).isActive = true
+        labeltime.leftAnchor.constraint(equalTo: self.button.leftAnchor , constant: 55).isActive = true
         labeltime.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor , constant: 5).isActive = true
         
 
