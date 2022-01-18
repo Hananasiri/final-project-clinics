@@ -38,12 +38,7 @@ class TabVC: UITabBarController {
             
             createNavController(for: ProfileVC(), title: NSLocalizedString("الملف الشخصي" , comment: ""), image: UIImage(systemName: "person.crop.rectangle")!),
             
-//            createNavController(for: VideoVC(), title: NSLocalizedString("معلومات مهمة" , comment: ""), image: UIImage(systemName: "doc.plaintext")!),
-            
-            
-          
-         ]
-         }
+         ]}
     
     override func viewDidLoad() {
         super.viewDidLoad()

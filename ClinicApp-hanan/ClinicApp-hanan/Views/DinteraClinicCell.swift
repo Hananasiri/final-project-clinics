@@ -82,7 +82,6 @@ class DinteraClinicCell: UITableViewCell {
                     y: 20,
                     width: 40,
                     height: contentView.frame.size.height-30)
-        
     }
     
     var distraint: service?

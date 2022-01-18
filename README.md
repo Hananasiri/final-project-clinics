@@ -1,9 +1,12 @@
 # final-project-clinics
 
+
 #Description :
 
 Set of Dental clinics every clinic has a set of services that make the user choose name of the clinic Such as 
 Dentera Dental Clinic, Pro Clinic Dental Clinic and other clinics and the type of service and book in it.
+
+
 
 #User Stories :
 
@@ -14,21 +17,26 @@ As a user, I want to book a dental.
 As a user, I want to delete an appointment that I do not want.
 As a user, I want to get medical advice.
 As a user, I want to choose the right date for me.
-As a user, I want to see the location of the clinics on the map
+As a user, I want to see the location of the clinics on the map.
+As a user, I want to see video in profile "For better dental health ".
 As a user, I want to complete my data registration.
+
+
 
 
 # Backlog:
  
 User :
-- can signup/login
-- see your profile
-- see Clinics Book List
-- see Appointments list
-- see advice list
-- can add appointment
-- can delete appointment
-- can see location of clinic
+
+- can signup/login.
+- see your profile.
+- see Clinics Book List.
+- see Appointments list.
+- see advice list.
+- can add appointment.
+- can delete appointment.
+- can see location of clinic.
+- can see video (For better dental health ).
 
 
 
@@ -52,7 +60,8 @@ informationClinicPage |   user only    | information clinic page, link to nameOf
 |    profilePage      |   user only    | profile page, link to edit profile image, navigate to iphone library after tap on profile image.                         |
 |    profilePage      |   user only    | profile page, link to edit User name, navigate to edite user name after tap on name field.                               |    
 |    profilePage      |   user only    | profile page, link to edit User Address, navigate to edite user address after tap on address field.                      | 
-|     profilePage     |   user only    | profile page, link to changeLanguage, navigate to changeLanguage after pressed on change button.                         |
+|    profilePage      |   user only    | profile page, link to changeLanguage, navigate to changeLanguage after pressed on change button.                         |
+|    profilePage      |   user only    | profile page, link to button, navigate to video page after pressed on"For better dental health" button.                  |
 |    profilePage      |   user only    | profile page, link to signOut, navigate to login page after pressed on SignOut button.                                   |
 
 
@@ -99,3 +108,6 @@ ProClinicDentalPage
 
 # repository Link:
  [click here](https://github.com/Hananasiri/final-project-clinics)
+ 
+ # Slides Link
+  [click here](https://docs.google.com/presentation/d/1LXNlxDybB5OIPsQ97Ww6OJC-ccHE0kXN/edit#slide=id.p1)

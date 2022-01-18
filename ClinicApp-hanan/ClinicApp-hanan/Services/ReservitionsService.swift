@@ -16,33 +16,33 @@ class ReservitionsService {
  let serviceCollection = Firestore.firestore().collection("reservations")
 
     // Added - Update to Appointment:
- func addToAppointment(book: Appointment) {
+     func addToAppointment(book: Appointment) {
      serviceCollection.document(book.bookaservice).setData([
-        "bookaservice" : book.bookaservice,
-        "bookadoctor" : book.bookadoctor,
-        "bookatime" : book.bookatime
+     "bookaservice": book.bookaservice,
+     "bookadoctor": book.bookadoctor,
+     "bookatime": book.bookatime
      ], merge: true)
      }
     
     // Listen to Appointment:
- func listenToAppointment(completion: @escaping (([Appointment]) -> Void)) {
+     func listenToAppointment(completion: @escaping (([Appointment]) -> Void)) {
      serviceCollection.addSnapshotListener { snapshot, error in
-   if error != nil {
-    return
-   }
-   guard let documents = snapshot?.documents else { return }
+     if error != nil {
+     return
+     }
+     guard let documents = snapshot?.documents else { return }
        
-    var statment: Array<Appointment> = []
+     var statment: Array<Appointment> = []
          // Use loops
-    for document in documents {
-    let data = document.data()
-    let Booked = Appointment(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
-    bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
-    bookatime: (data["bookatime"] as? String) ?? "Nothing")
-  statment.append(Booked)
-   }
-   completion(statment)
-  }
-  }
-  }
-
+     for document in documents {
+     let data = document.data()
+     let Booked = Appointment(bookaservice: (data["bookaservice"] as? String) ?? "Nothing",
+     bookadoctor: (data["bookadoctor"] as? String) ?? "Nothing",
+     bookatime: (data["bookatime"] as? String) ?? "Nothing")
+     statment.append(Booked)
+     }
+     completion(statment)
+     }
+     }
+     }
+ 

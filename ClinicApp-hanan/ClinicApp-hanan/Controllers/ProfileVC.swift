@@ -157,14 +157,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
       }
     
     
-//           @objc func adviceButtone() {
-//               let newVC = VideoVC()
-//               present(newVC, animated: true, completion: nil)
-//   //            let noteVC = VideoVC()
-//   //            navigationController?.pushViewController(noteVC,animated: true)
-//      }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //adviceButtone()
@@ -196,20 +188,18 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         view.addSubview(addserviceButton)
         
         NSLayoutConstraint.activate([
-         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
-         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
-         myLabel.heightAnchor.constraint(equalToConstant: 30),
-         myLabel.widthAnchor.constraint(equalToConstant: 300),
-         ])
-        
-        NSLayoutConstraint.activate([
+            
+            myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 120),
+            myLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            myLabel.heightAnchor.constraint(equalToConstant: 30),
+            myLabel.widthAnchor.constraint(equalToConstant: 300),
+         
+    
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 180),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 200),
-            imageView.widthAnchor.constraint(equalToConstant: 200)
-        ])
+            imageView.widthAnchor.constraint(equalToConstant: 200),
 
-        NSLayoutConstraint.activate([
 
             NameTF.topAnchor.constraint(equalTo: view.topAnchor,constant: 420),
             NameTF.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 50),
@@ -223,8 +213,6 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
             
             button.topAnchor.constraint(equalTo: view.topAnchor,constant: 560),
-           // button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            //button.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 114),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 35),
             button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
@@ -275,9 +263,9 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         // use Animation
         addserviceButton.startAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-            self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+            self.addserviceButton.stopAnimation(animationStyle: .shake , revertAfterDelay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-           self.addserviceButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
+            self.addserviceButton.stopAnimation(animationStyle: .shake, revertAfterDelay: 1)
             let newVC = VideoVC()
             self.navigationController?.pushViewController(newVC,animated: true)
         }

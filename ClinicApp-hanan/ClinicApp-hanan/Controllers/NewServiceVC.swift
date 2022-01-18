@@ -76,6 +76,10 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         view.addSubview(myLabel)
         view.addSubview(datePicker)
+        view.addSubview(serviceTV)
+        view.addSubview(datePicker)
+        view.addSubview(phoneTF)
+        view.addSubview(Button)
         self.view.backgroundColor = UIColor(named: "bgColor")
         //title = NSLocalizedString("مواعيدي", comment: "")
         let name = UserDefaults.standard.value(forKey: "phoneTF") as? String
@@ -83,49 +87,33 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         _ = UserDefaults.standard.value(forKey: "datePicker") as? NSDate
     
-        NSLayoutConstraint.activate([
-         myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 90),
-         myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
-         myLabel.heightAnchor.constraint(equalToConstant: 70),
-         myLabel.widthAnchor.constraint(equalToConstant: 300),
-         ])
+            NSLayoutConstraint.activate([
+            myLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 90),
+            myLabel.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 70),
+            myLabel.heightAnchor.constraint(equalToConstant: 70),
+            myLabel.widthAnchor.constraint(equalToConstant: 300),
         
-        view.addSubview(serviceTV)
-        NSLayoutConstraint.activate([
             serviceTV.topAnchor.constraint(equalTo: myLabel.topAnchor , constant: 70),
             serviceTV.leftAnchor.constraint(equalTo: view.leftAnchor),
             serviceTV.rightAnchor.constraint(equalTo: view.rightAnchor),
             serviceTV.heightAnchor.constraint(equalTo: view.heightAnchor , constant: 20),
             serviceTV.bottomAnchor.constraint(equalTo: view.bottomAnchor , constant: 300),
-        ])
-
-            view.addSubview(datePicker)
-            NSLayoutConstraint.activate([
-                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 100),
-                datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 88),
-            ])
-        
-        
-        view.addSubview(phoneTF)
-        NSLayoutConstraint.activate([
+       
+            datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 100),
+            datePicker.centerYAnchor.constraint(equalTo: serviceTV.centerYAnchor , constant: 88),
+         
             phoneTF.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: -60),
             phoneTF.topAnchor.constraint(equalTo: view.topAnchor, constant: 660),
             phoneTF.heightAnchor.constraint(equalToConstant: 40),
             phoneTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             datePicker.leftAnchor.constraint(equalTo: datePicker.leftAnchor),
             
-        ])
-        
-        
-        view.addSubview(Button)
-        NSLayoutConstraint.activate([
+
             Button.centerXAnchor.constraint(equalTo: view.centerXAnchor , constant: 5),
             Button.topAnchor.constraint(equalTo: phoneTF.bottomAnchor, constant: 12),
             Button.heightAnchor.constraint(equalToConstant: 38),
             Button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -230),
         ])
-            
-            
             
         ReservitionsService.shared.listenToAppointment(completion: { appointment in
             self.post = appointment
@@ -169,12 +157,8 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
-//        if indexPath.row == selectedIndex {
-//         return 354
-//        }else {
-//         return 100
-//        }
-       }
+
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -211,9 +195,6 @@ class NewServiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                  handler: { Action in
             if editingStyle == .delete {
             Firestore.firestore().collection("reservations").document(cell.bookaservice).delete()
-                
-//              self.appointment.remove(at: indexPath.row)
-//              self.serviceTV.deleteRows(at: [indexPath], with: .fade)
             }
             self.serviceTV.reloadData()
           })
@@ -271,10 +252,7 @@ class NewService: UITableViewCell {
       }
     
       override func layoutSubviews() {
-//          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//          backgroundImage.image = UIImage(named: "00")
-//          backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-//          self.contentView.insertSubview(backgroundImage, at: 0)
+
           super.layoutSubviews()
         // x: right and left
         // y: up and down
