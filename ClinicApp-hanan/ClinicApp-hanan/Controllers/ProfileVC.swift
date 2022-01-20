@@ -38,7 +38,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         label.text = NSLocalizedString("الملف الشخصي" , comment: "")
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 30 , weight: .bold)
-        label.textColor = .label
+        label.textColor = .white
         return label
     }()
 
@@ -67,7 +67,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.backgroundColor = .init(white: 0.90, alpha: 1)
         tf.layer.cornerRadius = 12
-        tf.textAlignment = .right
+        tf.textAlignment = .center
         tf.placeholder = NSLocalizedString("تفضل بإدخال اسمك", comment: "")
         return tf
     }()
@@ -76,7 +76,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.layer.cornerRadius = 12
         tf.backgroundColor = .init(white: 0.90, alpha: 1)
-        tf.textAlignment = .right
+        tf.textAlignment = .center
         tf.placeholder = NSLocalizedString("تفضل بإدخال عنوانك", comment: "")
         return tf
     }()
@@ -202,30 +202,30 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
 
 
             NameTF.topAnchor.constraint(equalTo: view.topAnchor,constant: 420),
-            NameTF.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 50),
+            NameTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             NameTF.heightAnchor.constraint(equalToConstant: 40),
-            NameTF.widthAnchor.constraint(equalToConstant: 290),
+            NameTF.widthAnchor.constraint(equalToConstant: 230),
 
             addressTF.topAnchor.constraint(equalTo: NameTF.bottomAnchor, constant: 24),
-            addressTF.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            addressTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addressTF.heightAnchor.constraint(equalToConstant: 40),
-            addressTF.widthAnchor.constraint(equalToConstant: 290),
+            addressTF.widthAnchor.constraint(equalToConstant: 230),
 
             
-            button.topAnchor.constraint(equalTo: view.topAnchor,constant: 560),
+            button.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 20),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 35),
             button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
             
             addserviceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            addserviceButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            addserviceButton.topAnchor.constraint(equalTo: view.topAnchor,constant: 560),
             addserviceButton.heightAnchor.constraint(equalToConstant: 35),
             addserviceButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
 
             
             Button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Button1.topAnchor.constraint(equalTo: addserviceButton.bottomAnchor, constant: 40),
+            Button1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 40),
             Button1.heightAnchor.constraint(equalToConstant: 35),
             Button1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -200),
             
@@ -264,7 +264,7 @@ class ProfileVC: UIViewController , UIImagePickerControllerDelegate, UINavigatio
         addserviceButton.startAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .shake , revertAfterDelay: 1)
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.addserviceButton.stopAnimation(animationStyle: .shake, revertAfterDelay: 1)
             let newVC = VideoVC()
             self.navigationController?.pushViewController(newVC,animated: true)

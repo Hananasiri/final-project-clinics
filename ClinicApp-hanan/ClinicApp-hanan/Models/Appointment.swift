@@ -1,10 +1,9 @@
 //
-//  Date.swift
+//  Appointment.swift
 //  ClinicApp-hanan
 //
-//  Created by  HANAN ASIRI on 20/04/1443 AH.
+//  Created by  HANAN ASIRI on 17/06/1443 AH.
 //
-
 
 import UIKit
 

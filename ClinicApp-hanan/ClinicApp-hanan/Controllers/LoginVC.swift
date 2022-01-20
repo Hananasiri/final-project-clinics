@@ -23,7 +23,7 @@ class LoginVC: UIViewController {
         self.view.insertSubview(backgroundImage, at: 0)
         
         name.placeholder = "Name"
-        name.text = "Hanan"
+        name.text = "HananYahia"
         name.textAlignment = .center
         name.translatesAutoresizingMaskIntoConstraints = false
         name.textColor = .black
@@ -35,7 +35,7 @@ class LoginVC: UIViewController {
 
     let email : UITextField = {
         $0.placeholder = "Enter your Email"
-        $0.text = "Hanan@gmail.com"
+        $0.text = "HananYahia@gmail.com"
         $0.textAlignment = .center
         $0.backgroundColor = .init(white: 0.90, alpha: 1)
         $0.layer.cornerRadius = 16
@@ -169,7 +169,6 @@ class LoginVC: UIViewController {
             logInButton.isHidden = true
         case 1:
             name.isHidden = true
-            // conf.isHidden = true
             signUp.isHidden = true
             logInButton.isHidden = false
         default:
