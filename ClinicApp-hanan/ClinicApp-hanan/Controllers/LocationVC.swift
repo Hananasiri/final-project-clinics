@@ -18,22 +18,22 @@ class LocationVC: UIViewController {
         return map
     }()
 
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "bgColor")
         setMapConstraints()
         configureMap()
-    }
+      }
     
-    func configureMap() {
-         let center = CLLocationCoordinate2D(latitude: 18.222442509549063, longitude: 42.51460111562375)
+      func configureMap() {
+         let center = CLLocationCoordinate2D (latitude: 18.222442509549063, longitude: 42.51460111562375)
          let span = MKCoordinateSpan(latitudeDelta: 0.175, longitudeDelta: 0.175)
          let region = MKCoordinateRegion(center: center, span: span)
+        
           mapView.setRegion(region, animated: true)
-          //self.mapView()
        }
 
-    func setMapConstraints() {
+       func setMapConstraints() {
         view.addSubview(mapView)
 
 
