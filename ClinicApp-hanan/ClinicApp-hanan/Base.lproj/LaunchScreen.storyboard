@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BB" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-hb-8cV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6785" translatesAutoresizingMaskIntoConstraints="NO" id="UlB-Ak-pBc">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VKO-hb-8cV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9sK-8Q-Yex"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VKO-hb-8cV" secondAttribute="bottom" id="Aq3-mz-oiZ"/>
-                            <constraint firstItem="VKO-hb-8cV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PUL-BS-MXY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VKO-hb-8cV" secondAttribute="trailing" id="UzO-9c-2Zp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UlB-Ak-pBc" secondAttribute="bottom" id="SVQ-z6-3AX"/>
+                            <constraint firstItem="UlB-Ak-pBc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kEm-ww-4uK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UlB-Ak-pBc" secondAttribute="trailing" id="ljN-1S-zo5"/>
+                            <constraint firstItem="UlB-Ak-pBc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z15-c6-dfd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BB" width="268" height="188"/>
+        <image name="IMG_6785" width="1113" height="877"/>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

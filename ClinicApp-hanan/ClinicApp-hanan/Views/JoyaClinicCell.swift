@@ -102,9 +102,9 @@ class JoyaClinicCell: UITableViewCell {
                 button.titleLabel?.textAlignment = .right
               
             }
-      let servicetype1 = labelname.text ??  ""
-      let servicedtype2 = labeldrname.text ?? ""
-      let servicetype3 = labeltime.text ?? ""
+      let servicetype1 = labelname.text ??  "No Value"
+      let servicedtype2 = labeldrname.text ?? "No Value"
+      let servicetype3 = labeltime.text ?? "No Value"
       ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
       
 

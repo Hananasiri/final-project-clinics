@@ -12,19 +12,19 @@ var isActive:Bool = false
 
 // use protocol with struct ..
 
-protocol someDelegate {
+   protocol someDelegate {
     func valueLable(update : String)
-}
+    }
 
-struct service: someDelegate {
+   struct service: someDelegate {
     func valueLable(update: String) {
         return
     }
   // Optional value
-let name: String?
+    let name: String?
     let drname: String
     let time: String
-}
+    }
 
 
  class DinteraClinic: UIViewController, UITableViewDelegate, UITableViewDataSource {

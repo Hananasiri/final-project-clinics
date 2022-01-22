@@ -87,25 +87,26 @@ class DinteraClinicCell: UITableViewCell {
     var distraint: service?
     
     @objc func addData() {
-        //  Use conditionals if
-        if isActive {
-              isActive = true
-            button.setImage(UIImage(systemName: "square"), for: .normal)
-            } else {
-                isActive = false
-                button.setImage(UIImage(systemName: ""), for: .normal)
-                button.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
-                button.backgroundColor = .red
-                button.layer.cornerRadius = 4
-                button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-                button.titleLabel?.textAlignment = .right
-              
+        // Use conditionals if
+     if isActive {
+         
+     isActive = true
+     button.setImage(UIImage(systemName: "square"), for: .normal)
+     } else {
+         
+         isActive = false
+         button.setImage(UIImage(systemName: ""), for: .normal)
+         button.setTitle(NSLocalizedString("حجز", comment: ""), for: .normal)
+         button.backgroundColor = .red
+         button.layer.cornerRadius = 4
+         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+         button.titleLabel?.textAlignment = .right
             }
-      let servicetype1 = labelname.text ??  ""
-      let servicedtype2 = labeldrname.text ?? ""
-      let servicetype3 = labeltime.text ?? ""
-      ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
-      
-
-  }
-  }
+      let servicetype1 = labelname.text ??  "No Value"
+      let servicedtype2 = labeldrname.text ??  "No Value"
+      let servicetype3 = labeltime.text ??  "No Value"
+      ReservitionsService.shared.addToAppointment(
+      book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3
+      ))
+      }
+      }

@@ -99,16 +99,14 @@ class AlmadarClinicCell: UITableViewCell {
                   button.layer.cornerRadius = 4
                   button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
                   button.titleLabel?.textAlignment = .right
-              }
-        
-        let servicetype1 = labelname.text ??  ""
-        let servicedtype2 = labeldrname.text ?? ""
-        let servicetype3 = labeltime.text ?? ""
-        ReservitionsService.shared.addToAppointment(book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3 ))
-        
-
-    }
-    }
-
+                     }
+               let servicetype1 = labelname.text ??  "No Value"
+               let servicedtype2 = labeldrname.text ??  "No Value"
+               let servicetype3 = labeltime.text ??  "No Value"
+               ReservitionsService.shared.addToAppointment(
+               book: Appointment(bookaservice: servicetype1, bookadoctor: servicedtype2, bookatime: servicetype3
+               ))
+               }
+               }
 
 
